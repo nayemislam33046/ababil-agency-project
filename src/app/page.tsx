@@ -1,8 +1,10 @@
-import Headers from '@/components/sections/home/headers'
+import Headers from '@/components/sections/headers'
+import Headline from '@/components/sections/headline'
 const page = () => {
   return (
     <>
       <Headers />
+      <Headline/>
     </>
   )
 }

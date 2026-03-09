@@ -21,10 +21,10 @@
 }
 
 /* Default Styles */
-/* h1, h2, h3 {
+h1, h2, h3 {
   font-family: var(--font-heading);
-  text-transform: uppercase;
-} */
+  /* text-transform: uppercase; */
+}
 
 body {
   font-family: var(--font-body);

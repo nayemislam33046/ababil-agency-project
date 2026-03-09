@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${anton.variable} ${outfit.variable} antialiased bg-background text-foreground font-outfit`}
+        
       >
         <main>{children}</main>
       </body>
