@@ -54,7 +54,7 @@ const Home = () => {
         </div>
 
         {/* Subtext */}
-        <p className="text-primary text-sm lm:text-lg md:text-[14px] sm:text-[12px] lg:text-body-base font-bold max-w-2xl mx-auto mb-6">
+        <p className="text-primary text-sm md:text-lg lg:text-body-base font-bold max-w-2xl mx-auto mb-6">
           From idea to launch — ABABIL helps brands build <br /> powerful digital products that drive growth.
         </p>
 
@@ -71,14 +71,13 @@ const Home = () => {
 
         {/* Floating Mockups Container (Conceptual) */}
 
-          <div className="absolute left-0 bottom-0 w-32 sm:w-40 lg:w-48 xl:w-64">
+          <div className="absolute -left-10 bottom-10 lm:-left-4 sm:left-0 sm:bottom-0 w-32 sm:w-40 lg:w-48 xl:w-64">
             <Image src={headerImage1} alt="Mockup 1" className="object-cover h-full w-full" />
           </div>
 
           {/* Right Mockups */}
-          <div className="absolute right-0 bottom-0 w-32 sm:w-40 lg:w-48 xl:w-64">
+          <div className="absolute -right-10 bottom-10 lm:-right-4 sm:right-0 sm:bottom-0 w-32 sm:w-40 lg:w-48 xl:w-64">
             <Image src={headerImage2} alt="Mockup 2" className="object-cover h-full w-full" />
-
         </div>
     </section>
   );
