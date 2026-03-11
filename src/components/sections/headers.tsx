@@ -27,25 +27,25 @@ const Home = () => {
               priority />
           </div>
 
-          <div className="flex flex-col items-center mt-9">
+          <div className="flex flex-col items-center mt-5 lm:mt-9">
             <div className="flex -space-x-2 mb-1">
               {/* Placeholder for Clutch/Google icons */}
               <Image src={clutchGoogleIcon} alt="Clutch-Google" width={50} height={50} className="rounded-full bg-gray-200 border-2 border-white" />
 
             </div>
             <p className="text-sm font-body text-primary font-medium">4.9 <span className='text-[#FFCB33] text-lg font-bold'>★★★★★</span></p>
-            <p className="text-primary text-[18px] font-body font-bold mt-1">Design & Build Agency</p>
+            <p className="text-primary text-[14px] lm:text-[18px] font-body font-bold mt-1">Design & Build Agency</p>
           </div>
         </div>
 
         {/* Main Headline */}
-        <div className='px-10'>
-          <h1 className=" text-[#0A3D2E] mx-auto mb-4 text-4xl text-wrap sm:text-5xl lg:text-7xl">
+        <div className='lm:px-10'>
+          <h1 className=" text-[#0A3D2E] mx-auto mb-4 text-2xl lm:text-4xl text-wrap sm:text-5xl lg:text-7xl">
           <span className="relative">
-            We Build High Performance <br className="hidden sm:block" />
+            We Build High Performance <br className="" />
             Web & Mobile Apps
           
-            <span className="absolute -right-8 top-3 text-5xl">
+            <span className="absolute -right-8 top-3 text-5xl hidden lm:block">
               <Image src={energyIcon} alt="Sparkle" width={40} height={40} />
             </span>
           </span>
@@ -54,7 +54,7 @@ const Home = () => {
         </div>
 
         {/* Subtext */}
-        <p className="text-primary text-lg md:text-[14px] sm:text-[12px] lg:text-body-base font-bold max-w-2xl mx-auto mb-6">
+        <p className="text-primary text-sm lm:text-lg md:text-[14px] sm:text-[12px] lg:text-body-base font-bold max-w-2xl mx-auto mb-6">
           From idea to launch — ABABIL helps brands build <br /> powerful digital products that drive growth.
         </p>
 
