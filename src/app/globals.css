@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+    --breakpoint-lp: 900px;
   /* Colors */
   --color-primary: #063d30;
   --color-secondary: #fcd718;
@@ -22,10 +23,9 @@
 
 /* Default Styles */
 h1, h2, h3 {
-  font-family: var(--font-heading);
-  /* text-transform: uppercase; */
+  font-family: var(--font-anton);
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-outfit);
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Outfit } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/navbar";
 
 const anton = Anton({
   variable: "--font-anton",
@@ -19,7 +20,8 @@ export const metadata: Metadata = {
     template: "%s | Ababil",
     default: "Ababil | We Build High Performance Web & Mobile Apps",
   },
-  description: "Ababil is a premier digital agency building high-performance web and mobile apps.",
+  description:
+    "Ababil is a premier digital agency building high-performance web and mobile apps.",
 };
 
 export default function RootLayout({
@@ -29,9 +31,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        
-      >
+      <body className={`${anton.variable} ${outfit.variable}`}>
+        <Navbar />
         <main>{children}</main>
       </body>
     </html>

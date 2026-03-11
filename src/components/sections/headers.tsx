@@ -5,7 +5,7 @@ import headerImage1 from '../../assets/headerImage1.png';
 import headerImage2 from '../../assets/headerImage2.png';
 import calenderIcon from '../../assets/stash_data-date-light.svg';
 import Link from 'next/link';
-const Hero = () => {
+const Home = () => {
   return (
     <section className="relative min-h-screen bg-white overflow-hidden pt-5">
       {/* Decorative Dots (Simplified Background) */}
@@ -39,10 +39,10 @@ const Hero = () => {
         </div>
 
         {/* Main Headline */}
-        <div>
-          <h1 className=" text-[#0A3D2E] mx-auto mb-4 md:text-4xl lg:text-5xl xl:text-6xl font-black tracking-[-1px] xl:tracking-[-5px] ">
+        <div className='px-10'>
+          <h1 className=" text-[#0A3D2E] mx-auto mb-4 text-4xl text-wrap sm:text-5xl lg:text-7xl">
           <span className="relative">
-            We Build High Performance <br className="hidden md:block" />
+            We Build High Performance <br className="hidden sm:block" />
             Web & Mobile Apps
           
             <span className="absolute -right-8 top-3 text-5xl">
@@ -54,7 +54,7 @@ const Hero = () => {
         </div>
 
         {/* Subtext */}
-        <p className="text-primary text-lg md:text-[14px] lg:text-body-base font-bold max-w-2xl mx-auto mb-6">
+        <p className="text-primary text-lg md:text-[14px] sm:text-[12px] lg:text-body-base font-bold max-w-2xl mx-auto mb-6">
           From idea to launch — ABABIL helps brands build <br /> powerful digital products that drive growth.
         </p>
 
@@ -66,29 +66,17 @@ const Hero = () => {
           Book Strategy Call
         </button>
 
-
-
-        {/* Floating Bottom Navigation Bar */}
-        <nav className="fixed bottom-3 left-1/2 -translate-x-1/2 bg-[#0A3D2E] text-white py-2 lg:px-5 xl:px-10 rounded-xl flex items-center xl:gap-10 lg:gap-6 shadow-2xl z-50">
-          <Link href="#" className="hover:text-yellow-400 text-sm font-medium">Projects</Link>
-          <Link href="#" className="hover:text-yellow-400 text-sm font-medium">Services</Link>
-          <button className="bg-white text-[#0A3D2E] px-6 py-2 rounded-lg font-bold flex items-center gap-2">
-            <span><Image src='/logoIcon.png' alt="ababil-icon" width={20} height={20} /></span> Start a Project
-          </button>
-          <Link href="#" className="hover:text-yellow-400 text-sm font-medium">Pricing</Link>
-          <Link href="#" className="hover:text-yellow-400 text-sm font-medium">More</Link>
-        </nav>
       </div>
 
 
         {/* Floating Mockups Container (Conceptual) */}
 
-          <div className="absolute md:left-0 md:bottom-0 lg:left-0 lg:bottom-0 md:w-40 lg:w-48 xl:w-64">
+          <div className="absolute left-0 bottom-0 w-32 sm:w-40 lg:w-48 xl:w-64">
             <Image src={headerImage1} alt="Mockup 1" className="object-cover h-full w-full" />
           </div>
 
           {/* Right Mockups */}
-          <div className="absolute md:right-0 md:bottom-0 lg:right-0 lg:bottom-0 md:w-40 lg:w-48 xl:w-64">
+          <div className="absolute right-0 bottom-0 w-32 sm:w-40 lg:w-48 xl:w-64">
             <Image src={headerImage2} alt="Mockup 2" className="object-cover h-full w-full" />
 
         </div>
@@ -96,4 +84,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
