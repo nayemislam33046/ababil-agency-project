@@ -40,7 +40,7 @@ const Home = () => {
 
         {/* Main Headline */}
         <div className='lm:px-10'>
-          <h1 className=" text-[#0A3D2E] mx-auto mb-4 text-2xl lm:text-4xl text-wrap sm:text-5xl lg:text-7xl">
+          <h1 className=" text-[#0A3D2E] mx-auto mb-4 text-2xl lm:text-4xl text-wrap sm:text-5xl lg:text-6xl">
           <span className="relative">
             We Build High Performance <br className="" />
             Web & Mobile Apps
@@ -54,7 +54,7 @@ const Home = () => {
         </div>
 
         {/* Subtext */}
-        <p className="text-primary text-sm md:text-lg lg:text-body-base font-bold max-w-2xl mx-auto mb-6">
+        <p className="text-primary text-sm md:text-lg lg:text-body-base font-bold max-w-2xl mx-auto px-2 lm:px-0 mb-4 lm:mb-6">
           From idea to launch — ABABIL helps brands build <br /> powerful digital products that drive growth.
         </p>
 
