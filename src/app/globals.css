@@ -30,3 +30,10 @@ h1, h2, h3 {
 body {
   font-family: var(--font-outfit);
 }
+
+.myShadow1{
+  box-shadow: 4.1px -5px 0 0 white;
+}
+.myShadow2{
+  box-shadow: -4.1px -5px 0 0 white;
+}
