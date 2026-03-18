@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Anton, Outfit } from "next/font/google";
+import { Anton, Outfit, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
 
@@ -13,6 +13,12 @@ const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${anton.variable} ${outfit.variable}`}>
+      <body className={`${anton.variable} ${outfit.variable} ${inter.variable}`}>
         <Navbar />
         <main>{children}</main>
       </body>

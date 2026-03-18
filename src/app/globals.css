@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 @theme {
+  /* Breakpoints */
     --breakpoint-lp: 900px;
     --breakpoint-lm: 480px;
+    --breakpoint-xlm: 528px;
+    --breakpoint-xsm: 440px;
   /* Colors */
   --color-primary: #063d30;
   --color-secondary: #fcd718;
@@ -16,6 +19,7 @@
   /* Typography */
   --font-heading: var(--font-anton);
   --font-body: var(--font-outfit);
+  --font-inter: var(--font-inter);
 
   /* Custom Font Sizes based on your image */
   --text-heading-1: 48px;
@@ -31,13 +35,6 @@ h1, h2, h3 {
 body {
   font-family: var(--font-outfit);
   background-color: var(--color-primary);
-}
-
-.myShadow1{
-  box-shadow: 2.5px -2.5px 0 0 white;
-}
-.myShadow2{
-  box-shadow: -2.5px -2.5px 0 0 white;
 }
 
 

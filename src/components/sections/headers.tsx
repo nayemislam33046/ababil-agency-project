@@ -4,10 +4,9 @@ import energyIcon from '../../assets/energyIcon.svg';
 import headerImage1 from '../../assets/headerImage1.png';
 import headerImage2 from '../../assets/headerImage2.png';
 import calenderIcon from '../../assets/stash_data-date-light.svg';
-import Link from 'next/link';
 const Home = () => {
   return (
-    <section className="relative min-h-screen bg-white overflow-hidden pt-5">
+    <section className="relative h-screen bg-white overflow-hidden pt-5">
       {/* Decorative Dots (Simplified Background) */}
       <div className="absolute top-10 left-4 w-2 h-2 bg-red-500 rounded-full" />
       <div className="absolute top-30 left-10 w-4 h-4 bg-blue-900 rounded-full" />
@@ -20,7 +19,7 @@ const Home = () => {
 
       <div className="mx-auto text-center relative z-10">
         {/* Logo & Rating */}
-        <div className="flex flex-col items-center mb-8">
+        <div className="flex flex-col items-center justify-center mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Image src="/ababil.svg" alt="Ababil" width={160}
               height={50}
@@ -40,9 +39,9 @@ const Home = () => {
 
         {/* Main Headline */}
         <div className='lm:px-10'>
-          <h1 className=" text-[#0A3D2E] mx-auto mb-4 text-2xl lm:text-4xl text-wrap sm:text-5xl lg:text-6xl">
+          <h1 className=" text-[#0A3D2E] mx-auto mb-4 px-6 lm:px-0 text-4xl mt-20 sm:mt-0 text-wrap sm:text-5xl lg:text-6xl">
           <span className="relative">
-            We Build High Performance <br className="" />
+            We Build High Performance <br className="hidden lm:block" />
             Web & Mobile Apps
           
             <span className="absolute -right-8 top-3 text-5xl hidden lm:block">
@@ -59,7 +58,7 @@ const Home = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="bg-[#FFD700] hover:bg-yellow-400 text-primary border border-primary font-bold py-1 px-8 rounded-full flex items-center gap-2 mx-auto transition-all shadow-lg">
+        <button className="bg-[#FFD700] hover:bg-yellow-400 text-primary border border-primary font-inter font-bold py-1 px-8 rounded-full flex items-center gap-2 mx-auto transition-all shadow-lg">
           <span className="bg-white/20 p-1 rounded-md">
            <Image src={calenderIcon} alt="phone-icon" width={30} height={30} />
           </span>
@@ -71,12 +70,12 @@ const Home = () => {
 
         {/* Floating Mockups Container (Conceptual) */}
 
-          <div className="absolute -left-10 bottom-10 lm:-left-4 sm:left-0 sm:bottom-0 w-32 sm:w-40 lg:w-48 xl:w-64">
+          <div className="absolute -left-10 bottom-0 lm:-left-4 sm:left-0 w-32 sm:w-40 lg:w-48 xl:w-64">
             <Image src={headerImage1} alt="Mockup 1" className="object-cover h-full w-full" />
           </div>
 
           {/* Right Mockups */}
-          <div className="absolute -right-10 bottom-10 lm:-right-4 sm:right-0 sm:bottom-0 w-32 sm:w-40 lg:w-48 xl:w-64">
+          <div className="absolute -right-10 bottom-0 lm:-right-4 sm:right-0 w-32 sm:w-40 lg:w-48 xl:w-64">
             <Image src={headerImage2} alt="Mockup 2" className="object-cover h-full w-full" />
         </div>
     </section>
