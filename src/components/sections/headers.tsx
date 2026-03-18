@@ -59,7 +59,7 @@ const Home = () => {
 
         {/* CTA Button */}
         <button className="bg-[#FFD700] hover:bg-yellow-400 text-primary border border-primary font-inter font-bold py-1 px-8 rounded-full flex items-center gap-2 mx-auto transition-all shadow-lg">
-          <span className="bg-white/20 p-1 rounded-md">
+          <span className="p-1 rounded-md">
            <Image src={calenderIcon} alt="phone-icon" width={30} height={30} />
           </span>
           Book Strategy Call

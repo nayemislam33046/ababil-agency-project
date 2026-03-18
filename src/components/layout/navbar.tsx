@@ -40,8 +40,8 @@ const Navbar = () => {
     sm:bg-white sm:bg-none border border-white sm:border-none 
     flex items-center justify-center gap-2 
     rounded-[15px] xsm:rounded-[20px] sm:rounded-lg font-bold 
-    w-15 h-16 xsm:w-20 xsm:h-20 lm:h-22 xlm:h-22 xlm:w-24 lm:w-max sm:w-auto sm:h-auto 
-    -translate-y-10 xsm:-translate-y-12 lm:-translate-y-14 xlm:-translate-y-14 sm:translate-y-0 
+    w-15 h-15 xsm:w-20 xsm:h-20 lm:h-22 xlm:h-22 xlm:w-24 lm:w-22 sm:w-auto sm:h-auto 
+    -translate-y-9 xsm:-translate-y-12 lm:-translate-y-14 xlm:-translate-y-14 sm:translate-y-0 
     sm:static px-4 lm:px-6 py-2 z-10
     text-white sm:text-[#0A3D2E]"
       >
