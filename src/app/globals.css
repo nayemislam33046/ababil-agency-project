@@ -2,17 +2,18 @@
 
 @theme {
   /* Breakpoints */
-    --breakpoint-lp: 900px;
-    --breakpoint-lm: 480px;
-    --breakpoint-xlm: 528px;
-    --breakpoint-xsm: 425px;
+  --breakpoint-lm: 480px;
+  --breakpoint-xsm: 425px;
+  --breakpoint-xlm: 528px;
+  --breakpoint-md: 768px;
+  --breakpoint-lp: 900px;
   /* Colors */
   --color-primary: #063d30;
   --color-secondary: #fcd718;
   --color-neutral-white: #ffffff;
   --color-neutral-black: #000000;
   --color-gray: #525252;
-  
+
   --background: var(--color-neutral-white);
   --foreground: #171717;
 
@@ -28,7 +29,9 @@
 }
 
 /* Default Styles */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-anton);
 }
 
@@ -36,7 +39,6 @@ body {
   font-family: var(--font-outfit);
   background-color: var(--color-primary);
 }
-
 
 @keyframes scroll-left {
   0% {

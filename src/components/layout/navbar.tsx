@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import navBg from '../../assets/nav-bg.png'
 
 const Navbar = () => {
   return (
@@ -11,7 +10,7 @@ const Navbar = () => {
       {/* --- Mobile Background Image --- */}
       <div className="absolute -inset-2 lm:-inset-4 -z-10 block sm:hidden">
         <Image
-          src={navBg}
+          src={'/assets/nav-bg.png'}
           alt="nav-background"
           fill
           className="object-fill"

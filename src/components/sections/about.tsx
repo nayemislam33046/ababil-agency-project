@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { PenTool, Code2, CheckSquare, TrendingUp } from "lucide-react";
-import aboutVideo from '../../assets/about-video.png'
+
 
 const About = () => {
   const aboutContent = [
@@ -35,7 +35,7 @@ const About = () => {
         <div className="relative">
           <div className="-rotate-6 overflow-hidden rounded-xl">
             <Image
-              src={aboutVideo}
+              src="/assets/about-video.png"
               alt="about"
               width={600}
               height={400}

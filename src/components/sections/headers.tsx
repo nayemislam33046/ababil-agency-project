@@ -1,9 +1,5 @@
 import Image from 'next/image';
-import clutchGoogleIcon from '../../assets/clutch-google.png';
-import energyIcon from '../../assets/energyIcon.svg';
-import headerImage1 from '../../assets/headerImage1.png';
-import headerImage2 from '../../assets/headerImage2.png';
-import calenderIcon from '../../assets/stash_data-date-light.svg';
+
 const Home = () => {
   return (
     <section className="relative h-screen bg-white overflow-hidden pt-5">
@@ -29,7 +25,7 @@ const Home = () => {
           <div className="flex flex-col items-center mt-5 lm:mt-9">
             <div className="flex -space-x-2 mb-1">
               {/* Placeholder for Clutch/Google icons */}
-              <Image src={clutchGoogleIcon} alt="Clutch-Google" width={50} height={50} className="rounded-full bg-gray-200 border-2 border-white" />
+              <Image src={'/assets/clutch-google.png'} alt="Clutch-Google" width={50} height={50} className="rounded-full bg-gray-200 border-2 border-white" />
 
             </div>
             <p className="text-sm font-body text-primary font-medium">4.9 <span className='text-[#FFCB33] text-lg font-bold'>★★★★★</span></p>
@@ -45,7 +41,7 @@ const Home = () => {
             Web & Mobile Apps
           
             <span className="absolute -right-8 top-3 text-5xl hidden lm:block">
-              <Image src={energyIcon} alt="Sparkle" width={40} height={40} />
+              <Image src={'/assets/energyIcon.svg'} alt="Sparkle" width={40} height={40} />
             </span>
           </span>
           
@@ -60,7 +56,7 @@ const Home = () => {
         {/* CTA Button */}
         <button className="bg-[#FFD700] hover:bg-yellow-400 text-primary border border-primary font-inter font-bold py-1 px-8 rounded-full flex items-center gap-2 mx-auto transition-all shadow-lg">
           <span className="p-1 rounded-md">
-           <Image src={calenderIcon} alt="phone-icon" width={30} height={30} />
+           <Image src={'/assets/stash_data-date-light.svg'} alt="phone-icon" width={30} height={30} />
           </span>
           Book Strategy Call
         </button>
@@ -71,12 +67,12 @@ const Home = () => {
         {/* Floating Mockups Container (Conceptual) */}
 
           <div className="absolute -left-10 bottom-0 lm:-left-4 sm:left-0 w-32 sm:w-40 lg:w-48 xl:w-64">
-            <Image src={headerImage1} alt="Mockup 1" className="object-cover h-full w-full" />
+            <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={900} height={900}/>
           </div>
 
           {/* Right Mockups */}
           <div className="absolute -right-10 bottom-0 lm:-right-4 sm:right-0 w-32 sm:w-40 lg:w-48 xl:w-64">
-            <Image src={headerImage2} alt="Mockup 2" className="object-cover h-full w-full" />
+            <Image src={'/assets/headerImage2.png'} alt="Mockup 2" className="object-cover h-full w-full" width={900} height={900}/>
         </div>
     </section>
   );
