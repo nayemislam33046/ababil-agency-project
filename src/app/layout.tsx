@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Anton, Outfit, Inter } from "next/font/google";
+import { Anton, Outfit, Inter, Damion} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
 
@@ -21,6 +21,12 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
+const damion = Damion({
+  variable: "--font-damion",
+  subsets: ["latin"],
+  weight: "400", // Damion only supports 400
+});
+
 export const metadata: Metadata = {
   title: {
     template: "%s | Ababil",
@@ -37,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${anton.variable} ${outfit.variable} ${inter.variable}`}>
+      <body className={`${anton.variable} ${outfit.variable} ${inter.variable} ${damion.variable}`}>
         <Navbar />
         <main>{children}</main>
       </body>
