@@ -37,17 +37,17 @@ const Support = () => {
         WHY CHOOSE US
       </span>
 
-      <h2 className="mt-4 text-2xl md:text-5xl font-black max-w-2xl">
+      <h2 className="mt-4 text-2xl lm:text-3xl sm:text-4xl md:text-5xl font-black max-w-2xl">
         WE DESIGN & BUILD FOR THE FUTURE TO DRIVE TODAY’S SUCCESS
       </h2>
 
       <div className="py-20 flex justify-center items-center">
         
         {/* MAIN WRAPPER */}
-        <div className="relative w-full max-w-6xl h-200 flex justify-center items-center">
+        <div className="relative w-full max-w-6xl md:h-200 flex flex-col justify-center items-center gap-6 md:gap-0">
 
           {/* 🔼 Top Cards */}
-          <div className="absolute md:top-23 lp:top-22 lg:top-9 xl:top-12 w-full flex gap-6">
+          <div className="md:absolute md:top-23 lp:top-22 lg:top-9 xl:top-12 w-full flex flex-col md:flex-row gap-6">
             {topCards.map((card, i) => (
               <div key={i} className="flex-1 bg-white/10 backdrop-blur-md p-6 rounded-xl md:h-56 lp:h-auto lg:h-60 xl:h-auto">
                 <Image src={card.icon} width={50} height={50} alt={card.title} className="mb-4 h-10 lp:h-12"/>
@@ -58,7 +58,7 @@ const Support = () => {
           </div>
 
           {/* 🔽 Bottom Cards */}
-          <div className="absolute md:-bottom-1 lp:bottom-10 lg:bottom-5 xl:bottom-5 w-full flex gap-6">
+          <div className="md:absolute md:-bottom-1 lp:bottom-10 lg:bottom-5 xl:bottom-5 w-full flex flex-col md:flex-row gap-6">
             {bottomCards.map((card, i) => (
               <div key={i} className="flex-1 bg-white/10 backdrop-blur-md p-7 rounded-xl md:h-80 lp:h-auto lg:h-64">
                 <Image src={card.icon} width={50} height={50} alt={card.title} className="mb-4 h-10 lp:h-12"/>
@@ -74,7 +74,7 @@ const Support = () => {
             width={700}
             height={500}
             alt="Choose Us"
-            className="opacity-80 w-62.2 md:w-120 lp:w-150 lg:w-175 h-auto"
+            className="opacity-80 w-62.2 md:w-120 lp:w-150 lg:w-175 h-auto hidden md:block"
           />
 
         </div>

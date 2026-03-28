@@ -77,21 +77,22 @@ export default function PricingSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* grid md:grid-cols-2 lp:grid-cols-3 */}
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-6 justify-center items-stretch">
           {plans.map((plan, i) => {
             const price = yearly ? plan.yearly : plan.monthly;
 
             return (
               <div
                 key={i}
-                className={`rounded-xl p-6 text-left flex flex-col h-full sm:min-w-72 ${plan.highlight
+                className={`rounded-xl p-6 text-left flex flex-col min-h-95 w-full sm:w-64 ${plan.highlight
                     ? "bg-white text-primary"
                     : "bg-gray-100 text-primary"
                   }`}
               >
                 <div>
                   <p className="text-lg text-primary font-semibold mb-2">{plan.name}</p>
-                  <p className="text-sm text-primary mb-4">{plan.desc}</p>
+                  <p className="text-sm lp:text-[13px] text-primary mb-4">{plan.desc}</p>
 
                   <div className="text-4xl text-primary font-bold mb-2 flex items-baseline gap-2">
                     ${Math.round(price)}
