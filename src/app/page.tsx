@@ -1,4 +1,5 @@
 import About from '@/components/sections/about'
+import ComparisonSection from '@/components/sections/ComparisonSection'
 import Headers from '@/components/sections/headers'
 import Headline from '@/components/sections/Headline'
 import LogoMarquee from '@/components/sections/logoMarquee'
@@ -10,7 +11,7 @@ import Support from '@/components/sections/support'
 import Testimonials from '@/components/sections/testimonials'
 const page = () => {
   return (
-    <>
+    <div className='max-w-400 mx-auto'>
       <Headers />
       <LogoMarquee/>
       <About/>
@@ -20,8 +21,9 @@ const page = () => {
       <Support/>
       <Testimonials/>
       <PricingSection/>
+      <ComparisonSection/>
       {/* <Headline/>       */}
-    </>
+    </div>
   )
 }
 

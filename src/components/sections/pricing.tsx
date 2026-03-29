@@ -86,7 +86,7 @@ export default function PricingSection() {
               <div
                 key={i}
                 className={`rounded-xl p-6 text-left flex flex-col min-h-95 w-full sm:w-64 ${plan.highlight
-                    ? "bg-white text-primary"
+                    ? "bg-white text-primary lp:scale-105"
                     : "bg-gray-100 text-primary"
                   }`}
               >
