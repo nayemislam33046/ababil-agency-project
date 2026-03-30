@@ -21,7 +21,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#050505] text-white pt-16 pb-26 md:pb-24 px-6 font-sans">
+    <footer className="bg-[#050505] text-white pt-16 pb-32 lm:pb-40 sm:pb-24 px-6 font-sans">
       <div className="max-w-7xl mx-auto">
         
         {/* ১. কলামগুলোকে সেন্টারে আনার জন্য justify-items-center এবং text-center */}
