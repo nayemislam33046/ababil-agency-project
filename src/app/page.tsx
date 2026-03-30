@@ -1,7 +1,10 @@
 import About from '@/components/sections/about'
+import AddressGrid from '@/components/sections/AddressGrid'
+import CallToAction from '@/components/sections/calltoaction'
 import ComparisonSection from '@/components/sections/ComparisonSection'
 import ContactSection from '@/components/sections/ContuctSection'
 import FAQSection from '@/components/sections/faqs'
+import Footer from '@/components/sections/Footer'
 import Headers from '@/components/sections/headers'
 import Headline from '@/components/sections/Headline'
 import LogoMarquee from '@/components/sections/logoMarquee'
@@ -15,18 +18,21 @@ const page = () => {
   return (
     <div className='max-w-400 mx-auto'>
       <Headers />
-      <LogoMarquee/>
-      <About/>
-      <ServiceCard/>
-      <SuccessStoriesSlider/>
-      <ServicesSection/>
-      <Support/>
-      <Testimonials/>
-      <PricingSection/>
-      <ComparisonSection/>
-      <FAQSection/>
-      <ContactSection/>
-      <Headline/>
+      <LogoMarquee />
+      <About />
+      <ServiceCard />
+      <SuccessStoriesSlider />
+      <ServicesSection />
+      <Support />
+      <Testimonials />
+      <PricingSection />
+      <ComparisonSection />
+      <FAQSection />
+      <ContactSection />
+      <CallToAction />
+      <AddressGrid />
+      <Footer />
+      {/* <div className="h-24 bg-[#050505]"></div> */}
     </div>
   )
 }
