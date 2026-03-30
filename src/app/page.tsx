@@ -1,5 +1,7 @@
 import About from '@/components/sections/about'
 import ComparisonSection from '@/components/sections/ComparisonSection'
+import ContactSection from '@/components/sections/ContuctSection'
+import FAQSection from '@/components/sections/faqs'
 import Headers from '@/components/sections/headers'
 import Headline from '@/components/sections/Headline'
 import LogoMarquee from '@/components/sections/logoMarquee'
@@ -22,7 +24,9 @@ const page = () => {
       <Testimonials/>
       <PricingSection/>
       <ComparisonSection/>
-      {/* <Headline/>       */}
+      <FAQSection/>
+      <ContactSection/>
+      <Headline/>
     </div>
   )
 }
