@@ -16,8 +16,8 @@ export default function ContactSection() {
   ];
 
   return (
-    <section className="w-full flex justify-center items-center flex-col md:py-10 bg-gray-100">
-      <div className="max-w-6xl w-full bg-primary lg:rounded-2xl p-6 py-10 mt-10 md:p-10 text-white relative">
+    <section className="w-full flex justify-center items-center flex-col md:py-10 px-3 lm:px-8 md:px-10 bg-gray-100">
+      <div className=" w-full bg-primary rounded-2xl p-5 lm:p-6 py-10 mt-10 md:p-10 text-white relative">
         <div className="grid md:grid-cols-2 gap-8">
           {/* LEFT SIDE */}
           <div className="flex flex-col justify-between">
@@ -143,7 +143,7 @@ export default function ContactSection() {
 
         {/* message banner */}
       <div className="w-full flex justify-center bg-gray-100 py-2">
-      <div className="max-w-6xl w-full mx-3 bg-linear-to-r from-lime-200 via-green-200 to-lime-300 rounded-full px-2 md:px-4 py-2 flex flex-col gap-3 lm:gap-5 lm:flex-row items-center justify-between shadow-sm">
+      <div className="w-full bg-linear-to-r from-lime-200 via-green-200 to-lime-300 rounded-full px-2 md:px-4 py-2 flex flex-col gap-3 lm:gap-5 lm:flex-row items-center justify-between shadow-sm">
 
         {/* LEFT: AVATARS */}
         <div className="flex -space-x-3">
