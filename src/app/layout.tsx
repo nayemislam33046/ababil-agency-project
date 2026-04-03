@@ -51,7 +51,22 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${anton.variable} ${outfit.variable} ${inter.variable} ${damion.variable} ${playfair.variable}`}>
         <Navbar />
-        <main>{children}</main>
+        {children}
+        <svg width="0" height="0" style={{ position: "absolute" }}>
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  
+                  0 1 0 0 0  
+                  0 0 1 0 0  
+                  0 0 0 20 -5"
+              />
+            </filter>
+          </defs>
+        </svg>
       </body>
     </html>
   );

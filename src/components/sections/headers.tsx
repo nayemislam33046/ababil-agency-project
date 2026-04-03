@@ -54,12 +54,22 @@ const Home = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="bg-[#FFD700] hover:bg-yellow-400 text-primary border border-primary font-inter font-bold py-1 px-8 rounded-full flex items-center gap-2 mx-auto transition-all shadow-lg">
+        {/* <button className="bg-[#FFD700] hover:bg-yellow-400 text-primary border border-primary font-inter font-bold py-1 px-8 rounded-full flex items-center gap-2 mx-auto transition-all shadow-lg">
           <span className="p-1 rounded-md">
            <Image src={'/assets/stash_data-date-light.svg'} alt="phone-icon" width={30} height={30} />
           </span>
           Book Strategy Call
-        </button>
+        </button> */}
+        <button className="blob-btn relative z-10 flex items-center gap-2 mx-auto">
+  <Image
+    src="/assets/stash_data-date-light.svg"
+    alt="icon"
+    width={30}
+    height={30}
+    className="z-10"
+  />
+  <span>Book Strategy Call</span>
+</button>
 
       </div>
 

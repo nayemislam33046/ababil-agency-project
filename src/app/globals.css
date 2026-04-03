@@ -55,6 +55,43 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+/* header button */
+.blob-btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  background: #ffd700;
+  border: 1px solid #063d30;
+  padding: 12px 28px;
+  color: #063d30;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* text */
+.blob-btn span {
+  position: relative;
+  z-index: 10;
+}
+
+/* animated layer */
+.blob-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  transform: translateY(100%);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+/* hover effect */
+.blob-btn:hover::before {
+  transform: translateY(0);
+  border-radius: 0;
+}
+
+
 
 /* button animation */
 @keyframes borderGlow {
