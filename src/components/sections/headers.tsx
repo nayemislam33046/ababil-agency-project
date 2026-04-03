@@ -66,12 +66,12 @@ const Home = () => {
 
         {/* Floating Mockups Container (Conceptual) */}
 
-          <div className="absolute -left-10 bottom-0 lm:-left-4 sm:left-0 w-32 sm:w-40 lg:w-48 xl:w-64">
+          <div className="absolute -left-10 bottom-0 lm:-left-4 sm:left-0 w-32 sm:w-40 lg:w-48 xl:w-64 float">
             <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={900} height={900}/>
           </div>
 
           {/* Right Mockups */}
-          <div className="absolute -right-10 bottom-0 lm:-right-4 sm:right-0 w-32 sm:w-40 lg:w-48 xl:w-64">
+          <div className="absolute -right-10 bottom-0 lm:-right-4 sm:right-0 w-32 sm:w-40 lg:w-48 xl:w-64 float">
             <Image src={'/assets/headerImage2.png'} alt="Mockup 2" className="object-cover h-full w-full" width={900} height={900}/>
         </div>
     </section>

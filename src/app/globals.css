@@ -23,11 +23,6 @@
   --font-inter: var(--font-inter);
   --font-damion: var(--font-damion);
   --font-playfair: var(--font-playfair);
-
-  /* Custom Font Sizes based on your image */
-  /* --text-heading-1: 48px;
-  --text-body-lg: 32px;
-  --text-body-base: 16px; */
 }
 
 /* Default Styles */
@@ -41,6 +36,67 @@ body {
   font-family: var(--font-outfit);
   background-color: var(--color-primary);
 }
+
+
+/* header animation  */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+
+/* button animation */
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.glow-border {
+  position: relative;
+  z-index: 0;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -3px; /* border thickness */
+  border-radius: 10px;
+  background: linear-gradient(
+    120deg,
+    #00ffcc,
+    #00b3ff,
+    #7a5cff,
+    #00ffcc
+  );
+  background-size: 300% 300%;
+  animation: borderGlow 2s linear infinite;
+  z-index: -1;
+}
+
+.glow-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+
 
 @keyframes scroll-left {
   0% {
@@ -67,3 +123,6 @@ body {
 .animate-scroll-right {
   animation: scroll-right 50s linear infinite;
 }
+
+
+
