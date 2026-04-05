@@ -46,6 +46,7 @@ export default function LogoMarquee() {
                   <img
                     key={i}
                     src={logo}
+                    alt={logo}
                     className="w-20 lg:w-40 shrink-0 object-contain"
                   />
                 ))}
@@ -63,6 +64,7 @@ export default function LogoMarquee() {
                   <img
                     key={i}
                     src={logo}
+                    alt={logo}
                     className="w-20 lg:w-40 shrink-0 object-contain"
                   />
                 ))}

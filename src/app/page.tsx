@@ -6,7 +6,6 @@ import ContactSection from '@/components/sections/ContuctSection'
 import FAQSection from '@/components/sections/faqs'
 import Footer from '@/components/sections/Footer'
 import Headers from '@/components/sections/headers'
-import Headline from '@/components/sections/Headline'
 import LogoMarquee from '@/components/sections/logoMarquee'
 import ServiceCard from '@/components/sections/portfolio/portfolio'
 import PricingSection from '@/components/sections/pricing'
@@ -32,7 +31,6 @@ const page = () => {
       <CallToAction />
       <AddressGrid />
       <Footer />
-      {/* <div className="h-24 bg-[#050505]"></div> */}
     </div>
   )
 }

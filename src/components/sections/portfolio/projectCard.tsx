@@ -24,7 +24,7 @@ type ProjectCardProps = {
 const ProjectCard = ({ project }: ProjectCardProps) => {
     return (
         <div
-            className={`rounded-md p-6 lg:p-8 flex flex-col md:flex-row items-center justify-between gap-6 ${project.bgColor}`}
+            className={`rounded-md p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 ${project.bgColor}`}
         >
             {/* LEFT CONTENT */}
             <div className="flex-1 text-white flex flex-col justify-between order-2 md:order-1">
@@ -36,19 +36,19 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     {project.title}
                 </p>
 
-                <p className="text-sm md:text-[12px] lp:text-sm font-body mb-4">
+                <p className="text-sm lp:text-sm font-body mb-4">
                     {project.description}
                 </p>
 
                 {/* STATS */}
                 <div className="flex items-center justify-between md:items-start md:justify-start lm:gap-14 lp:gap-20 lg:gap-28 text-sm mb-4 font-body">
                     <div>
-                        <p className="md:text-nowrap text-sm lm:text-base">{project.moduleTitle}</p>
-                        <p className="font-bold text-xl lm:text-2xl md:text-xl lp:text-2xl">{project.modules}</p>
+                        <p className="sm:text-nowrap text-sm sm:text-sm md:text-base lm:text-base">{project.moduleTitle}</p>
+                        <p className="font-bold text-xl lm:text-2xl sm:text-lg md:text-xl lp:text-2xl">{project.modules}</p>
                     </div>
                     <div>
-                        <p className="md:text-nowrap text-sm lm:text-base">{project.growthTitle}</p>
-                        <p className="font-bold text-xl lm:text-2xl md:text-xl lp:text-2xl">{project.growth}</p>
+                        <p className="sm:text-nowrap text-sm sm:text-sm md:text-base lm:text-base">{project.growthTitle}</p>
+                        <p className="font-bold text-xl lm:text-2xl sm:text-lg md:text-xl lp:text-2xl">{project.growth}</p>
                     </div>
                 </div>
 

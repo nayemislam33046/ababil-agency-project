@@ -1,9 +1,13 @@
-import Image from "next/image";
+"use client"
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProjectCard from "./projectCard";
 import { ArrowRight } from "lucide-react";
 
+gsap.registerPlugin(ScrollTrigger);
 
-export const projects = [
+const projects = [
   {
     id: 1,
     category: "FINTECH / AI",
@@ -84,31 +88,71 @@ export const projects = [
 ];
 
 export default function ServiceCard() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const cards = containerRef.current?.querySelectorAll(".stack-card");
+
+    cards?.forEach((card: any, index) => {
+      if (index === cards.length - 1) return;
+
+      const nextCard = cards[index + 1];
+      const inner = card.querySelector(".stack-inner");
+
+      const scaleTo = 1 - (cards.length - index - 1) * 0.05;
+
+      gsap.to(inner, {
+        scale: scaleTo,
+        filter: "brightness(0.7)",
+        ease: "none",
+        scrollTrigger: {
+          trigger: nextCard,
+          start: "top center",
+          end: "top top",
+          scrub: true,
+        },
+      });
+    });
+  }, []);
+
   return (
     <section className="my-10 bg-white p-8 xl:p-16">
-
-      <div className="mb-10">
-        <p className="font-inter font-bold text-primary mb-5 text-sm lp:text-base"> OUR SERVICES</p>
-        <h1 className="text-[24px] sm:text-[32px] lp:text-[40px] lg:text-5xl xl:text-6xl font-heading font-bold text-primary">
+      
+      {/* HEADER */}
+      <div className="mb-16">
+        <p className="font-inter font-bold text-primary mb-5 text-sm">
+          OUR SERVICES
+        </p>
+        <h1 className="text-4xl lg:text-6xl font-bold text-primary">
           PROVEN SUCCESS IN <br /> EVERY INDUSTRY
         </h1>
       </div>
 
-      {projects.map((project, index) => (
-        <div key={project.id} className={`mb-10 ${index === 0 ? "" : "mt-10"}`}>
-          <ProjectCard
+      {/* STACK CONTAINER */}
+      <div ref={containerRef} className="max-w-6xl mx-auto">
+        {projects.map((project, i) => (
+          <div
             key={project.id}
-            project={project}
-          />
-        </div>
-      ))}
+            className="stack-card sm:sticky top-5"
+            style={{
+              paddingTop: `${i * 30}px`, 
+              zIndex: i
+            }}
+          >
+            <div className="stack-inner">
+              <ProjectCard project={project} />
+            </div>
+          </div>
+        ))}
+      </div>
 
-      <button className="flex justify-center items-center bg-[#FFD700] hover:bg-yellow-400 text-primary border border-primary font-inter font-bold py-2 px-8 rounded-full gap-2 mx-auto transition-all shadow-lg">
-      Explore All
-      <span>
-        <ArrowRight/>
-      </span>
+      {/* BUTTON */}
+      <button className="flex justify-center items-center bg-[#FFD700] hover:bg-yellow-400 text-primary border border-primary font-bold py-2 px-8 rounded-full gap-2 mx-auto mt-20 transition-all shadow-lg">
+        Explore All
+        <ArrowRight />
       </button>
+
+      {/* bottom space for scroll */}
     </section>
   );
 }
