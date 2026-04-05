@@ -27,7 +27,7 @@ const Testimonials = () => {
                 </Link>
             </div>
             {/* right side */}
-            <div >
+            <div className='hover:-rotate-6 transition-transform duration-300'>
                 <Image src="/assets/testiMonials.png" alt="testimonial" width={500} height={500} className="object-cover rounded-lg" priority />
 
             </div>

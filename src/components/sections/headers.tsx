@@ -36,16 +36,16 @@ const Home = () => {
         {/* Main Headline */}
         <div className='lm:px-10'>
           <h1 className=" text-[#0A3D2E] mx-auto mb-4 px-6 lm:px-0 text-4xl lm:mt-20 sm:mt-0 text-wrap sm:text-5xl lg:text-6xl">
-          <span className="relative">
-            We Build High Performance <br className="hidden lm:block" />
-            Web & Mobile Apps
-          
-            <span className="absolute -right-8 top-3 text-5xl hidden lm:block">
-              <Image src={'/assets/energyIcon.svg'} alt="Sparkle" width={40} height={40} />
+            <span className="relative">
+              We Build High Performance <br className="hidden lm:block" />
+              Web & Mobile Apps
+
+              <span className="absolute -right-8 top-3 text-5xl hidden lm:block">
+                <Image src={'/assets/energyIcon.svg'} alt="Sparkle" width={40} height={40} />
+              </span>
             </span>
-          </span>
-          
-        </h1>
+
+          </h1>
         </div>
 
         {/* Subtext */}
@@ -53,37 +53,29 @@ const Home = () => {
           From idea to launch — ABABIL helps brands build <br /> powerful digital products that drive growth.
         </p>
 
-        {/* CTA Button */}
-        {/* <button className="bg-[#FFD700] hover:bg-yellow-400 text-primary border border-primary font-inter font-bold py-1 px-8 rounded-full flex items-center gap-2 mx-auto transition-all shadow-lg">
-          <span className="p-1 rounded-md">
-           <Image src={'/assets/stash_data-date-light.svg'} alt="phone-icon" width={30} height={30} />
-          </span>
-          Book Strategy Call
-        </button> */}
         <button className="blob-btn relative z-10 flex items-center gap-2 mx-auto">
-  <Image
-    src="/assets/stash_data-date-light.svg"
-    alt="icon"
-    width={30}
-    height={30}
-    className="z-10"
-  />
-  <span>Book Strategy Call</span>
-</button>
+          <Image
+            src="/assets/stash_data-date-light.svg"
+            alt="icon"
+            width={30}
+            height={30}
+            className="z-10"
+          />
+          <span>Book Strategy Call</span>
+        </button>
 
       </div>
 
+      {/* Floating Mockups Container (Conceptual) */}
 
-        {/* Floating Mockups Container (Conceptual) */}
+      <div className="absolute -left-10 -bottom-10 w-40 lm:w-50 sm:w-65 md:w-70 md:-left-14 lg:w-80 xl:w-95 float">
+        <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={900} height={900} />
+      </div>
 
-          <div className="absolute -left-10 bottom-0 lm:-left-4 sm:left-0 w-32 sm:w-40 lg:w-48 xl:w-64 float">
-            <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={900} height={900}/>
-          </div>
-
-          {/* Right Mockups */}
-          <div className="absolute -right-10 bottom-0 lm:-right-4 sm:right-0 w-32 sm:w-40 lg:w-48 xl:w-64 float">
-            <Image src={'/assets/headerImage2.png'} alt="Mockup 2" className="object-cover h-full w-full" width={900} height={900}/>
-        </div>
+      {/* Right Mockups */}
+      <div className="absolute -right-10 -bottom-10 w-40 lm:w-50 sm:w-65 md:w-70 md:-right-14 lg:w-80 xl:w-95 float">
+        <Image src={'/assets/headerImage2.png'} alt="Mockup 2" className="object-cover h-full w-full" width={900} height={900} />
+      </div>
     </section>
   );
 };
