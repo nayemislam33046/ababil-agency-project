@@ -142,34 +142,38 @@ export default function ContactSection() {
       </div>
 
         {/* message banner */}
-      <div className="w-full flex justify-center bg-gray-100 py-2">
-      <div className="w-full bg-linear-to-r from-lime-200 via-green-200 to-lime-300 rounded-full px-2 md:px-4 py-2 flex flex-col gap-3 lm:gap-5 lm:flex-row items-center justify-between shadow-sm">
+     <div className="w-full flex justify-center bg-gray-100 py-2 overflow-hidden">
+  <div className="w-full bg-linear-to-r from-lime-200 via-green-200 to-lime-300 rounded-full px-2 md:px-4 py-2 flex items-center shadow-sm overflow-hidden">
 
-        {/* LEFT: AVATARS */}
-        <div className="flex -space-x-3">
-          {[1, 2, 3, 4].map((i) => (
-            <Image
-              key={i}
-              src={`/assets/CEO_Fahad.png`}
-              alt="avatar"
-              width={32}
-              height={32}
-              className="rounded-full border-2 border-white object-cover "
-            />
-          ))}
-        </div>
+    {/* LEFT: 30% */}
+    <div className="w-[20%] lg:w-[10%] flex -space-x-3 z-10">
+      {[1, 2, 3, 4].map((i) => (
+        <Image
+          key={i}
+          src={`/assets/CEO_Fahad.png`}
+          alt="avatar"
+          width={32}
+          height={32}
+          className="rounded-full border-2 border-white object-cover"
+        />
+      ))}
+    </div>
 
-        {/* TEXT */}
-        <p className="text-sm md:text-base text-gray-800 text-center px-4">
+    {/* RIGHT: 70% */}
+    <div className="w-[80%] lg:w-[90%] overflow-hidden">
+      <div className="whitespace-nowrap animate-marquee">
+        <span className="text-sm md:text-base text-gray-800 px-4">
           The <span className="italic font-semibold">Wrong Partner?</span>{" "}
           Get 100% Value And Guarantee. Don’t Miss Out -{" "}
           <span className="text-green-700 font-semibold cursor-pointer">
             Secure Your Business
           </span>
-        </p>
-
+        </span>
       </div>
     </div>
+
+  </div>
+</div>
     </section>
   );
 }

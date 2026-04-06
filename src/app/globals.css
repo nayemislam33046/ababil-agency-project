@@ -7,8 +7,6 @@
   --breakpoint-xlm: 528px;
   --breakpoint-md: 768px;
   --breakpoint-lp: 900px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
   /* Colors */
   --color-primary: #063d30;
   --color-secondary: #fcd718;
@@ -162,7 +160,7 @@ body {
 }
 
 
-
+/* navigation button center */
 @layer utilities {
   .animate-border-spin {
     animation: border-spin 4s linear infinite;
@@ -176,4 +174,19 @@ body {
       transform: rotate(360deg);
     }
   }
+}
+
+/* contact headline animation  */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 12s linear infinite;
 }

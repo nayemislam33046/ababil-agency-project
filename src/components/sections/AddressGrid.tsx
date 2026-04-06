@@ -13,7 +13,7 @@ const locations = [
 
 export default function AddressGrid() {
   return (
-    <section className="bg-black py-20 px-6 min-h-screen flex items-center justify-center">
+    <section className="py-20 px-6 min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/assets/world-bg.png')"  }}>
       <div className="max-w-6xl w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {locations.map((loc, index) => (
