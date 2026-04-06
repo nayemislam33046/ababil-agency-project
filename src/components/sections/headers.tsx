@@ -11,7 +11,7 @@ const Home = () => {
       <div className="absolute top-24 left-80 w-4 h-4 bg-green-500 rounded-full" />
       <div className="absolute top-20 left-56 w-4 h-4 bg-green-700 rounded-full" />
       <div className="absolute top-40 left-20 w-3 h-3 bg-red-500 rounded-full" />
-      <div className="absolute top-20 right-1/4 w-3 h-3 bg-yellow-400 rounded-full" />
+      <div className="absolute top-20 right-1/4 w-3 h-3 bg-yello0 rounded-full" />
 
       <div className="mx-auto text-center relative z-10">
         {/* Logo & Rating */}
@@ -68,12 +68,12 @@ const Home = () => {
 
       {/* Floating Mockups Container (Conceptual) */}
 
-      <div className="absolute -left-10 -bottom-10 w-40 lm:w-50 sm:w-65 md:w-70 md:-left-14 lg:w-80 xl:w-95 float">
+      <div className="absolute -left-10 -bottom-10 w-50 xsm:w-65 md:w-80 xl:w-95 md:-left-14 float">
         <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={900} height={900} />
       </div>
 
       {/* Right Mockups */}
-      <div className="absolute -right-10 -bottom-10 w-40 lm:w-50 sm:w-65 md:w-70 md:-right-14 lg:w-80 xl:w-95 float">
+      <div className="absolute -right-10 -bottom-10 w-50 xsm:w-65 md:w-80 xl:w-95 md:-right-14 float">
         <Image src={'/assets/headerImage2.png'} alt="Mockup 2" className="object-cover h-full w-full" width={900} height={900} />
       </div>
     </section>
