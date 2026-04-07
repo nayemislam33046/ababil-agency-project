@@ -123,7 +123,7 @@ export default function ServiceCard() {
         <p className="font-inter font-bold text-primary mb-5 text-sm">
           OUR SERVICES
         </p>
-        <h1 className="text-4xl lg:text-6xl font-bold text-primary">
+        <h1 className="text-2xl lm:text-4xl lg:text-6xl font-bold text-primary">
           PROVEN SUCCESS IN <br /> EVERY INDUSTRY
         </h1>
       </div>
@@ -133,9 +133,9 @@ export default function ServiceCard() {
         {projects.map((project, i) => (
           <div
             key={project.id}
-            className="stack-card sm:sticky top-5"
+            className="stack-card sticky top-5"
             style={{
-              paddingTop: `${i * 30}px`, 
+              paddingTop: `10px`, 
               zIndex: i
             }}
           >

@@ -35,7 +35,7 @@ const Navbar = () => {
 
       <CenterButton/>
 
-      <Link href="#" className="hover:text-yellow-400 text-[11px] xsm:text-sm sm:text-body-base font-medium flex justify-center items-center flex-col gap-1 xsm:gap-2 xsm:w-9 w-7">
+      <Link href="/pages/pricing" className="hover:text-yellow-400 text-[11px] xsm:text-sm sm:text-body-base font-medium flex justify-center items-center flex-col gap-1 xsm:gap-2 xsm:w-9 w-7">
         <span className='sm:hidden'>
           <Image src="/doller_icon.svg" alt="doller_icon" width={24} height={24} />
         </span>
