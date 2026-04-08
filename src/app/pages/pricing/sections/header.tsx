@@ -1,8 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import PricingSection from './pricingSection';
 
 const PricingHeader = () => {
   return (
-    <section className="relative h-screen bg-white overflow-hidden pt-5">
+
+    <section className="relative min-h-screen bg-white overflow-hidden pb-10">
       {/* Decorative Dots (Simplified Background) */}
       <div className="absolute top-10 left-4 w-2 h-2 bg-red-500 rounded-full" />
       <div className="absolute top-30 left-10 w-4 h-4 bg-blue-900 rounded-full" />
@@ -13,70 +16,35 @@ const PricingHeader = () => {
       <div className="absolute top-40 left-20 w-3 h-3 bg-red-500 rounded-full" />
       <div className="absolute top-20 right-1/4 w-3 h-3 bg-yello0 rounded-full" />
 
-      <div className="mx-auto text-center relative z-10">
-        {/* Logo & Rating */}
-        <div className="flex flex-col items-center justify-center mb-8">
-          <div className="flex items-center gap-2 mb-4">
-            <Image src="/ababil.svg" alt="Ababil" width={160}
-              height={50}
-              priority />
-          </div>
+      {/* 🔹 TOP (Logo + Breadcrumb) */}
+      <div className="flex flex-col items-center py-5">
+        <Image src="/ababil.svg" alt="Ababil" width={140} height={40} priority />
 
-          <div className="flex flex-col items-center mt-5 lm:mt-9">
-            <div className="flex -space-x-2 mb-1">
-              {/* Placeholder for Clutch/Google icons */}
-              <Image src={'/assets/clutch-google.png'} alt="Clutch-Google" width={50} height={50} className="rounded-full bg-gray-200 border-2 border-white" />
+        <p className='p-1 px-2 text-sm mt-3 rounded-full flex justify-center items-center gap-2 border border-[#063D30] bg-[#FCD718] text-primary'><Link href="/" className="text-[#685700]">Home</Link> <span><svg width="7" height="12" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fillRule="evenodd" clipRule="evenodd" d="M5.30325 5.30325L1.0605 9.546L0 8.4855L3.7125 4.773L0 1.0605L1.0605 0L5.30325 4.24275C5.44385 4.3834 5.52284 4.57413 5.52284 4.773C5.52284 4.97187 5.44385 5.1626 5.30325 5.30325Z" fill="#063D30" />
+        </svg>
+        </span> Pricing</p>
+      </div>
 
-            </div>
-            <p className="text-sm font-body text-primary font-medium">4.9 <span className='text-[#FFCB33] text-lg font-bold'>★★★★★</span></p>
-            <p className="text-primary text-[14px] lm:text-[18px] font-body font-bold mt-1">Design & Build Agency</p>
-          </div>
-        </div>
+      {/* 🔹 CENTER HERO CONTENT */}
+      <div className="flex flex-col items-center justify-center text-center p-4">
 
-        {/* Main Headline */}
-        <div className='lm:px-10'>
-          <h1 className=" text-[#0A3D2E] mx-auto mb-4 px-6 lm:px-0 text-4xl lm:mt-20 sm:mt-0 text-wrap sm:text-5xl lg:text-6xl">
-            <span className="relative">
-              We Build High Performance <br className="hidden lm:block" />
-              Web & Mobile Apps
+        <h1 className="text-[#0A3D2E] font-bold leading-tight text-4xl sm:text-5xl lg:text-6xl max-w-4xl">
+          Affordability & Flexibility <br className="hidden sm:block" />
+          Premium Quality With
+        </h1>
 
-              <span className="absolute -right-8 top-3 text-5xl hidden lm:block">
-                <Image src={'/assets/energyIcon.svg'} alt="Sparkle" width={40} height={40} />
-              </span>
-            </span>
-
-          </h1>
-        </div>
-
-        {/* Subtext */}
-        <p className="text-primary text-sm md:text-lg lg:text-body-base font-bold max-w-2xl mx-auto px-2 lm:px-0 mb-4 lm:mb-6">
-          From idea to launch — ABABIL helps brands build <br /> powerful digital products that drive growth.
+        <p className="mt-4 text-sm md:text-lg font-semibold max-w-2xl text-[#0A3D2E]">
+          Personalize your plan for custom solutions <br />
+          according to your business needs
         </p>
 
-        <button className="blob-btn relative z-10 flex items-center gap-2 mx-auto">
-          <Image
-            src="/assets/stash_data-date-light.svg"
-            alt="icon"
-            width={30}
-            height={30}
-            className="z-10"
-          />
-          <span>Book Strategy Call</span>
-        </button>
+        <PricingSection/>
 
       </div>
 
-      {/* Floating Mockups Container (Conceptual) */}
-
-      <div className="absolute -left-10 -bottom-10 w-50 xsm:w-65 md:w-80 xl:w-95 md:-left-14 float">
-        <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={900} height={900} />
-      </div>
-
-      {/* Right Mockups */}
-      <div className="absolute -right-10 -bottom-10 w-50 xsm:w-65 md:w-80 xl:w-95 md:-right-14 float">
-        <Image src={'/assets/headerImage2.png'} alt="Mockup 2" className="object-cover h-full w-full" width={900} height={900} />
-      </div>
     </section>
+
   );
 };
 
