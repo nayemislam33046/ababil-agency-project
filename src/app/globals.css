@@ -208,3 +208,24 @@ body {
     overflow: visible;
   }
 }
+
+
+/* dot animation */
+@keyframes floatdot {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(var(--x), var(--y));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.particle {
+  position: absolute;
+  border-radius: 9999px;
+  animation: floatdot var(--duration) ease-in-out infinite;
+  animation-delay: var(--delay);
+}

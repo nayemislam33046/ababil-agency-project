@@ -75,7 +75,7 @@ export default function ContactSection() {
           {/* RIGHT SIDE FORM */}
           <div className="space-y-4">
             <div>
-              <label className="font-body font-bold text-sm lm:text-[18px]">Full Name</label>
+              <label className="font-body font-bold text-sm lm:text-[16px]">Full Name</label>
               <input
                 type="text"
                 placeholder="John Doe"
@@ -85,7 +85,7 @@ export default function ContactSection() {
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="font-body font-bold text-sm lm:text-[18px]">Your Email</label>
+                <label className="font-body font-bold text-sm lm:text-[16px]">Your Email</label>
                 <input
                   type="email"
                   placeholder="yourmail@mail.com"
@@ -94,7 +94,7 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="font-body font-bold text-sm lm:text-[18px]">Whatsapp Number</label>
+                <label className="font-body font-bold text-sm lm:text-[16px] text-nowrap">Whatsapp Number</label>
                 <input
                   type="text"
                   placeholder="123 1234567"
@@ -105,7 +105,7 @@ export default function ContactSection() {
 
             {/* BUDGET */}
             <div>
-              <label className="font-body font-bold text-sm lm:text-[18px]">Project Budget</label>
+              <label className="font-body font-bold text-sm lm:text-[16px]">Project Budget</label>
               <div className="flex flex-wrap gap-2 mt-2">
                 {budgetOptions.map((item) => (
                   <button
@@ -125,7 +125,7 @@ export default function ContactSection() {
 
             {/* DETAILS */}
             <div>
-              <label className="font-body font-bold text-sm lm:text-[18px]">Project Details</label>
+              <label className="font-body font-bold text-sm lm:text-[16px]">Project Details</label>
               <textarea
                 rows={3}
                 placeholder="I want to redesign my website..."
