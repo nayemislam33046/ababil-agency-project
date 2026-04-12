@@ -74,7 +74,7 @@ const Support = () => {
             width={700}
             height={500}
             alt="Choose Us"
-            className="opacity-80 w-62.2 md:w-120 lp:w-150 lg:w-175 h-auto hidden md:block"
+            className="w-62.2 md:w-120 lp:w-150 lg:w-175 h-auto hidden md:block"
           />
 
         </div>

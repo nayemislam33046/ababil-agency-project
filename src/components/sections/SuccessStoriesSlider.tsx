@@ -93,7 +93,7 @@ const SuccessStoriesSlider = () => {
           Client Stories
         </p>
         <h2
-          className="text-[24px] sm:text-[32px] lp:text-[40px] lg:text-5xl xl:text-6xl font-heading font-bold text-white"
+          className="text-[24px] sm:text-[32px] lp:text-[40px] lg:text-5xl xl:text-6xl font-heading font-bold text-white uppercase"
         >
           Success Stories That
           <br />

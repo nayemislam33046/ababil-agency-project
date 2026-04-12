@@ -21,7 +21,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[linear-gradient(180deg,#060606_-3.32%,#07211B_24.25%,#063D30_58.34%)] text-white pt-16 pb-32 lm:pb-40 sm:pb-24 px-6 font-sans">
+    // pt-16 pb-32 lm:pb-40 sm:pb-24
+    <footer className="bg-[linear-gradient(180deg,#060606_-3.32%,#07211B_24.25%,#063D30_58.34%)] text-white py-16 px-6 font-sans">
       <div className="max-w-7xl mx-auto">
         
         {/* ১. কলামগুলোকে সেন্টারে আনার জন্য justify-items-center এবং text-center */}
@@ -39,7 +40,7 @@ const Footer = () => {
               <div key={i} className="flex flex-col items-center space-y-2">
                 <Image src={`/${partner.name.toLowerCase()}_logo.svg`} alt={partner.name} width={80} height={40} className="object-contain" />
                 <div className="flex items-center gap-1 mt-1">
-                   <span className="text-[10px] text-gray-500 uppercase tracking-wider">{partner.sub}</span>
+                   <span className="text-[10px] text-white uppercase tracking-wider">{partner.sub}</span>
                    {partner.stars && (
                      <span className="text-yellow-500 text-[10px]">★★★★★</span>
                    )}
@@ -50,7 +51,7 @@ const Footer = () => {
         </div>
 
         {/* ৩. কপিরাইট সেকশন */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[13px] text-gray-400">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[13px] text-white">
           <Link href="#" className="hover:text-white transition-colors order-1 md:order-0">Terms & Conditions</Link>
           <p className="order-3 md:order-0">© {new Date().getFullYear()} Ababil, All Rights Reserved.</p>
           <Link href="#" className="hover:text-white transition-colors order-2 md:order-0 my-3 md:my-0">Privacy Policy</Link>
@@ -66,7 +67,7 @@ const FooterColumn = ({ title, links, isIndustry }: { title: string, links: stri
     <ul className="space-y-3 flex flex-col items-center">
       {links.map((link, i) => (
         <li key={i}>
-          <Link href="#" className="text-gray-400 text-[14px] hover:text-white transition-colors flex items-center justify-center">
+          <Link href="#" className="text-white text-[14px] hover:text-white transition-colors flex items-center justify-center">
             {link}
             {isIndustry && link === 'Company Deck' && (
               <span className="ml-2 bg-primary text-white font-bold text-[10px] p-1 rounded-full flex items-center justify-center">

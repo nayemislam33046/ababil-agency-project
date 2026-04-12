@@ -5,14 +5,12 @@ const Home = () => {
     const random = (min: number, max: number) =>
     Math.random() * (max - min) + min;
 
-  // ✅ Size system (controlled)
   const getSize = (i: number) => {
-    if (i % 3 === 0) return 4;  // small
-    if (i % 3 === 1) return 6;  // medium
-    return 8;                   // large
+    if (i % 3 === 0) return 4;
+    if (i % 3 === 1) return 6;
+    return 8;                 
   };
 
-  // ✅ Color system (controlled)
   const colors = [
     "#ef4444",
     "#eab308",
@@ -34,7 +32,7 @@ const Home = () => {
           priority
         />
       </div>
-      {/* Decorative Dots (Simplified Background) */}
+      {/* Decorative Dots */}
      
       <div
         className="particle w-2 h-2 bg-red-900 rounded-full"
@@ -72,7 +70,6 @@ const Home = () => {
         } as React.CSSProperties}
       />
 
-      {/* ✅ FIXED (circle corrected) */}
       <div
         className="particle w-4 h-4 bg-cyan-900 rounded-full"
         style={{
@@ -85,7 +82,6 @@ const Home = () => {
         } as React.CSSProperties}
       />
 
-      {/* 🔥 DYNAMIC PARTICLES */}
       {[...Array(18)].map((_, i) => {
         const size = getSize(i);
 
@@ -96,18 +92,12 @@ const Home = () => {
             style={{
               top: `${random(0, 90)}%`,
               left: `${random(0, 90)}%`,
-
               width: `${size}px`,
               height: `${size}px`,
-
               backgroundColor: colors[i % colors.length],
-
               "--x": `${random(-30, 30)}px`,
               "--y": `${random(-40, 40)}px`,
-
-              // 💎 BONUS: size-based speed (premium feel)
               "--duration": `${size === 4 ? 6 : size === 6 ? 8 : 10}s`,
-
               "--delay": `${random(0, 5)}s`,
             } as React.CSSProperties}
           />
@@ -123,7 +113,7 @@ const Home = () => {
               priority />
           </div>
 
-          <div className="flex flex-col items-center mt-5 lm:mt-9">
+          <div className="flex flex-col items-center mt-5 lm:mt-10">
             <div className="flex -space-x-2 mb-1">
               {/* Placeholder for Clutch/Google icons */}
               <Image src={'/assets/clutch-google.png'} alt="Clutch-Google" width={50} height={50} />
@@ -136,14 +126,10 @@ const Home = () => {
 
         {/* Main Headline */}
         <div className='lm:px-10'>
-          <h1 className=" text-[#0A3D2E] mx-auto mb-4 px-6 lm:px-0 text-4xl lm:mt-20 sm:mt-0 text-wrap sm:text-5xl lg:text-6xl">
-            <span className="relative">
+          <h1 className=" text-[#0A3D2E] mx-auto mb-4 px-6 lm:px-0 text-4xl lm:mt-20 sm:mt-0 text-wrap sm:text-6xl lg:text-7xl">
+            <span className="relative sm:leading-tight">
               We Build High Performance <br className="hidden lm:block" />
               Web & Mobile Apps
-
-              <span className="absolute -right-8 top-3 text-5xl hidden lm:block">
-                <Image src={'/assets/energyIcon.svg'} alt="Sparkle" width={40} height={40} />
-              </span>
             </span>
 
           </h1>
@@ -169,12 +155,12 @@ const Home = () => {
 
       {/* Floating Mockups Container (Conceptual) */}
 
-      <div className="absolute -left-10 -bottom-10 w-50 xsm:w-65 md:w-80 xl:w-95 md:-left-14 float">
+      <div className="absolute -left-10 -bottom-10 w-50 xsm:w-65 md:w-90 xl:w-95 md:-left-14 float">
         <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={900} height={900} />
       </div>
 
       {/* Right Mockups */}
-      <div className="absolute -right-10 -bottom-10 w-50 xsm:w-65 md:w-80 xl:w-95 md:-right-14 float">
+      <div className="absolute -right-10 -bottom-10 w-50 xsm:w-65 md:w-90 xl:w-95 md:-right-20 float">
         <Image src={'/assets/headerImage2.png'} alt="Mockup 2" className="object-cover h-full w-full" width={900} height={900} />
       </div>
     </section>
@@ -182,3 +168,4 @@ const Home = () => {
 };
 
 export default Home;
+

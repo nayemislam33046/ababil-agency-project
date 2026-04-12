@@ -120,8 +120,8 @@ const PricingHeader = () => {
       <div className="flex flex-col items-center py-5 relative z-10">
         <Image src="/ababil.svg" alt="Ababil" width={140} height={40} priority />
 
-        <p className="p-1 px-2 text-sm mt-3 rounded-full flex items-center gap-2 border border-[#063D30] bg-[#FCD718] text-primary">
-          <Link href="/" className="text-[#685700]">Home</Link>
+        <p className="p-1 px-2 text-xs lm:text-sm mt-7 rounded-full flex items-center gap-2 text-primary">
+          <Link href="/" className="text-[#454A51]">Home</Link>
           <span>
             <svg width="7" height="12" viewBox="0 0 6 10" fill="none">
               <path

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, ArrowRight, Dribbble, Linkedin, Instagram, Facebook, Send } from 'lucide-react';
+import { Mail, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
