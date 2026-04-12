@@ -15,6 +15,16 @@ export default function ContactSection() {
     "More than $50K",
   ];
 
+  const textContent = (
+    <span className="text-sm md:text-lg text-gray-800 font-medium px-10">
+      The <span className="italic font-bold">Wrong Partner?</span>{" "}
+      Get 100% Value And Guarantee. Don’t Miss Out -{" "}
+      <span className="text-green-800 font-extrabold cursor-pointer underline decoration-2 underline-offset-4">
+        Secure Your Business
+      </span>
+    </span>
+  );
+
   return (
     <section className="w-full flex justify-center items-center flex-col md:py-10 px-3 lm:px-8 md:px-10 bg-gray-100">
       <div className=" w-full bg-primary rounded-2xl p-5 lm:p-6 py-10 mt-10 md:p-10 text-white relative">
@@ -111,11 +121,10 @@ export default function ContactSection() {
                   <button
                     key={item}
                     onClick={() => setSelectedBudget(item)}
-                    className={`text-sm lm:text-base p-2 lm:p-3 border rounded-md transition ${
-                      selectedBudget === item
-                        ? "bg-secondary text-primary border-secondary"
-                        : "border-[#A3A3A3] text-[#A3A3A3] hover:bg-secondary hover:text-black"
-                    }`}
+                    className={`text-sm lm:text-base p-2 lm:p-3 border rounded-md transition ${selectedBudget === item
+                      ? "bg-secondary text-primary border-secondary"
+                      : "border-[#A3A3A3] text-[#A3A3A3] hover:bg-secondary hover:text-black"
+                      }`}
                   >
                     {item}
                   </button>
@@ -141,39 +150,55 @@ export default function ContactSection() {
         </div>
       </div>
 
-        {/* message banner */}
-     <div className="w-full flex justify-center bg-gray-100 py-2 overflow-hidden">
-  <div className="w-full bg-linear-to-r from-lime-200 via-green-200 to-lime-300 rounded-full px-2 md:px-4 py-2 flex items-center shadow-sm overflow-hidden">
+      {/* message banner */}
+      <div className="w-full flex justify-center bg-white py-6 px-4">
+        <div className="relative w-full bg-linear-to-r from-[#D9F99D] via-[#BBF7D0] to-[#BEF264] rounded-full h-14 flex items-center shadow-lg overflow-hidden">
 
-    {/* LEFT: 30% */}
-    <div className="w-[20%] lg:w-[10%] flex -space-x-3 z-10">
-      {[1, 2, 3, 4].map((i) => (
-        <Image
-          key={i}
-          src={`/assets/CEO_Fahad.png`}
-          alt="avatar"
-          width={32}
-          height={32}
-          className="rounded-full border-2 border-white object-cover"
-        />
-      ))}
-    </div>
+          {/* image section */}
+          <div className="absolute left-0 z-30 flex items-center pl-2 pr-10 h-full bg-linear-to-r from-[#D9F99D] via-[#D9F99D] to-transparent rounded-l-full pointer-events-none">
+            <div className="flex -space-x-4">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md">
+                  <Image
+                    src="/assets/CEO_Fahad.png"
+                    alt="avatar"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
 
-    {/* RIGHT: 70% */}
-    <div className="w-[80%] lg:w-[90%] overflow-hidden">
-      <div className="whitespace-nowrap animate-marquee">
-        <span className="text-sm md:text-base text-gray-800 px-4">
-          The <span className="italic font-semibold">Wrong Partner?</span>{" "}
-          Get 100% Value And Guarantee. Don’t Miss Out -{" "}
-          <span className="text-green-700 font-semibold cursor-pointer">
-            Secure Your Business
-          </span>
-        </span>
+          {/* text section */}
+          <div className="flex-1 overflow-hidden h-full flex items-center mask-fade-effect">
+
+            <div className="animate-marquee-custom">
+
+              <div className="flex items-center">
+                <span className="text-sm md:text-lg text-gray-800 font-medium px-10 whitespace-nowrap">
+                  The <span className="italic font-bold">brand's future?</span> Get 100% Value And Guarantee. Don’t Miss Out - <span className="text-green-800 font-extrabold cursor-pointer underline decoration-2 underline-offset-4">Secure Your brand's future</span>
+                </span>
+              </div>
+
+              <div className="flex items-center">
+                <span className="text-sm md:text-lg text-gray-800 font-medium px-10 whitespace-nowrap">
+                  The <span className="italic font-bold">brand's future?</span> Get 100% Value And Guarantee. Don’t Miss Out - <span className="text-green-800 font-extrabold cursor-pointer underline decoration-2 underline-offset-4">Secure Your brand's future</span>
+                </span>
+              </div>
+
+              <div className="flex items-center">
+                <span className="text-sm md:text-lg text-gray-800 font-medium px-10 whitespace-nowrap">
+                  The <span className="italic font-bold">brand's future?</span> Get 100% Value And Guarantee. Don’t Miss Out - <span className="text-green-800 font-extrabold cursor-pointer underline decoration-2 underline-offset-4">Secure Your brand's future</span>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
-    </div>
 
-  </div>
-</div>
     </section>
   );
 }
+

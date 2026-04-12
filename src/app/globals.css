@@ -177,19 +177,29 @@ body {
 }
 
 /* contact headline animation  */
-@keyframes marquee {
+/* global.css */
+
+@keyframes marquee-infinite {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%); /* ৫০% কারণ আমরা কন্টেন্ট ডাবল করেছি */
   }
 }
 
-.animate-marquee {
-  display: inline-block;
-  animation: marquee 12s linear infinite;
+.animate-marquee-custom {
+  display: flex;
+  width: max-content;
+  animation: marquee-infinite 30s linear infinite;
 }
+
+/* টেক্সট যখন গ্রাডিয়েন্টের ভেতর দিয়ে যাবে তখন দুই পাশে ঝাপসা (Fade) দেখাবে */
+.mask-fade-effect {
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
 
 
 /* portfolio card read more functionality */
