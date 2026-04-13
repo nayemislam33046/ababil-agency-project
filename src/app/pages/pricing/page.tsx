@@ -5,11 +5,13 @@ import ComparisonSection from '@/components/sections/ComparisonSection'
 import ContactSection from '@/components/sections/ContuctSection'
 import Footer from '@/components/sections/Footer'
 import SuccessStoriesSlider from '@/components/sections/SuccessStoriesSlider'
+import BonusSection from './sections/BonusSection'
 
 const Pricing = () => {
   return (
     <>
         <PricingHeader/>
+        <BonusSection/>
         <SuccessStoriesSlider/>
         <ComparisonSection/>
         <ContactSection />

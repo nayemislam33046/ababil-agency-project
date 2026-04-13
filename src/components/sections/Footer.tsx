@@ -21,8 +21,8 @@ const Footer = () => {
   ];
 
   return (
-    // pt-16 pb-32 lm:pb-40 sm:pb-24
-    <footer className="bg-[linear-gradient(180deg,#060606_-3.32%,#07211B_24.25%,#063D30_58.34%)] text-white py-16 px-6 font-sans">
+    
+    <footer className="bg-[linear-gradient(180deg,#060606_-3.32%,#07211B_24.25%,#063D30_58.34%)] text-white pt-16 pb-32 lm:pb-40 sm:pb-24 px-6 font-sans">
       <div className="max-w-7xl mx-auto">
         
         {/* ১. কলামগুলোকে সেন্টারে আনার জন্য justify-items-center এবং text-center */}

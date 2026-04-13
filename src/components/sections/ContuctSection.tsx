@@ -151,7 +151,7 @@ export default function ContactSection() {
       </div>
 
       {/* message banner */}
-      <div className="w-full flex justify-center bg-white py-6 px-4">
+      <div className="w-full flex justify-center py-6">
         <div className="relative w-full bg-linear-to-r from-[#D9F99D] via-[#BBF7D0] to-[#BEF264] rounded-full h-14 flex items-center shadow-lg overflow-hidden">
 
           {/* image section */}

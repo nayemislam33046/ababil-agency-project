@@ -7,7 +7,7 @@ const Navbar = () => {
 
     <>
 
-     <div className="fixed -bottom-10 left-0 w-screen h-24 z-10 pointer-events-none">
+     {/* <div className="fixed -bottom-10 left-0 w-screen h-24 z-10 pointer-events-none">
         <Image
           src="/assets/MaskEffect.png"
           alt="nav-background"
@@ -15,7 +15,18 @@ const Navbar = () => {
           className="object-cover"
           priority
         />
-      </div>
+      </div> */}
+      <div className="fixed bottom-0 left-0 w-full h-24 z-10 pointer-events-none">
+  
+  <div className="
+    w-full h-full
+    backdrop-blur-[10px]
+    bg-white/20
+
+    [mask-image:linear-gradient(to_top,black_0%,black_60%,transparent_100%)]
+    [-webkit-mask-image:linear-gradient(to_top,black_0%,black_60%,transparent_100%)]
+  "></div>
+</div>
 
     <nav className="fixed bottom-0 sm:bottom-3 left-1/2 -translate-x-1/2 text-white flex items-center z-50 sm:min-w-140 justify-between sm:w-auto w-full       
       sm:bg-[#0A3D2E] sm:border-2 sm:py-2 sm:px-10 sm:rounded-xl sm:shadow-2xl gap-4 sm:gap-6 xl:gap-10

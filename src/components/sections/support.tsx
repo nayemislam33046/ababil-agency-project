@@ -37,8 +37,8 @@ const Support = () => {
         WHY CHOOSE US
       </span>
 
-      <h2 className="mt-4 text-2xl lm:text-3xl sm:text-4xl md:text-5xl font-black max-w-2xl">
-        WE DESIGN & BUILD FOR THE FUTURE TO DRIVE TODAY’S SUCCESS
+      <h2 className="mt-4 text-xl lm:text-3xl sm:text-4xl md:text-5xl font-black max-w-xl ">
+        WE DESIGN & BUILD FOR THE FUTURE <br /> TO DRIVE TODAY’S SUCCESS
       </h2>
 
       <div className="py-20 flex justify-center items-center">

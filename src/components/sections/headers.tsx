@@ -108,9 +108,7 @@ const Home = () => {
         {/* Logo & Rating */}
         <div className="flex flex-col items-center justify-center mb-8">
           <div className="flex items-center gap-2 mb-4">
-            <Image src="/ababil.svg" alt="Ababil" width={160}
-              height={50}
-              priority />
+            <Image src="/ababil.svg" alt="Ababil" width={140} height={40} priority />            
           </div>
 
           <div className="flex flex-col items-center mt-5 lm:mt-10">

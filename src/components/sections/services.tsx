@@ -48,7 +48,7 @@ export default function ServicesSection() {
       </span>
 
       {/* Main Headline */}
-      <h2 className="mt-4 text-2xl lm:text-4xl md:text-6xl font-black text-primary leading-tight max-w-2xl">
+      <h2 className="mt-4 text-2xl lm:text-4xl md:text-5xl font-black text-primary leading-tight max-w-2xl">
         WE DESIGN & BUILD BRANDS <br className='sm:hidden'/> THAT SPEAK TO AUDIENCES
       </h2>
 
@@ -58,7 +58,7 @@ export default function ServicesSection() {
 
             {/* Left Content */}
             <div className="top-10 xl:max-w-96">
-              <h3 className="text-xl sm:text-3xl lg:text-4xl lg:font-extrabold text-primary mb-4 sm:mb-6">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl lg:font-extrabold text-primary mb-4 sm:mb-6">
                 {service.title}
               </h3>
               <div className="w-full h-px bg-gray-300 mb-4 sm:mb-8" />
