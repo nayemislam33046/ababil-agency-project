@@ -26,7 +26,7 @@ const bonuses = [
 const BonusSection = () => {
   return (
     <section className="w-full flex justify-center px-4 py-10 bg-white">
-      <div className="w-full max-w-6xl bg-primary rounded-2xl p-6 md:p-10 relative overflow-hidden">
+      <div className="w-full bg-primary rounded-2xl p-6 md:p-10 mx-3 sm:mx-10 relative overflow-hidden">
 
         {/* Gradient Glow (top right effect) */}
         <div className="absolute top-0 right-0 w-40 h-40 bg-green-400 blur-3xl opacity-20 rounded-full"></div>
@@ -44,11 +44,11 @@ const BonusSection = () => {
             return (
               <div
                 key={i}
-                className="bg-secondary rounded-xl p-7 shadow-md hover:scale-105 h-48 transition duration-300"
+                className="bg-secondary rounded-xl p-6 shadow-md hover:scale-105 h-48 transition duration-300"
               >
                 <Image src={item.icon} width={24} height={24} alt={item.title} className="mb-3" />
 
-                <p className="font-bold text-lg text-primary mb-2">
+                <p className="font-bold text-lg lg:text-base text-primary mb-2">
                   {item.title}
                 </p>
 
