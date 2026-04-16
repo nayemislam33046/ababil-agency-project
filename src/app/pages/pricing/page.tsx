@@ -9,6 +9,7 @@ import BonusSection from './sections/BonusSection'
 import ServicesMarks from './sections/ServicesSection'
 import ComparisonTable from './sections/ComparisonTables/ComparisonTable'
 import WorksSection from './sections/WorksSection'
+import FAQSection from '@/components/sections/faqs'
 
 const Pricing = () => {
   return (
@@ -20,6 +21,7 @@ const Pricing = () => {
         <ComparisonSection/>
         <ComparisonTable/>
         <WorksSection/>
+        <FAQSection/>
         <ContactSection />
         <CallToAction />
         <AddressGrid/>
