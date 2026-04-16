@@ -7,7 +7,7 @@ import Footer from '@/components/sections/Footer'
 import SuccessStoriesSlider from '@/components/sections/SuccessStoriesSlider'
 import BonusSection from './sections/BonusSection'
 import ServicesMarks from './sections/ServicesSection'
-import ComparisonTable from './sections/ComparisonTable'
+import ComparisonTable from './sections/ComparisonTables/ComparisonTable'
 import WorksSection from './sections/WorksSection'
 
 const Pricing = () => {
