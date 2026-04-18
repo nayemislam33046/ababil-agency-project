@@ -24,8 +24,7 @@ const Pricing = () => {
         <FAQSection/>
         <ContactSection />
         <CallToAction />
-        <AddressGrid/>
-        <Footer/>
+        
     </>
   )
 }

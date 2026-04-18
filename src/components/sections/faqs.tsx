@@ -96,7 +96,7 @@ export default function FAQSection() {
           {/* Footer */}
           <div className="flex flex-col lm:flex-row justify-between items-center text-sm mt-4 text-white">
             <p className="pb-2 lm:pb-0">Can’t find what you’re looking for?</p>
-            <Link href="/contact" className="flex items-center font-bold gap-1 hover:underline">
+            <Link href="/pages/contact" className="flex items-center font-bold gap-1 hover:underline">
               Contact Us
               <Image src="/arrow_white_image.svg" alt="arrows" width={20} height={20} className="inline-block ml-2" />
             </Link>

@@ -27,10 +27,8 @@ const page = () => {
       <PricingSection />
       <ComparisonSection />
       <FAQSection />
-      <ContactSection />
+      <ContactSection isContact={false} />
       <CallToAction />
-      <AddressGrid />
-      <Footer />
     </div>
   )
 }
