@@ -2,6 +2,10 @@ import React from 'react'
 import ContactHeader from './sections/ContactHeader'
 import ContactSection from '@/components/sections/ContuctSection'
 import ContactContent from './sections/ContactContent'
+import SuccessStories from './sections/SuccessStories'
+import FAQSection from '@/components/sections/faqs'
+import CallToAction from '@/components/sections/calltoaction'
+import Headline from '@/components/sections/Headline'
 
 const Contact = () => {
   return (
@@ -15,6 +19,10 @@ const Contact = () => {
       <ContactContent />
     </div>
     
+      <SuccessStories/>
+      <FAQSection/>
+      <Headline/>
+      <CallToAction/>
     </div>
   )
 }
