@@ -47,7 +47,7 @@ export default function ComparisonTable() {
   };
 
   return (
-    <div className="">
+    <div>
       <Tables {...table1} />
       <Tables {...table2} />
       <Tables {...table3} />

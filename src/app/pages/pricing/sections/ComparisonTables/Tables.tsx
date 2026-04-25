@@ -18,7 +18,6 @@ const Tables = ({ subtitle, title, competitorName, features }:TablesProps) => {
     <section className="min-h-screen flex flex-col justify-center p-5 lm:p-7 sm:p-10 font-sans bg-primary relative overflow-hidden">
   
   {/* Background Gradient Layer */}
-  <div className="absolute inset-0 pointer-events-none" />
 
   <div className="relative z-10">
     
@@ -87,7 +86,7 @@ const Tables = ({ subtitle, title, competitorName, features }:TablesProps) => {
 
       {/* Ababil Highlight Card */}
       <div className="col-span-4 sm:col-span-3 relative">
-        <div className="absolute inset-y-[-25px] -right-4 -left-0 bg-gradient-to-b from-[#01523F] to-[#10A380] rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)] flex flex-col pt-12 pb-8">
+        <div className="absolute inset-y-[-25px] -right-4 left-0 bg-gradient-to-b from-[#01523F] to-[#10A380] rounded-[2.5rem] flex flex-col pt-12 pb-8">
           
           {/* Logo */}
           <div className="mb-14 flex justify-center px-3">

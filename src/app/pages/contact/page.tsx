@@ -6,10 +6,11 @@ import SuccessStories from './sections/SuccessStories'
 import FAQSection from '@/components/sections/faqs'
 import CallToAction from '@/components/sections/calltoaction'
 import Headline from '@/components/sections/Headline'
+import BrandSection from './sections/BrandSection'
 
 const Contact = () => {
   return (
-    <div className="bg-white w-full">
+    <div className="bg-white">
 
     <div className='relative'>
       <ContactHeader />
@@ -21,7 +22,7 @@ const Contact = () => {
     
       <SuccessStories/>
       <FAQSection/>
-      <Headline/>
+      <BrandSection/>      
       <CallToAction/>
     </div>
   )

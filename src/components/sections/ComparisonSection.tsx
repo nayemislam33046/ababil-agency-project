@@ -76,7 +76,7 @@ export default function ComparisonSection() {
             key={index}
             className={`flex flex-col md:flex-row md:items-center md:justify-between gap-6 px-6 py-6 rounded-2xl transition-all duration-300
             ${item.highlight
-                ? "bg-linear-to-r from-[#0b3d2e] via-[#1f7a63] to-[#2dd4bf] text-white shadow-lg"
+                ? "bg-primary text-white shadow-lg"
                 : "bg-white"
               }`}
           >
