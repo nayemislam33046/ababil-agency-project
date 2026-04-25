@@ -70,7 +70,6 @@ const SuccessStories = () => {
   
   const categories = ['UI UX Design', 'Branding', 'Web Dev', 'Mobile App Dev', 'SaaS Design & Dev'];
 
-  // Find the project that matches the current active tab
   const currentProject = projects.find(p => p.category === activeTab) || projects[0];
 
   return (
