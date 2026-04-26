@@ -1,6 +1,6 @@
-'use client';
+ 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -40,55 +40,112 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    const handleScroll = () => {
+      if (window.innerWidth < 768) return;
+
+      const triggerPoint = window.innerHeight / 2;
+      sectionRefs.current.forEach((ref, index) => {
+        if (ref) {
+          const rect = ref.getBoundingClientRect();
+          if (rect.top <= triggerPoint && rect.bottom >= triggerPoint) {
+            setActiveIndex(index);
+          }
+        }
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
+    
+    handleResize(); // Initial check
+    handleScroll(); 
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <section className="mx-auto px-6 lg:px-16 py-16 font-sans bg-white">
-      {/* Subheader */}
       <span className="text-xs font-bold tracking-widest text-primary uppercase">
         What We Do
       </span>
 
-      {/* Main Headline */}
-      <h2 className="mt-4 text-2xl lm:text-4xl md:text-5xl font-black text-primary leading-tight max-w-2xl">
+      <h2 className="mt-4 text-2xl md:text-5xl font-black text-primary leading-tight max-w-2xl mb-16">
         WE DESIGN & BUILD BRANDS <br className='sm:hidden'/> THAT SPEAK TO AUDIENCES
       </h2>
 
-      <div className="mt-20 flex flex-col gap-20 sm:gap-32">
-        {services.map((service, index) => (
-          <div key={index} className="flex gap-3 sm:gap-10 items-start justify-between flex-col sm:flex-row">
+      <div className="flex flex-col md:flex-row gap-10 items-start relative">
+        
+        {/* Left Content: Sticky on Desktop, Hidden/Integrated on Mobile */}
+        <div className="hidden md:block md:w-1/2 md:sticky md:top-10 h-fit">
+          <div className="xl:max-w-96">
+            <h3 className="text-2xl lg:text-3xl lg:font-extrabold text-primary mb-6 uppercase transition-all duration-500 ease-in-out">
+              {services[activeIndex]?.title}
+            </h3>
+            <div className="w-full h-px bg-gray-300 mb-8" />
+            <p className="text-gray-600 leading-relaxed mb-6 font-body text-base">
+              {services[activeIndex]?.description}
+            </p>
+            <button className="flex items-center gap-2 font-bold text-sm hover:underline transition-all">
+              See More <ArrowUpRight size={18} />
+            </button>
+          </div>
+        </div>
 
-            {/* Left Content */}
-            <div className="top-10 xl:max-w-96">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl lg:font-extrabold text-primary mb-4 sm:mb-6">
-                {service.title}
-              </h3>
-              <div className="w-full h-px bg-gray-300 mb-4 sm:mb-8" />
-              <p className="text-gray leading-relaxed mb-6 font-body text-sm sm:text-base">
-                {service.description}
-              </p>
-              <button className="flex items-center gap-2 font-bold text-sm hover:underline transition-all">
-                See More <ArrowUpRight size={18} />
-              </button>
-            </div>
+        {/* Right Area: Scrolling Images on Desktop, Full Content on Mobile */}
+        <div className="w-full md:w-1/2">
+          {services.map((service, index) => (
+            <div 
+              key={index} 
+              ref={(el) => { sectionRefs.current[index] = el; }}
+              className="mb-20 md:mb-40 min-h-fit md:min-h-[70vh] last:mb-20 md:last:mb-[50vh]"
+            >
+              {/* Mobile Only: Content will appear above images */}
+              <div className="md:hidden mb-8">
+                <h3 className="text-xl font-bold text-primary mb-2 uppercase">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  {service.description}
+                </p>
+                <div className="w-full h-[1px] bg-gray-200" />
+              </div>
 
-            {/* Right Images */}
-            <div className="flex justify-center items-center gap-5 lp:gap-10 relative">
+              {/* Images Container */}
+              <div className="flex justify-center items-center gap-5 lp:gap-10">
+                <div className={`${service.images[0].color} rounded-2xl w-1/2 h-64 md:w-52 md:h-80 lg:w-64 lg:h-96 flex items-center justify-center overflow-hidden relative shadow-lg`}>
+                  <Image 
+                    src={service.images[0].src} 
+                    alt="Service Image 1" 
+                    fill 
+                    className="object-cover p-2" 
+                  />
+                </div>
 
-              <div className={`${service.images[0].color} rounded-2xl sm:w-40 sm:h-64 md:w-52 md:h-80 lg:w-64 lg:h-96 flex items-center justify-center overflow-hidden relative`}>
-                <div className="relative w-full h-full object-fit">
-                  {/* Replace with your actual Image component */}
-                  <Image src={service.images[0].src} alt="Laptop Mockup" width={300} height={600} className="w-full h-full object-fit" />
+                <div className={`${service.images[1].color} rounded-2xl w-1/2 h-64 md:w-52 md:h-80 lg:w-64 lg:h-96 mt-10 md:mt-20 overflow-hidden relative shadow-lg`}>
+                  <Image 
+                    src={service.images[1].src} 
+                    alt="Service Image 2" 
+                    fill 
+                    className="object-cover p-2" 
+                  />
                 </div>
               </div>
-
-              <div className={`${service.images[1].color} rounded-2xl sm:w-40 sm:h-64 md:w-52 md:h-80 lg:w-64 lg:h-96 mt-20 overflow-hidden relative`}>
-                <Image src={service.images[1].src} alt="Mobile Mockup" width={300} height={600} className="w-full h-full object-fit" />
-              </div>
             </div>
-
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
