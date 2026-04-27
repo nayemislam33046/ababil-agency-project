@@ -147,7 +147,7 @@ export default function ServiceCard() {
       </div>
 
       {/* BUTTON */}
-      <button className="flex justify-center items-center bg-[#FFD700] hover:bg-yellow-400 text-primary border border-primary font-bold py-2 px-8 rounded-full gap-2 mx-auto mt-20 transition-all shadow-lg">
+      <button aria-label="Explore All" className="flex justify-center items-center bg-[#FFD700] hover:bg-yellow-400 text-primary border border-primary font-bold py-2 px-8 rounded-full gap-2 mx-auto mt-20 transition-all shadow-lg">
         Explore All
         <ArrowRight />
       </button>

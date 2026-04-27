@@ -17,6 +17,7 @@ const DescriptionText = ({ desc }: DescriptionTextProps) => {
                 {desc}
             </p>
             <button
+                aria-label={isExpanded ? "Show Less" : "Read More"}
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="text-xs text-white underline cursor-pointer lm:hidden"
             >

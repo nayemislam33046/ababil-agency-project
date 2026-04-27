@@ -1,18 +1,16 @@
-import About from '@/components/sections/about'
-import AddressGrid from '@/components/sections/AddressGrid'
-import CallToAction from '@/components/sections/calltoaction'
-import ComparisonSection from '@/components/sections/ComparisonSection'
-import ContactSection from '@/components/sections/ContuctSection'
-import FAQSection from '@/components/sections/faqs'
-import Footer from '@/components/sections/Footer'
-import Headers from '@/components/sections/headers'
-import LogoMarquee from '@/components/sections/logoMarquee'
+import About from '@/components/sections/About/about'
+import BlogSection from '@/components/sections/BlogSection/BlogSection'
+import CallToAction from '@/components/sections/CallToAction/calltoaction'
+import ComparisonSection from '@/components/sections/ComparisonSection/ComparisonSection'
+import ContactSection from '@/components/sections/ContactSection/ContuctSection'
+import FAQSection from '@/components/sections/FAQSection/faqs'
+import Headers from '@/components/sections/Headers/headers'
+import LogoMarquee from '@/components/sections/Logos/logoMarquee'
 import ServiceCard from '@/components/sections/portfolio/portfolio'
-import PricingSection from '@/components/sections/pricing'
-import ServicesSection from '@/components/sections/services'
-import SuccessStoriesSlider from '@/components/sections/SuccessStoriesSlider'
-import Support from '@/components/sections/support'
-import Testimonials from '@/components/sections/testimonials'
+import PricingContent from '@/components/sections/PricingSection/pricingContent'
+import SuccessStoriesSlider from '@/components/sections/SuccessStoriesSlider/SuccessStoriesSlider'
+import Support from '@/components/sections/Support/support'
+import Testimonials from '@/components/sections/Testimonials/testimonials'
 const page = () => {
   return (
     <div className='max-w-400 mx-auto'>
@@ -21,10 +19,10 @@ const page = () => {
       <About />
       <ServiceCard />
       <SuccessStoriesSlider />
-      <ServicesSection />
+      <BlogSection />
       <Support />
       <Testimonials />
-      <PricingSection />
+      <PricingContent/>
       <ComparisonSection />
       <FAQSection />
       <ContactSection isContact={false} />
@@ -32,5 +30,4 @@ const page = () => {
     </div>
   )
 }
-
 export default page

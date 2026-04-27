@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function LogoMarquee() {
+const LogoMarquee = () => {
   const logosTop = [
     "/logo_1.svg",
     "/logo_2.png",
@@ -72,8 +70,8 @@ export default function LogoMarquee() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
 }
+export default LogoMarquee;

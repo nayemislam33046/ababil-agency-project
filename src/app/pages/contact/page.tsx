@@ -1,11 +1,11 @@
 import React from 'react'
 import ContactHeader from './sections/ContactHeader'
-import ContactSection from '@/components/sections/ContuctSection'
+import ContactSection from '@/components/sections/ContactSection/ContuctSection'
 import ContactContent from './sections/ContactContent'
 import SuccessStories from './sections/SuccessStories'
-import FAQSection from '@/components/sections/faqs'
-import CallToAction from '@/components/sections/calltoaction'
-import Headline from '@/components/sections/Headline'
+import FAQSection from '@/components/sections/FAQSection/faqs'
+import CallToAction from '@/components/sections/CallToAction/calltoaction'
+import Headline from '@/components/sections/Headlines/Headline'
 import BrandSection from './sections/BrandSection'
 
 const Contact = () => {

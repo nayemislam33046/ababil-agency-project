@@ -32,7 +32,6 @@ const bottomCards = [
 const Support = () => {
   return (
     <section className="p-6 md:p-16 bg-[#0B3D2E] text-white">
-
       <span className="text-xs font-bold tracking-widest">
         WHY CHOOSE US
       </span>
@@ -46,7 +45,6 @@ const Support = () => {
         {/* MAIN WRAPPER */}
         <div className="relative w-full max-w-6xl md:h-200 flex flex-col justify-center items-center gap-6 md:gap-0">
 
-          {/* 🔼 Top Cards */}
           <div className="md:absolute md:top-23 lp:top-22 lg:top-9 xl:top-12 w-full flex flex-col md:flex-row gap-6">
             {topCards.map((card, i) => (
               <div key={i} className="flex-1 bg-white/10 backdrop-blur-md p-6 rounded-xl md:h-56 lp:h-auto lg:h-60 xl:h-auto">
@@ -57,7 +55,6 @@ const Support = () => {
             ))}
           </div>
 
-          {/* 🔽 Bottom Cards */}
           <div className="md:absolute md:-bottom-1 lp:bottom-10 lg:bottom-5 xl:bottom-5 w-full flex flex-col md:flex-row gap-6">
             {bottomCards.map((card, i) => (
               <div key={i} className="flex-1 bg-white/10 backdrop-blur-md p-7 rounded-xl md:h-80 lp:h-auto lg:h-64">
@@ -67,7 +64,6 @@ const Support = () => {
               </div>
             ))}
           </div>
-
           {/* Center Image */}
           <Image
             src="/assets/chooseUsDesign.png"
@@ -76,11 +72,9 @@ const Support = () => {
             alt="Choose Us"
             className="w-62.2 md:w-120 lp:w-150 lg:w-175 h-auto hidden md:block"
           />
-
         </div>
       </div>
     </section>
   )
 }
-
 export default Support

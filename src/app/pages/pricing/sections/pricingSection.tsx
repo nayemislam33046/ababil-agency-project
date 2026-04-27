@@ -107,6 +107,7 @@ const PricingSection = () => {
         <div className="inline-flex flex-wrap justify-center items-center gap-2 bg-primary p-2 rounded-lg">
           {(Object.keys(pricingData) as Category[]).map((item) => (
             <button
+              aria-label={item}
               key={item}
               onClick={() => {
                 setCategory(item);
@@ -127,6 +128,7 @@ const PricingSection = () => {
       <div className="mt-6 flex flex-wrap justify-center gap-2">
         {pageOptions.map((p) => (
           <button
+            aria-label={p}
             key={p}
             onClick={() => setPageType(p)}
             className={`px-4 py-2 rounded-md text-sm ${pageType === p
@@ -146,6 +148,7 @@ const PricingSection = () => {
         </span>
 
         <button
+          aria-label={yearly ? "Switch to Monthly" : "Switch to Yearly"}
           onClick={() => setYearly(!yearly)}
           className={`w-14 h-7 flex items-center rounded-full p-1 transition ${yearly ? "bg-secondary" : "bg-gray-400"
             }`}
@@ -193,6 +196,7 @@ const PricingSection = () => {
                 </ul>
 
                 <button
+                  aria-label={`Select the ${plan.name} plan`}
                   className={`w-full py-2 rounded-full font-semibold ${plan.highlight
                       ? "bg-secondary text-primary"
                       : "border border-primary text-primary"

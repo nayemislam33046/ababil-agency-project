@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useRef, useState, useCallback } from "react";
-
 const stories = [
   {
     id: 1,
@@ -40,10 +39,9 @@ const stories = [
       "Big shoutout to the Design Monks team. They brought our vision to life both…",
     imgUrl: "/client_4.png",
   }
-
 ];
 
-const SuccessStoriesSlider = () => {
+const SuccessSlider = () => {
   const trackRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   const startX = useRef(0);
@@ -86,22 +84,7 @@ const SuccessStoriesSlider = () => {
   }, []);
 
   return (
-    <section className="min-h-screen py-12 px-6 md:px-20 overflow-hidden font-sans">
-      {/* Header */}
-      <div className="mb-12">
-        <p className="font-inter font-bold text-white mb-5 text-sm lp:text-base">
-          Client Stories
-        </p>
-        <h2
-          className="text-[24px] sm:text-[32px] lp:text-[40px] lg:text-5xl xl:text-6xl font-heading font-bold text-white uppercase"
-        >
-          Success Stories That
-          <br />
-          Inspire Us
-        </h2>
-      </div>
-
-      {/* Slider track */}
+    <>
       <div
         ref={trackRef}
         className="flex gap-10 overflow-x-scroll py-6 select-none -mx-6 md:-mx-20 px-6 md:px-20"
@@ -135,6 +118,7 @@ const SuccessStoriesSlider = () => {
 
               {/* Play button */}
               <button
+                aria-label="Play Video"
                 className="absolute inset-0 flex items-center justify-center group"
                 style={{ pointerEvents: dragged ? "none" : "auto" }}
               >
@@ -167,18 +151,10 @@ const SuccessStoriesSlider = () => {
             </div>
           </div>
         ))}
-
         {/* Trailing spacer */}
         <div className="shrink-0 w-4" />
       </div>
-
-      {/* Hide scrollbar globally for webkit */}
-      <style>{`
-        div::-webkit-scrollbar { display: none; }
-      `}</style>
-    </section>
+    </>
   );
 }
-
-
-export default SuccessStoriesSlider;
+export default SuccessSlider;

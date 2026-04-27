@@ -24,7 +24,6 @@ const Footer = () => {
     <footer className="bg-[linear-gradient(180deg,#060606_-3.32%,#07211B_24.25%,#063D30_58.34%)] text-white pt-16 pb-32 lm:pb-40 sm:pb-24 px-6 font-sans">
       <div className="max-w-7xl mx-auto">
         
-        {/* ১. কলামগুলোকে সেন্টারে আনার জন্য justify-items-center এবং text-center */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 justify-items-center text-center">
           <FooterColumn title="Important Links" links={footerData.importantLinks} />
           <FooterColumn title="Services" links={footerData.services} />
@@ -32,7 +31,6 @@ const Footer = () => {
           <FooterColumn title="Compare" links={footerData.compare} />
         </div>
 
-        {/* ২. পার্টনার সেকশন - justify-center দিয়ে আইটেমগুলো সেন্টারে রাখা হয়েছে */}
         <div className="border-t border-white/10 py-12">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 justify-center items-center text-center">
             {partners.map((partner, i) => (
@@ -49,7 +47,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* ৩. কপিরাইট সেকশন */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[13px] text-white">
           <Link href="#" className="hover:text-white transition-colors order-1 md:order-0">Terms & Conditions</Link>
           <p className="order-3 md:order-0">© {new Date().getFullYear()} Ababil, All Rights Reserved.</p>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const locations = [
   { country: 'United States', address: '16 Cove Road', city: 'Mount Arlington, NJ 07856' },
   { country: 'Australia', address: '155 Bennett Rd, St Clair NSW', city: '2759' },
@@ -10,16 +8,15 @@ const locations = [
   { country: 'Cyprus', address: 'Esfios 5, Strovolos', city: '2001' },
   { country: 'Bangladesh', address: 'Ventura Iconia, Plot 37 Road', city: 'No. 11, Banani, Dhaka 1213' },
 ];
-
-export default function AddressGrid() {
+const AddressGrid = () => {
   return (
-    <section className="py-20 px-6 min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/assets/world-bg.png')"  }}>
+    <section className="py-20 px-6 min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/assets/world-bg.png')" }}>
       <div className="max-w-6xl w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {locations.map((loc, index) => (
-            <div 
+            <div
               key={index}
-              className="group relative p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/10 flex flex-col items-center text-center justify-center min-h-[140px]"
+              className="group relative p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/10 flex flex-col items-center text-center justify-center min-h-35"
             >
               <p className="text-white font-bold text-lg md:text-xl mb-2">
                 {loc.country}
@@ -37,3 +34,4 @@ export default function AddressGrid() {
     </section>
   );
 }
+export default AddressGrid;

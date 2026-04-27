@@ -1,12 +1,11 @@
 "use client";
-
 import { useState } from "react";
 
 const plans = [
   {
     name: "Starter",
     monthly: 999,
-    yearly: 999 * 12 * 0.8, // 20% discount
+    yearly: 999 * 12 * 0.8,
     desc: "Perfect for small teams exploring creative and general support.",
     features: [
       "Access to basic design templates",
@@ -43,24 +42,19 @@ const plans = [
   },
 ];
 
-export default function PricingSection() {
+const Pricing = () => {
   const [yearly, setYearly] = useState(false);
 
   return (
-    <section className=" py-20 px-6 text-white">
-      <div className="max-w-6xl mx-auto text-center">
-        <p className="font-inter uppercase text-secondary text-sm mb-2">Pricing</p>
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-          Affordable Plans <br /> For Everyone.
-        </h2>
-
-        {/* Toggle */}
+    <>
+     {/* Toggle */}
         <div className="flex items-center justify-center gap-3 mb-12">
           <span className={!yearly ? "font-semibold" : "opacity-60"}>
             Monthly
           </span>
 
           <button
+            aria-label={yearly ? "Switch to Monthly" : "Switch to Yearly"}
             onClick={() => setYearly(!yearly)}
             className={`w-14 h-7 flex items-center rounded-full p-1 transition ${yearly ? "bg-yellow-400" : "bg-gray-400"
               }`}
@@ -77,28 +71,24 @@ export default function PricingSection() {
         </div>
 
         {/* Cards */}
-        {/* grid md:grid-cols-2 lp:grid-cols-3 */}
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-6 justify-center items-stretch">
           {plans.map((plan, i) => {
             const price = yearly ? plan.yearly : plan.monthly;
-
             return (
               <div
                 key={i}
                 className={`rounded-xl p-6 text-left flex flex-col min-h-95 w-full sm:w-64 ${plan.highlight
-                    ? "bg-white text-primary lp:scale-105"
-                    : "bg-gray-100 text-primary"
+                  ? "bg-white text-primary lp:scale-105"
+                  : "bg-gray-100 text-primary"
                   }`}
               >
                 <div>
                   <p className="text-lg text-primary font-semibold mb-2">{plan.name}</p>
                   <p className="text-sm lp:text-[13px] text-primary mb-4">{plan.desc}</p>
-
                   <div className="text-4xl text-primary font-bold mb-2 flex items-baseline gap-2">
                     ${Math.round(price)}
                     <p className="text-sm mb-4">/{yearly ? "year" : "month"}</p>
                   </div>
-
                   <hr className="my-4" />
                 </div>
 
@@ -111,9 +101,10 @@ export default function PricingSection() {
                   </ul>
 
                   <button
+                    aria-label={`Select the ${plan.name} plan`}
                     className={`w-full py-2 rounded-full font-semibold ${plan.highlight
-                        ? "bg-secondary text-primary"
-                        : "border border-primary"
+                      ? "bg-secondary text-primary"
+                      : "border border-primary"
                       }`}
                   >
                     Let's Collab!
@@ -123,7 +114,7 @@ export default function PricingSection() {
             );
           })}
         </div>
-      </div>
-    </section>
+    </>
   );
 }
+export default Pricing;

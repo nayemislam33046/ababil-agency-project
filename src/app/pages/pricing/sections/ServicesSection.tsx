@@ -1,7 +1,4 @@
-import React from 'react';
-
 const ServicesMarks = () => {
-  // Organized data structure for easy maintenance
   const serviceCategories = [
     {
       title: "Core Design",

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Mail, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -9,7 +8,7 @@ const CallToAction = () => {
       {/* Headline Container */}
       <div className="max-w-3xl mb-10">
         <p className="text-gray text-lg md:text-xl leading-relaxed font-body">
-          Say goodbye to outdated enterprise software and welcome the smoother one. 
+          Say goodbye to outdated enterprise software and welcome the smoother one.
           We lead you from design to product innovation to shape your path from idea to success
         </p>
       </div>
@@ -48,8 +47,8 @@ const CallToAction = () => {
             className="block w-full pl-11 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all"
           />
         </div>
-        
-        <button className="w-full md:w-auto whitespace-nowrap bg-secondary hover:bg-yellow-400 text-primary border border-primary font-bold py-3 px-8 rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-sm">
+
+        <button aria-label='Book a Call' className="w-full md:w-auto whitespace-nowrap bg-secondary hover:bg-yellow-400 text-primary border border-primary font-bold py-3 px-8 rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-sm">
           Book a Call
           <ArrowRight size={20} />
         </button>

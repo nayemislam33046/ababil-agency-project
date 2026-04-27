@@ -1,14 +1,13 @@
 
-import Headline from "@/components/sections/Headline";
+import Headline from "@/components/sections/Headlines/Headline";
 import Image from "next/image";
 
 const BrandSection = () => {
   return (
     <>
-      <section className="m-10 mt-20 md:mt-30">
-       
+      <section className="m-10 mt-20 md:mt-30">       
         <div 
-          className="relative rounded-2xl bg-primary md:min-h-[350px] lg:min-h-[400px] xl:min-h-[500px] px-6 lm:px-12 py-4 lm:py-8 flex flex-col md:flex-row items-center justify-between"
+          className="relative rounded-2xl bg-primary md:min-h-87.5 lg:min-h-100 xl:min-h-125 px-6 lm:px-12 py-4 lm:py-8 flex flex-col md:flex-row items-center justify-between"
           style={{ clipPath: 'inset(-500px 0px 0px 0px)' }} 
         >
           
@@ -63,7 +62,7 @@ const BrandSection = () => {
                     </div>
                   ))}
                 </div>
-                <button className="bg-secondary hover:bg-yellow-500 text-primary font-semibold px-4 py-2 text-sm xl:px-6 xl:py-3 rounded-full transition flex justify-center items-center gap-3">
+                <button aria-label="Let's Talk" className="bg-secondary hover:bg-yellow-500 text-primary font-semibold px-4 py-2 text-sm xl:px-6 xl:py-3 rounded-full transition flex justify-center items-center gap-3">
                   Let’s Talk <span><img src="/right-arrow.svg" alt="Arrow" /></span>
                 </button>
               </div>

@@ -1,10 +1,8 @@
  'use client';
-
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
-
-const services = [
+const blogs = [
   {
     title: "UI/UX DESIGN",
     description: "UI/UX Design, App Design, Website Design, Dashboard Design, Wireframing & Prototyping, Interaction Design, and Product Design.",
@@ -39,7 +37,7 @@ const services = [
   },
 ];
 
-export default function ServicesSection() {
+const Blogs = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -51,7 +49,6 @@ export default function ServicesSection() {
 
     const handleScroll = () => {
       if (window.innerWidth < 768) return;
-
       const triggerPoint = window.innerHeight / 2;
       sectionRefs.current.forEach((ref, index) => {
         if (ref) {
@@ -62,13 +59,10 @@ export default function ServicesSection() {
         }
       });
     };
-
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
-    
-    handleResize(); // Initial check
+    handleResize();
     handleScroll(); 
-
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
@@ -76,28 +70,18 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <section className="mx-auto px-6 lg:px-16 py-16 font-sans bg-white">
-      <span className="text-xs font-bold tracking-widest text-primary uppercase">
-        What We Do
-      </span>
-
-      <h2 className="mt-4 text-2xl md:text-5xl font-black text-primary leading-tight max-w-2xl mb-16">
-        WE DESIGN & BUILD BRANDS <br className='sm:hidden'/> THAT SPEAK TO AUDIENCES
-      </h2>
-
-      <div className="flex flex-col md:flex-row gap-10 items-start relative">
-        
-        {/* Left Content: Sticky on Desktop, Hidden/Integrated on Mobile */}
+    <>
+       <div className="flex flex-col md:flex-row gap-10 items-start relative">
         <div className="hidden md:block md:w-1/2 md:sticky md:top-10 h-fit">
           <div className="xl:max-w-96">
             <h3 className="text-2xl lg:text-3xl lg:font-extrabold text-primary mb-6 uppercase transition-all duration-500 ease-in-out">
-              {services[activeIndex]?.title}
+              {blogs[activeIndex]?.title}
             </h3>
             <div className="w-full h-px bg-gray-300 mb-8" />
             <p className="text-gray-600 leading-relaxed mb-6 font-body text-base">
-              {services[activeIndex]?.description}
+              {blogs[activeIndex]?.description}
             </p>
-            <button className="flex items-center gap-2 font-bold text-sm hover:underline transition-all">
+            <button aria-label="See More" className="flex items-center gap-2 font-bold text-sm hover:underline transition-all">
               See More <ArrowUpRight size={18} />
             </button>
           </div>
@@ -105,7 +89,7 @@ export default function ServicesSection() {
 
         {/* Right Area: Scrolling Images on Desktop, Full Content on Mobile */}
         <div className="w-full md:w-1/2">
-          {services.map((service, index) => (
+          {blogs.map((blog, index) => (
             <div 
               key={index} 
               ref={(el) => { sectionRefs.current[index] = el; }}
@@ -114,29 +98,28 @@ export default function ServicesSection() {
               {/* Mobile Only: Content will appear above images */}
               <div className="md:hidden mb-8">
                 <h3 className="text-xl font-bold text-primary mb-2 uppercase">
-                  {service.title}
+                  {blog.title}
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  {service.description}
+                  {blog.description}
                 </p>
-                <div className="w-full h-[1px] bg-gray-200" />
+                <div className="w-full h-px bg-gray-200" />
               </div>
 
               {/* Images Container */}
               <div className="flex justify-center items-center gap-5 lp:gap-10">
-                <div className={`${service.images[0].color} rounded-2xl w-1/2 h-64 md:w-52 md:h-80 lg:w-64 lg:h-96 flex items-center justify-center overflow-hidden relative shadow-lg`}>
+                <div className={`${blog.images[0].color} rounded-2xl w-1/2 h-64 md:w-52 md:h-80 lg:w-64 lg:h-96 flex items-center justify-center overflow-hidden relative shadow-lg`}>
                   <Image 
-                    src={service.images[0].src} 
-                    alt="Service Image 1" 
+                    src={blog.images[0].src} 
+                    alt="Blog Image 1" 
                     fill 
                     className="object-cover p-2" 
                   />
                 </div>
-
-                <div className={`${service.images[1].color} rounded-2xl w-1/2 h-64 md:w-52 md:h-80 lg:w-64 lg:h-96 mt-10 md:mt-20 overflow-hidden relative shadow-lg`}>
+                <div className={`${blog.images[1].color} rounded-2xl w-1/2 h-64 md:w-52 md:h-80 lg:w-64 lg:h-96 mt-10 md:mt-20 overflow-hidden relative shadow-lg`}>
                   <Image 
-                    src={service.images[1].src} 
-                    alt="Service Image 2" 
+                    src={blog.images[1].src} 
+                    alt="Blog Image 2" 
                     fill 
                     className="object-cover p-2" 
                   />
@@ -146,6 +129,8 @@ export default function ServicesSection() {
           ))}
         </div>
       </div>
-    </section>
+    </>
   );
 }
+
+export default Blogs;

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Check, X } from "lucide-react";
 
@@ -45,7 +43,7 @@ const headers = [
   "Affordability",
 ];
 
-export default function ComparisonSection() {
+const ComparisonSection = () => {
   return (
     <div className="bg-white px-6 md:px-8 lp:px-14 py-12 mx-auto">
 
@@ -93,7 +91,6 @@ export default function ComparisonSection() {
                   height={28}
                 />
               </div>
-
               <div>
                 <p className="font-semibold text-lg">{item.name}</p>
                 <p
@@ -121,8 +118,8 @@ export default function ComparisonSection() {
                   {val ? (
                     <Check
                       className={`${item.highlight
-                          ? "text-white"
-                          : "text-green-600"
+                        ? "text-white"
+                        : "text-green-600"
                         }`}
                     />
                   ) : (
@@ -141,3 +138,5 @@ export default function ComparisonSection() {
     </div>
   );
 }
+
+export default ComparisonSection;

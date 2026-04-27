@@ -1,4 +1,4 @@
-import LogoMarquee from '@/components/sections/logoMarquee'
+import LogoMarquee from '@/components/sections/Logos/logoMarquee'
 import React from 'react'
 
 const ContactContent = () => {

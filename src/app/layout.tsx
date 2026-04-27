@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Anton, Outfit, Inter, Damion, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
-import Footer from "@/components/sections/Footer";
-import AddressGrid from "@/components/sections/AddressGrid";
+import Footer from "@/components/sections/Footer/Footer";
+import AddressGrid from "@/components/sections/AddressGrid/AddressGrid";
 
 const anton = Anton({
   variable: "--font-anton",

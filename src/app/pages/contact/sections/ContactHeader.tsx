@@ -1,4 +1,4 @@
-import ContactSection from '@/components/sections/ContuctSection';
+import ContactSection from '@/components/sections/ContactSection/ContuctSection';
 import Image from 'next/image';
 import Link from 'next/link';
 

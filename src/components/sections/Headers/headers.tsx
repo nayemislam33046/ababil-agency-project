@@ -1,14 +1,12 @@
 import Image from 'next/image';
 
 const Home = () => {
-
-    const random = (min: number, max: number) =>
+  const random = (min: number, max: number) =>
     Math.random() * (max - min) + min;
-
   const getSize = (i: number) => {
     if (i % 3 === 0) return 4;
     if (i % 3 === 1) return 6;
-    return 8;                 
+    return 8;
   };
 
   const colors = [
@@ -22,7 +20,6 @@ const Home = () => {
 
   return (
     <section className="relative h-screen bg-white overflow-hidden pt-5">
-
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/image_design.png"
@@ -32,8 +29,8 @@ const Home = () => {
           priority
         />
       </div>
+
       {/* Decorative Dots */}
-     
       <div
         className="particle w-2 h-2 bg-red-900 rounded-full"
         style={{
@@ -108,14 +105,13 @@ const Home = () => {
         {/* Logo & Rating */}
         <div className="flex flex-col items-center justify-center mb-8">
           <div className="flex items-center gap-2 mb-4">
-            <Image src="/ababil.svg" alt="Ababil" width={140} height={40} priority />            
+            <Image src="/ababil.svg" alt="Ababil" width={140} height={40} priority />
           </div>
 
           <div className="flex flex-col items-center mt-5 lm:mt-10">
             <div className="flex -space-x-2 mb-1">
               {/* Placeholder for Clutch/Google icons */}
               <Image src={'/assets/clutch-google.png'} alt="Clutch-Google" width={50} height={50} />
-
             </div>
             <p className="text-sm font-body text-primary font-medium">4.9 <span className='text-[#FFCB33] text-lg font-bold'>★★★★★</span></p>
             <p className="text-primary text-[14px] lm:text-[18px] font-body font-bold mt-1">Design & Build Agency</p>
@@ -129,7 +125,6 @@ const Home = () => {
               We Build High Performance <br className="hidden lm:block" />
               Web & Mobile Apps
             </span>
-
           </h1>
         </div>
 
@@ -138,7 +133,7 @@ const Home = () => {
           From idea to launch — ABABIL helps brands build <br /> powerful digital products that drive growth.
         </p>
 
-        <button className="blob-btn relative z-10 flex items-center gap-2 mx-auto">
+        <button aria-label="Book Strategy Call" className="blob-btn relative z-10 flex items-center gap-2 mx-auto">
           <Image
             src="/assets/stash_data-date-light.svg"
             alt="icon"
@@ -148,11 +143,11 @@ const Home = () => {
           />
           <span>Book Strategy Call</span>
         </button>
-
       </div>
 
-      {/* Floating Mockups Container (Conceptual) */}
+      {/* Floating Mockups Container */}
 
+      {/* Left Mockups */}
       <div className="absolute -left-10 -bottom-10 w-50 xsm:w-65 md:w-90 xl:w-95 md:-left-14 float">
         <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={900} height={900} />
       </div>
@@ -166,4 +161,3 @@ const Home = () => {
 };
 
 export default Home;
-

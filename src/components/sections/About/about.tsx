@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 
-// Content এর জন্য ইন্টারফেস
 interface AboutItem {
   title: string;
   description: string;
@@ -12,12 +11,9 @@ interface AboutItem {
 }
 
 const About: React.FC = () => {
-  // TypeScript Ref Types
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
-  
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isFullWidth, setIsFullWidth] = useState<boolean>(false);
   const [volume, setVolume] = useState<number>(0.5);
@@ -25,18 +21,16 @@ const About: React.FC = () => {
   const [progress, setProgress] = useState<number>(0);
   const [isLargeScreen, setIsLargeScreen] = useState<boolean>(false);
 
-  // স্ক্রিন সাইজ চেক করার জন্য (SSR safe window check)
   useEffect(() => {
     const checkScreenSize = () => {
       setIsLargeScreen(window.innerWidth > 1024);
     };
-    
+
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  // অটো-প্লে লজিক
   useEffect(() => {
     if (isInView) {
       const timer = setTimeout(() => {
@@ -98,36 +92,35 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section ref={containerRef} className="bg-[#f3f3f3] rounded-2xl px-6 lg:px-16 m-5 py-14 overflow-hidden">
+    <section ref={containerRef} className="bg-white rounded-2xl px-6 lg:px-16 m-5 py-14 overflow-hidden">
       <p className="text-yellow-500 text-sm font-semibold mb-3 uppercase tracking-widest text-center lg:text-left">ABOUT US</p>
-      
-      <div className="relative grid lg:grid-cols-2 gap-12 items-center min-h-[400px]">
-        
+      <div className="relative grid lg:grid-cols-2 gap-12 items-center min-h-100">
+
         {/* VIDEO SECTION */}
-        <motion.div 
+        <motion.div
           layout
-          animate={{ 
+          animate={{
             rotate: isFullWidth ? 0 : -6,
-            width: isFullWidth && isLargeScreen ? "205%" : "100%", 
+            width: isFullWidth && isLargeScreen ? "205%" : "100%",
           }}
           transition={{ duration: 0.8, ease: "circOut" }}
-          className="relative group rounded-2xl overflow-hidden shadow-2xl z-20 bg-black max-h-[80vh]" 
+          className="relative group rounded-2xl overflow-hidden shadow-2xl z-20 bg-black max-h-[80vh]"
         >
-          <video 
+          <video
             ref={videoRef}
             muted={isMuted}
-            loop 
-            playsInline 
+            loop
+            playsInline
             onTimeUpdate={handleTimeUpdate}
-            className="w-full h-full max-h-[450px] object-cover cursor-pointer"
+            className="w-full h-full max-h-112.5 object-cover cursor-pointer"
             onClick={togglePlay}
           >
             <source src="/assets/video.mp4" type="video/mp4" />
           </video>
 
           {/* CUSTOM CONTROLS */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity space-y-2">
-            <input 
+          <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity space-y-2">
+            <input
               type="range"
               min="0"
               max="100"
@@ -135,25 +128,22 @@ const About: React.FC = () => {
               onChange={handleSeek}
               className="w-full h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer accent-yellow-500"
             />
-
             <div className="flex items-center gap-4 text-white">
-              <button onClick={togglePlay} type="button">
+              <button onClick={togglePlay} type="button" aria-label={isPlaying ? "Pause video" : "Play video"}>
                 {isPlaying ? <Pause size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" />}
               </button>
-
               <div className="flex items-center gap-2">
                 {isMuted || volume === 0 ? <VolumeX size={18} /> : <Volume2 size={18} />}
-                <input 
-                  type="range" 
-                  min="0" 
-                  max="1" 
-                  step="0.1" 
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.1"
                   value={volume}
                   onChange={handleVolumeChange}
                   className="w-16 h-1 bg-gray-500 rounded-lg appearance-none cursor-pointer accent-white"
                 />
               </div>
-              
               <span className="text-[10px] font-mono text-gray-300 ml-auto uppercase">
                 {isPlaying ? "Streaming" : "Paused"}
               </span>
@@ -164,7 +154,7 @@ const About: React.FC = () => {
         {/* RIGHT CONTENT */}
         <AnimatePresence mode="wait">
           {(!isFullWidth || !isLargeScreen) && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 50 }}
@@ -187,10 +177,8 @@ const About: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence>
-
       </div>
     </section>
   );
 };
-
 export default About;
