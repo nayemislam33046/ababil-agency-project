@@ -4,8 +4,7 @@ import React from 'react'
 const ContactContent = () => {
     return (
         <section className="w-full min-h-300 lm:min-h-272 md:min-h-210 flex items-end justify-center rounded-4xl bg-primary py-15 relative z-0">
-            <div className="text-center w-full">
-                <LogoMarquee />
+            <div className="text-center w-full">                
 
                 <div className="">
                     <p className="text-xs lm:text-sm tracking-widest font-semibold font-inter text-white mb-2">
@@ -29,6 +28,7 @@ const ContactContent = () => {
                     </div>
 
                 </div>
+                <LogoMarquee />
             </div>
 
         </section>

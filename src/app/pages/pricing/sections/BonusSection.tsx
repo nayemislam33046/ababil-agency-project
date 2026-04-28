@@ -25,8 +25,8 @@ const bonuses = [
 
 const BonusSection = () => {
   return (
-    <section className="w-full flex justify-center px-4 py-10 bg-white">
-      <div className="w-full bg-primary rounded-2xl p-6 md:p-10 mx-3 sm:mx-10 relative overflow-hidden">
+    <section className="w-full flex justify-center px-6 py-10 bg-white">
+      <div className="w-full bg-primary rounded-2xl p-6 md:p-10 sm:mx-10 relative overflow-hidden">
 
         {/* Gradient Glow (top right effect) */}
         <div className="absolute top-0 right-0 w-40 h-40 bg-green-400 blur-3xl opacity-20 rounded-full"></div>

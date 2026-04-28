@@ -58,7 +58,7 @@ const ComparisonSection = () => {
       </div>
 
       {/* Header Row */}
-      <div className="hidden md:flex justify-between items-center px-6 mb-4 text-primary text-sm font-semibold">
+      <div className="hidden md:flex justify-between items-center  mb-4 text-primary text-sm font-semibold">
         <div className="w-[40%]">Platform</div>
         <div className="flex flex-1 justify-around">
           {headers.map((h, i) => (

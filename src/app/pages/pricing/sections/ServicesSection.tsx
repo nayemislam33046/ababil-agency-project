@@ -20,8 +20,8 @@ const ServicesMarks = () => {
 
   return (
     <section className="bg-white py-10 px-6 font-sans">
-      <div className="mx-3 sm:mx-10">
-        
+      <div className="sm:mx-10">
+
         {/* Dynamic Header */}
         <div className="mb-12">
           <p className="text-sm font-bold uppercase tracking-widest text-primary mb-2">
@@ -33,14 +33,14 @@ const ServicesMarks = () => {
         </div>
 
         {/* Dynamic Service Container */}
-        <div className="bg-primary text-white rounded-[2.5rem] p-10 md:p-16">
+        <div className="bg-primary text-white rounded-[2.5rem] p-7 md:p-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 justify-center items-center gap-y-8">
-            
+
             {serviceCategories.map((category, idx) => (
               <ul key={idx} className="space-y-4">
                 {category.items.map((item, itemIdx) => (
-                  <li 
-                    key={itemIdx} 
+                  <li
+                    key={itemIdx}
                     className="flex items-start gap-3 group cursor-default transition-colors hover:text-white"
                   >
                     {/* Checkmark Icon */}
@@ -52,7 +52,9 @@ const ServicesMarks = () => {
                     </span>
                   </li>
                 ))}
-                <hr className='text-gray sm:hidden'/>
+                {idx !== serviceCategories.length - 1 && (
+                  <hr className="text-gray sm:hidden" />
+                )}
               </ul>
             ))}
 
@@ -65,14 +67,14 @@ const ServicesMarks = () => {
 
 // Simple reusable SVG component for the checkmark
 const CheckIcon = () => (
-  <svg 
-    width="14" 
-    height="14" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="3" 
-    strokeLinecap="round" 
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="3"
+    strokeLinecap="round"
     strokeLinejoin="round"
   >
     <polyline points="20 6 9 17 4 12" />

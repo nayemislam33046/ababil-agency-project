@@ -15,7 +15,7 @@ interface TablesProps {
 };
 const Tables = ({ subtitle, title, competitorName, features }:TablesProps) => {
   return (
-    <section className="min-h-screen flex flex-col justify-center p-5 lm:p-7 sm:p-10 font-sans bg-primary relative overflow-hidden">
+    <section className="min-h-screen flex flex-col justify-center px-6 py-8 lm:p-7 sm:p-10 font-sans bg-primary relative overflow-hidden">
   
   {/* Background Gradient Layer */}
 
@@ -46,7 +46,7 @@ const Tables = ({ subtitle, title, competitorName, features }:TablesProps) => {
         
         {/* Header Row */}
         <div className="grid grid-cols-2 mb-8 gap-4 px-4 md:px-12 items-center">
-          <div className="flex items-center gap-2 text-xs lm:text-sm md:text-base font-bold text-white tracking-wider">
+          <div className="flex items-center gap-2 text-xs lm:text-sm md:text-base font-semibold text-white tracking-wider">
             <Image
               src="/energy-icon.svg"
               alt="Features Icon"
@@ -66,9 +66,9 @@ const Tables = ({ subtitle, title, competitorName, features }:TablesProps) => {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="grid grid-cols-2 items-center h-[72px] px-3 md:px-12 border-b border-white/5 last:border-0"
+              className="grid grid-cols-2 items-center h-18 px-3 md:px-12 border-b border-white/5 last:border-0"
             >
-              <span className="text-xs md:text-base text-white font-medium">
+              <span className="text-xs md:text-base text-white">
                 {feature.label}
               </span>
 
@@ -86,7 +86,7 @@ const Tables = ({ subtitle, title, competitorName, features }:TablesProps) => {
 
       {/* Ababil Highlight Card */}
       <div className="col-span-4 sm:col-span-3 relative">
-        <div className="absolute inset-y-[-25px] -right-4 left-0 bg-gradient-to-b from-[#01523F] to-[#10A380] rounded-[2.5rem] flex flex-col pt-12 pb-8">
+        <div className="absolute -inset-y-6.25 -right-px left-0 bg-linear-to-b from-[#01523F] to-[#10A380] rounded-[2.5rem] flex flex-col pt-12 pb-8">
           
           {/* Logo */}
           <div className="mb-14 flex justify-center px-3">
@@ -95,6 +95,14 @@ const Tables = ({ subtitle, title, competitorName, features }:TablesProps) => {
               alt="Ababil Logo"
               width={120}
               height={120}
+              className='hidden sm:block'
+            />
+            <Image
+              src="/white_logo.svg"
+              alt="Ababil Logo"
+              width={30}
+              height={30}
+              className='sm:hidden'
             />
           </div>
 
@@ -103,9 +111,9 @@ const Tables = ({ subtitle, title, competitorName, features }:TablesProps) => {
             {features.map((_, idx) => (
               <div
                 key={idx}
-                className="h-[72px] flex items-center justify-center border-b border-white/10 last:border-0"
+                className="h-18 flex items-center justify-center border-b border-white/10 last:border-0"
               >
-                <Check className="w-6 h-6 text-white stroke-[3] drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]" />
+                <Check className="w-4 h-4 md:w-6 md:h-6 text-white stroke-3 drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]" />
               </div>
             ))}
           </div>

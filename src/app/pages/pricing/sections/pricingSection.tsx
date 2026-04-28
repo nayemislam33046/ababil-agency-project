@@ -15,7 +15,6 @@ type PageType = "1-4 Pages" | "5-8 Pages" | "10-15 Pages" | "16-25 Pages" | "Cus
 
 type Category = "Website" | "Web App" | "Mobile App" | "Branding" | "Subscription";
 
-// ✅ Generator function (so you don’t repeat yourself)
 const generatePlans = (base: number): Plan[] => [
   {
     name: "Starter",
@@ -102,7 +101,6 @@ const PricingSection = () => {
     <div>
 
       {/* 🔹 CATEGORY BUTTONS */}
-
       <div className="mt-6 flex justify-center">
         <div className="inline-flex flex-wrap justify-center items-center gap-2 bg-primary p-2 rounded-lg">
           {(Object.keys(pricingData) as Category[]).map((item) => (
@@ -165,7 +163,7 @@ const PricingSection = () => {
       </div>
 
       {/* 🔹 CARDS */}
-      <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-8 justify-center items-stretch">
+      <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap px-2 gap-8 justify-center items-stretch">
         {currentPlans.map((plan, i) => {
           const price = yearly ? plan.yearly : plan.monthly;
 

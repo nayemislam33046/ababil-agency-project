@@ -8,7 +8,7 @@ type ContactSectionProps = {
 export default function ContactSection({ isContact }: ContactSectionProps) {
 
   return (
-    <section className={`w-full flex justify-center items-center flex-col md:py-10 px-3 lm:px-8 md:px-10 ${isContact ? "bg-transparent" : "bg-white"}`}>
+    <section className={`w-full flex justify-center items-center flex-col md:py-10 px-6 md:px-10 ${isContact ? "bg-transparent" : "bg-white"}`}>
       <div className={`w-full ${isContact ? "bg-white shadow border border-gray-300" : "bg-primary "} rounded-2xl p-5 lm:p-6 py-10 mt-10 md:p-10 text-white relative`}>
         <div className="grid md:grid-cols-2 gap-8">
           {/* LEFT SIDE */}

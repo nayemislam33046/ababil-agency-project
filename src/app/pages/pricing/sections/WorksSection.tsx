@@ -30,7 +30,7 @@ const projects = [
 
 export default function WorksSection() {
   return (
-    <section className="w-full bg-white px-5 sm:px-7 md:px-10 lg:px-14 py-14 font-outfit">
+    <section className="w-full bg-white px-6 sm:px-7 md:px-10 lg:px-14 py-14 font-outfit">
       {/* Header */}
       <div className="mb-12">
         <span className="text-xs font-bold tracking-widest uppercase text-primary mb-2">Live Preview</span>
