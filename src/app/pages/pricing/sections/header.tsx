@@ -139,7 +139,7 @@ const PricingHeader = () => {
       {/* 🔹 CENTER */}
       <div className="flex flex-col items-center justify-center text-center p-4 relative z-10">
 
-        <h1 className="text-[#0A3D2E] font-bold leading-tight text-4xl sm:text-5xl lg:text-6xl max-w-4xl">
+        <h1 className="text-[#0A3D2E] leading-tight text-4xl sm:text-5xl lg:text-6xl max-w-4xl">
           Affordability & Flexibility <br className="hidden sm:block" />
           Premium Quality With
         </h1>

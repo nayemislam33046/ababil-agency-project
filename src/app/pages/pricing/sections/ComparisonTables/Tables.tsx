@@ -27,7 +27,7 @@ const Tables = ({ subtitle, title, competitorName, features }:TablesProps) => {
         {subtitle}
       </p>
 
-      <h2 className="mt-4 text-xl lm:text-3xl sm:text-5xl md:text-7xl font-black text-white max-w-2xl">
+      <h2 className="mt-4 text-xl lm:text-3xl sm:text-5xl md:text-7xl leading-tight text-white max-w-2xl">
         {title}
       </h2>
     </div>
