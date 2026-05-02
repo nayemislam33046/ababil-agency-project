@@ -5,7 +5,7 @@ import Image from "next/image";
 const BrandSection = () => {
   return (
     <>
-      <section className="m-10 mt-20 md:mt-30">       
+      <section className="mx-10 mt-20 md:mt-30">       
         <div 
           className="relative rounded-2xl bg-primary md:min-h-87.5 lg:min-h-100 xl:min-h-125 px-6 lm:px-12 py-4 lm:py-8 flex flex-col md:flex-row items-center justify-between"
           style={{ clipPath: 'inset(-500px 0px 0px 0px)' }} 

@@ -1,6 +1,5 @@
 import About from '@/components/sections/About/about'
 import BlogSection from '@/components/sections/BlogSection/BlogSection'
-import CallToAction from '@/components/sections/CallToAction/calltoaction'
 import ComparisonSection from '@/components/sections/ComparisonSection/ComparisonSection'
 import ContactSection from '@/components/sections/ContactSection/ContuctSection'
 import FAQSection from '@/components/sections/FAQSection/faqs'
@@ -26,7 +25,6 @@ const page = () => {
       <ComparisonSection />
       <FAQSection />
       <ContactSection isContact={false} />
-      <CallToAction />
     </div>
   )
 }

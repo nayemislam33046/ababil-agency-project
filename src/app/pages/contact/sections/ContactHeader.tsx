@@ -147,17 +147,12 @@ const ContactHeader = () => {
       </div>
 
       <div className="absolute -left-10 top-40 w-20 xsm:w-24 md:w-44 xl:w-56 md:-left-14 float">
-        <Image src={'/assets/ContactHeader1.png'} alt="Mockup 1" className="object-cover h-full w-full rotate-12" width={900} height={900} />
+        <Image src={'/assets/boxHeader.png'} alt="Mockup 1" className="object-cover h-full w-full rotate-12" width={900} height={900} />
       </div>
 
       <div className="absolute -right-5 -top-14 w-20 xsm:w-24 md:w-44 xl:w-56 md:-right-10 float">
-        <Image src={'/assets/ContactHeader2.png'} alt="Mockup 2" className="object-cover h-full w-full rotate-16" width={900} height={900} />
+        <Image src={'/assets/earthHeader.png'} alt="Mockup 2" className="object-cover h-full w-full rotate-16" width={900} height={900} />
       </div>
-     
-
-      {/* <div className="absolute left-0 right-0 bottom-0 translate-y-1/2 z-50">
-        <ContactSection isContact={true} />
-      </div> */}
     </section>
   );
 };

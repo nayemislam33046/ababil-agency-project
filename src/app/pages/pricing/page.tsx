@@ -23,8 +23,6 @@ const Pricing = () => {
         <WorksSection/>
         <FAQSection/>
         <ContactSection />
-        <CallToAction />
-        
     </>
   )
 }

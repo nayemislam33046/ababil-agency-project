@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/sections/Footer/Footer";
 import AddressGrid from "@/components/sections/AddressGrid/AddressGrid";
+import CallToAction from "@/components/sections/CallToAction/calltoaction";
 
 const anton = Anton({
   variable: "--font-anton",
@@ -69,8 +70,9 @@ export default function RootLayout({
             </filter>
           </defs>
         </svg>
-        <AddressGrid/>
-        <Footer/>
+        <CallToAction />
+        <AddressGrid />
+        <Footer />
       </body>
     </html>
   );
