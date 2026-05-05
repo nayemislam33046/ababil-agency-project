@@ -107,7 +107,7 @@ const About: React.FC = () => {
       <p className="text-yellow-500 text-sm font-semibold mb-3 uppercase tracking-widest text-center lg:text-left">ABOUT US</p>
       <div className="relative grid lg:grid-cols-2 gap-12 items-center min-h-100">
 
-        {/* VIDEO SECTION */}
+        {/* VIDEO SECTIONS */}
         <motion.div
           layout
           animate={{
@@ -134,7 +134,7 @@ const About: React.FC = () => {
               kind="captions"
               src="/captions.vtt"
               // srclang="en"
-              label="English captions"
+              label="English captions" 
             />
           </video> */}
 
