@@ -149,12 +149,12 @@ const Home = () => {
 
       {/* Left Mockups */}
       <div className="absolute -left-10 -bottom-10 w-50 xsm:w-65 md:w-90 xl:w-95 md:-left-14 float">
-        <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={900} height={900} />
+        <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={300} height={300} priority loading='lazy'/>
       </div>
 
       {/* Right Mockups */}
       <div className="absolute -right-10 -bottom-10 w-50 xsm:w-65 md:w-90 xl:w-95 md:-right-20 float">
-        <Image src={'/assets/headerImage2.png'} alt="Mockup 2" className="object-cover h-full w-full" width={900} height={900} />
+        <Image src={'/assets/headerImage2.png'} alt="Mockup 2" className="object-cover h-full w-full" width={300} height={300} priority loading='lazy'/>
       </div>
     </section>
   );

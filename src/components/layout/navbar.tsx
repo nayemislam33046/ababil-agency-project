@@ -56,11 +56,11 @@ const Navbar = () => {
       arrowPos: 'sm:right-15 lg:right-37 xl:right-30',
       links: [
         { title: "Home", desc: "Home is where the ABABIL lives.", href: "/home" },
-        { title: "About us", desc: "The Journey of ABABIL", href: "/about" },
+        { title: "About us", desc: "The Journey of ABABIL", href: "/pages/about" },
         { title: "Meet the team", desc: "An overview of the Monk family", href: "/meet" },
         { title: "Blogs", desc: "A collection of informative blogs", href: "/blogs" },
         { title: "Career", desc: "Work with top global brands, grow your skills", href: "/career" },
-        { title: "Contact us", desc: "Start your dream design journey from here", href: "/contact" },
+        { title: "Contact us", desc: "Start your dream design journey from here", href: "/pages/contact" },
       ]
     }
   };
@@ -80,11 +80,10 @@ const Navbar = () => {
       {activePopup && (
         <div className="fixed z-50 transition-all duration-300 ease-out bottom-0 left-0 h-[90vh] bg-white rounded-t-[30px] p-8 sm:bottom-28 sm:left-1/2 sm:-translate-x-1/2 sm:w-150 w-full lg:w-[90%] lg:max-w-3xl sm:h-auto sm:rounded-2xl sm:shadow-2xl overflow-visible">
 
-          <div className={`flex flex-col sm:flex-row gap-14 items-stretch ${
-            navData[activePopup as MenuKey].imagePosition === 'left'
+          <div className={`flex flex-col sm:flex-row gap-14 items-stretch ${navData[activePopup as MenuKey].imagePosition === 'left'
               ? 'sm:flex-row-reverse'
               : 'sm:flex-row'
-          }`}>
+            }`}>
 
             <div className="flex-1 w-full flex flex-col gap-6 text-black">
               {navData[activePopup as MenuKey].links.map((item: any, index: number) => (
