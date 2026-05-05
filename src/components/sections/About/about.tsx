@@ -31,14 +31,25 @@ const About: React.FC = () => {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
+  // useEffect(() => {
+  //   if (isInView) {
+  //     const timer = setTimeout(() => {
+  //       handlePlay();
+  //     }, 1000);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [isInView]);
+
   useEffect(() => {
-    if (isInView) {
-      const timer = setTimeout(() => {
-        handlePlay();
-      }, 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [isInView]);
+  if (isInView && isLargeScreen) {
+    const timer = setTimeout(() => {
+      handlePlay();
+    }, 1000);
+    return () => clearTimeout(timer);
+  }
+}, [isInView, isLargeScreen]);
+
+
 
   const handleTimeUpdate = () => {
     if (videoRef.current) {
@@ -107,19 +118,8 @@ const About: React.FC = () => {
           className="relative group rounded-2xl overflow-hidden shadow-2xl z-20 bg-black max-h-[80vh]"
           role="region" aria-label="About us video section"
         >
+
           {/* <video
-            ref={videoRef}
-            muted={isMuted}
-            loop
-            playsInline
-            onTimeUpdate={handleTimeUpdate}
-            className="w-full h-full max-h-112.5 object-cover cursor-pointer"
-            onClick={togglePlay}
-            
-          >
-            <source src="/assets/video.mp4" type="video/mp4" />
-          </video> */}
-          <video
             ref={videoRef}
             muted={isMuted}
             loop
@@ -136,6 +136,21 @@ const About: React.FC = () => {
               // srclang="en"
               label="English captions"
             />
+          </video> */}
+
+          <video
+            ref={videoRef}
+            muted={isMuted}
+            loop
+            playsInline
+            preload="none"
+            poster="/assets/dmvid.png"
+            onTimeUpdate={handleTimeUpdate}
+            className="w-full object-cover max-h-[450px] cursor-pointer"
+            onClick={togglePlay}
+            aria-label="About us promotional video"
+          >
+            <source src="/assets/video.mp4" type="video/mp4" />
           </video>
 
           {/* CUSTOM CONTROLS */}
