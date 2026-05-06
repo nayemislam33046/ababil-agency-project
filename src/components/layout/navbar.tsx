@@ -4,29 +4,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CenterButton from './centerButton';
 
-// ✅ Type fix added
-type MenuKey = 'projects' | 'services' | 'pricing' | 'more';
+// ✅ FIX: only valid keys
+type MenuKey = 'services' | 'more';
 
 const Navbar = () => {
   const [activePopup, setActivePopup] = useState<MenuKey | null>(null);
 
   const navData = {
-    projects: {
-      image: "/assets/dmvid.png",
-      imagePosition: 'right',
-      arrowPos: 'sm:left-20 lg:left-37 xl:left-30',
-      links: [
-        { title: "Web Portfolios", desc: "Explore our latest web development work.", href: "/pages/projects/web" },
-        { title: "Mobile Apps", desc: "Innovative mobile solutions.", href: "/pages/projects/mobile" },
-        { title: "Branding Projects", desc: "Creative branding case studies.", href: "/pages/projects/branding" },
-        { title: "E-commerce Sites", desc: "Successful online store designs.", href: "/pages/projects/ecommerce" },
-        { title: "SaaS Platforms", desc: "Intuitive SaaS product designs.", href: "/pages/projects/saas" },
-        { title: "UI/UX Case Studies", desc: "In-depth UI/UX design projects.", href: "/pages/projects/ui-ux" },
-      ]
-    },
     services: {
       image: "/assets/parallelMobile.jpg",
       imagePosition: 'right',
+      vidPosition:"end",
       arrowPos: 'sm:left-[28%] lg:left-[32%] xl:left-[30%]',
       links: [
         { title: "UI UX Design", desc: "Creating user-friendly digital experiences.", href: "/pages/service/ui-ux" },
@@ -37,23 +25,11 @@ const Navbar = () => {
         { title: "SaaS Design", desc: "Intuitive interfaces that boost user engagement.", href: "/pages/service/web-design" },
       ]
     },
-    pricing: {
-      image: "/assets/parallelMobile.jpg",
-      imagePosition: 'left',
-      arrowPos: 'sm:right-[24%] lg:right-[30%] xl:right-[28%]',
-      links: [
-        { title: "Basic Plan", desc: "Perfect for small startups.", href: "/pages/pricing/basic" },
-        { title: "Pro Plan", desc: "Scalable solutions for teams.", href: "/pages/pricing/pro" },
-        { title: "Enterprise Plan", desc: "Custom solutions for large businesses.", href: "/pages/pricing/enterprise" },
-        { title: "UI/UX Design", desc: "Transparent pricing for design services.", href: "/pages/pricing/ui-ux" },
-        { title: "Web Design", desc: "Affordable web design packages.", href: "/pages/pricing/web-design" },
-        { title: "Branding", desc: "Competitive rates for branding services.", href: "/pages/pricing/branding" },
-      ]
-    },
     more: {
       image: "/assets/dmvid.png",
       imagePosition: 'left',
-      arrowPos: 'sm:right-15 lg:right-37 xl:right-30',
+      vidPosition:"center",
+      arrowPos: 'sm:right-[60px] lg:right-[140px] xl:right-[120px]',
       links: [
         { title: "Home", desc: "Home is where the ABABIL lives.", href: "/home" },
         { title: "About us", desc: "The Journey of ABABIL", href: "/pages/about" },
@@ -80,13 +56,13 @@ const Navbar = () => {
       {activePopup && (
         <div className="fixed z-50 transition-all duration-300 ease-out bottom-0 left-0 h-[90vh] bg-white rounded-t-[30px] p-8 sm:bottom-28 sm:left-1/2 sm:-translate-x-1/2 sm:w-150 w-full lg:w-[90%] lg:max-w-3xl sm:h-auto sm:rounded-2xl sm:shadow-2xl overflow-visible">
 
-          <div className={`flex flex-col sm:flex-row gap-14 items-stretch ${navData[activePopup as MenuKey].imagePosition === 'left'
-              ? 'sm:flex-row-reverse'
-              : 'sm:flex-row'
+          <div className={`flex flex-col sm:flex-row gap-14 sm:px-6 items-stretch ${navData[activePopup].imagePosition === 'left'
+            ? 'sm:flex-row-reverse'
+            : 'sm:flex-row'
             }`}>
 
-            <div className="flex-1 w-full flex flex-col gap-6 text-black">
-              {navData[activePopup as MenuKey].links.map((item: any, index: number) => (
+            <div className="flex-2 w-full flex flex-col gap-6 text-black">
+              {navData[activePopup].links.map((item, index: number) => (
                 <Link
                   key={index}
                   href={item.href}
@@ -96,26 +72,29 @@ const Navbar = () => {
                   <p className="font-bold lm:text-lg group-hover:text-green-800 transition-colors">
                     {item.title}
                   </p>
-                  <p className="text-xs lm:text-sm text-gray-500">
+                  <p className="text-xs text-gray-500">
                     {item.desc}
                   </p>
                 </Link>
               ))}
             </div>
 
-            <div className="hidden sm:block flex-1 relative">
-              <Image
-                src={navData[activePopup as MenuKey].image}
-                alt="preview"
-                fill
-                className="rounded-xl object-cover shadow-sm"
-              />
+            {/* ✅ FIX: add height for Image fill */}
+            <div className={`hidden sm:flex flex-1 items-center justify-${navData[activePopup].vidPosition}`}>
+              <div className="relative h-full aspect-[9/16] max-h-[400px]">
+                <Image
+                  src={navData[activePopup].image}
+                  alt="preview"
+                  fill
+                  className="rounded-xl object-cover shadow-sm"
+                />
+              </div>
             </div>
           </div>
 
           {/* Arrow */}
           <div className={`absolute -bottom-2 w-5 h-5 bg-white rotate-45 transform transition-all duration-300 border-b border-r border-gray-100 sm:border-none
-            ${navData[activePopup as MenuKey].arrowPos} -translate-x-1/2`}
+            ${navData[activePopup].arrowPos} -translate-x-1/2`}
           />
         </div>
       )}
@@ -127,13 +106,12 @@ const Navbar = () => {
           <Image src={'/assets/nav-bg.png'} alt="bg" fill className="object-fill" priority />
         </div>
 
-        <button onClick={() => togglePopup('projects')}
-          className={`hover:text-yellow-400 text-[11px] xsm:text-sm sm:text-body-base font-medium flex flex-col items-center gap-1 w-12 transition-all ${activePopup === 'projects' ? 'text-yellow-400 scale-110' : ''}`}>
+        <Link href="/pages/projects" className="hover:text-yellow-400 text-[11px] xsm:text-sm sm:text-body-base font-medium flex flex-col items-center gap-1 w-12 transition-all">
           <span className='sm:hidden'>
             <Image src="/projects_icon.svg" alt="i" width={24} height={24} />
           </span>
           Projects
-        </button>
+        </Link>
 
         <button onClick={() => togglePopup('services')}
           className={`hover:text-yellow-400 text-[11px] xsm:text-sm sm:text-body-base font-medium flex flex-col items-center gap-1 w-12 transition-all ${activePopup === 'services' ? 'text-yellow-400 scale-110' : ''}`}>
@@ -145,13 +123,12 @@ const Navbar = () => {
 
         <CenterButton />
 
-        <button onClick={() => togglePopup('pricing')}
-          className={`hover:text-yellow-400 text-[11px] xsm:text-sm sm:text-body-base font-medium flex flex-col items-center gap-1 w-12 transition-all ${activePopup === 'pricing' ? 'text-yellow-400 scale-110' : ''}`}>
+        <Link href="/pages/pricing" className="hover:text-yellow-400 text-[11px] xsm:text-sm sm:text-body-base font-medium flex flex-col items-center gap-1 w-12 transition-all">
           <span className='sm:hidden'>
             <Image src="/doller_icon.svg" alt="i" width={24} height={24} />
           </span>
           Pricing
-        </button>
+        </Link>
 
         <button onClick={() => togglePopup('more')}
           className={`hover:text-yellow-400 text-[11px] xsm:text-sm sm:text-body-base font-medium flex flex-col items-center gap-1 w-12 transition-all ${activePopup === 'more' ? 'text-yellow-400 scale-110' : ''}`}>

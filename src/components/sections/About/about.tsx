@@ -201,15 +201,7 @@ const About: React.FC = () => {
                 >
                   {isMuted || volume === 0 ? <VolumeX size={18} /> : <Volume2 size={18} />}
                 </button>
-                {/* <input
-                  type="range"
-                  min="0"
-                  max="1"
-                  step="0.1"
-                  value={volume}
-                  onChange={handleVolumeChange}
-                  className="w-16 h-1 bg-gray-500 rounded-lg appearance-none cursor-pointer accent-white"
-                /> */}
+                
                 <label htmlFor="volume-control" className="sr-only">
                   Volume control
                 </label>
