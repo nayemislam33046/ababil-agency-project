@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CenterButton from './centerButton';
 
-// ✅ FIX: only valid keys
 type MenuKey = 'services' | 'more';
 
 const Navbar = () => {
@@ -14,7 +13,7 @@ const Navbar = () => {
     services: {
       image: "/assets/parallelMobile.jpg",
       imagePosition: 'right',
-      vidPosition:"end",
+      vidPosition: "end",
       arrowPos: 'sm:left-[28%] lg:left-[32%] xl:left-[30%]',
       links: [
         { title: "UI UX Design", desc: "Creating user-friendly digital experiences.", href: "/pages/service/ui-ux" },
@@ -28,7 +27,7 @@ const Navbar = () => {
     more: {
       image: "/assets/dmvid.png",
       imagePosition: 'left',
-      vidPosition:"center",
+      vidPosition: "center",
       arrowPos: 'sm:right-[60px] lg:right-[140px] xl:right-[120px]',
       links: [
         { title: "Home", desc: "Home is where the ABABIL lives.", href: "/home" },
@@ -79,7 +78,6 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* ✅ FIX: add height for Image fill */}
             <div className={`hidden sm:flex flex-1 items-center justify-${navData[activePopup].vidPosition}`}>
               <div className="relative h-full aspect-[9/16] max-h-[400px]">
                 <Image
@@ -137,7 +135,6 @@ const Navbar = () => {
           </span>
           More
         </button>
-
       </nav>
     </>
   );

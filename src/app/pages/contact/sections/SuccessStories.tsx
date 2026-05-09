@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 
 const projects = [
@@ -10,7 +10,7 @@ const projects = [
     testimonial: "Working with Ababil on our ESDIAC app and group websites was an excellent experience. They were patient, attentive to feedback, and delivered clean, consistent, high-quality work. We're proud of the results.",
     author: "Sofia Gouveia",
     role: "Design Director @ Esdiac",
-    image: "/assets/successImg.jpg", 
+    image: "/assets/successImg.jpg",
     brandLogo: "/assets/successBrand.png",
     brandName: "Esdiac",
     avatar: "/assets/successProfile.png"
@@ -67,7 +67,7 @@ const projects = [
 
 const SuccessStories = () => {
   const [activeTab, setActiveTab] = useState('UI UX Design');
-  
+
   const categories = ['UI UX Design', 'Branding', 'Web Dev', 'Mobile App Dev', 'SaaS Design & Dev'];
 
   const currentProject = projects.find(p => p.category === activeTab) || projects[0];
@@ -88,44 +88,43 @@ const SuccessStories = () => {
           <button
             key={cat}
             onClick={() => setActiveTab(cat)}
-            className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-              activeTab === cat 
-              ? 'bg-gray-100 text-black shadow-sm scale-105' 
-              : 'text-gray-500 hover:text-black hover:bg-gray-50'
-            }`}
+            className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === cat
+                ? 'bg-gray-100 text-black shadow-sm scale-105'
+                : 'text-gray-500 hover:text-black hover:bg-gray-50'
+              }`}
           >
             {cat}
           </button>
         ))}
       </div>
 
-      {/* Main Content Area - Key prop forces a re-render/animation on tab change */}
-      <div 
-        key={activeTab} 
+      {/* Main Content */}
+      <div
+        key={activeTab}
         className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center rounded-3xl p-3 lm:p-8 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-700"
       >
-        
-        {/* Left: Dynamic Image Mockup */}
+
+        {/* Left Side*/}
         <div className="flex justify-center items-center z-10">
           <div className="relative w-full transition-transform duration-500 hover:scale-105">
-            <Image 
-              src={currentProject.image} 
+            <Image
+              src={currentProject.image}
               width={900}
               height={900}
-              alt={currentProject.title} 
+              alt={currentProject.title}
               className="w-full h-auto rounded-lg"
             />
           </div>
         </div>
 
-        {/* Right: Dynamic Testimonial Card */}
+        {/* Right Side*/}
         <div className="bg-white p-3 lm:p-8 md:p-10 rounded-2xl shadow-xl z-10">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
-              <img 
-                src={currentProject.avatar} 
-                alt={currentProject.author} 
-                className="object-cover w-full h-full" 
+              <img
+                src={currentProject.avatar}
+                alt={currentProject.author}
+                className="object-cover w-full h-full"
               />
             </div>
             <div>
@@ -140,18 +139,16 @@ const SuccessStories = () => {
 
           <div className="flex items-center justify-between border-t pt-6 gap-4">
             <div className="flex items-center gap-2">
-               <div className="w-8 h-8 lm:w-10 lm:h-10 bg-black rounded-md flex items-center justify-center p-2">
-                  <img src={currentProject.brandLogo} alt="" className="invert h-full w-full object-contain" />
-               </div>
-               <span className="font-bold text-lg lm:text-xl text-gray-900">{currentProject.brandName}</span>
+              <div className="w-8 h-8 lm:w-10 lm:h-10 bg-black rounded-md flex items-center justify-center p-2">
+                <img src={currentProject.brandLogo} alt="" className="invert h-full w-full object-contain" />
+              </div>
+              <span className="font-bold text-lg lm:text-xl text-gray-900">{currentProject.brandName}</span>
             </div>
             <button className="bg-[#FCD718] hover:bg-yellow-400 text-black font-bold text-sm lm:text-base py-2 px-3 lm:py-3 lm:px-6 rounded-full flex items-center gap-2 transition-transform active:scale-95 whitespace-nowrap">
               Book a Call <span className="text-xl">→</span>
             </button>
           </div>
         </div>
-
-        
       </div>
     </section>
   );

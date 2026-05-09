@@ -2,37 +2,35 @@ import Image from "next/image";
 
 const AboutSlider = () => {
   const logosTop = [
-    {logo: "/logo.svg", width:"w-56"},
-    {logo: "/logo.png", width:"w-96"},
-    {logo: "/logo.svg", width:"w-56"},
-    {logo: "/logo.svg", width:"w-96"},
-    {logo: "/logo.svg", width:"w-56"},
-    {logo: "/logo.svg", width:"w-96"},
-    {logo: "/logo.png", width:"w-56"},
-    {logo: "/logo.svg", width:"w-96"},
-    {logo: "/logo.svg", width:"w-56"}
+    { logo: "/logo.svg", width: "w-56" },
+    { logo: "/logo.png", width: "w-96" },
+    { logo: "/logo.svg", width: "w-56" },
+    { logo: "/logo.svg", width: "w-96" },
+    { logo: "/logo.svg", width: "w-56" },
+    { logo: "/logo.svg", width: "w-96" },
+    { logo: "/logo.png", width: "w-56" },
+    { logo: "/logo.svg", width: "w-96" },
+    { logo: "/logo.svg", width: "w-56" }
   ];
 
   const logosBottom = [
-    {logo: "/logo.svg", width:"w-56"},
-    {logo: "/logo.png", width:"w-96"},
-    {logo: "/logo.svg", width:"w-56"},
-    {logo: "/logo.svg", width:"w-96"},
-    {logo: "/logo.svg", width:"w-56"},
-    {logo: "/logo.svg", width:"w-96"},
-    {logo: "/logo.svg", width:"w-56"},
-    {logo: "/logo.svg", width:"w-96"}
+    { logo: "/logo.svg", width: "w-56" },
+    { logo: "/logo.png", width: "w-96" },
+    { logo: "/logo.svg", width: "w-56" },
+    { logo: "/logo.svg", width: "w-96" },
+    { logo: "/logo.svg", width: "w-56" },
+    { logo: "/logo.svg", width: "w-96" },
+    { logo: "/logo.svg", width: "w-56" },
+    { logo: "/logo.svg", width: "w-96" }
   ];
 
   return (
     <section className="bg-transparent relative overflow-hidden py-10">
-
-      <div className="max-w-350 mx-auto">
-
+      <div className="w-full">
         {/* TOP ROW */}
         <div className="overflow-hidden">
           <div className="flex animate-scroll-left w-max">
-            {[0,1].map((track)=>(
+            {[0, 1].map((track) => (
               <div key={track} className="flex gap-5 max-h-75 px-5">
                 {logosTop.map((logo, i) => (
                   <Image
@@ -52,7 +50,7 @@ const AboutSlider = () => {
         {/* BOTTOM ROW */}
         <div className="overflow-hidden mt-5">
           <div className="flex animate-scroll-right w-max">
-            {[0,1].map((track)=>(
+            {[0, 1].map((track) => (
               <div key={track} className="flex gap-5 max-h-75 px-5">
                 {logosBottom.map((logo, i) => (
                   <Image

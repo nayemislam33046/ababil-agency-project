@@ -9,7 +9,6 @@ const AboutHeader = () => {
         if (i % 3 === 1) return 6;
         return 8;
     };
-
     const colors = [
         "#ef4444",
         "#eab308",
@@ -18,7 +17,6 @@ const AboutHeader = () => {
         "#1e3a8a",
         "#0e7490",
     ];
-
     return (
         <section className="relative h-[70vh] bg-white pt-5 overflow-hidden">
             <div className="absolute inset-0 z-0">
@@ -43,7 +41,6 @@ const AboutHeader = () => {
                     "--delay": "0s",
                 } as React.CSSProperties}
             />
-
             <div
                 className="particle w-4 h-4 bg-blue-500 rounded-full"
                 style={{
@@ -67,7 +64,6 @@ const AboutHeader = () => {
                     "--delay": "0.5s",
                 } as React.CSSProperties}
             />
-
             <div
                 className="particle w-4 h-4 bg-cyan-900 rounded-full"
                 style={{
@@ -79,10 +75,8 @@ const AboutHeader = () => {
                     "--delay": "2s",
                 } as React.CSSProperties}
             />
-
             {[...Array(18)].map((_, i) => {
                 const size = getSize(i);
-
                 return (
                     <div
                         key={i}
@@ -132,14 +126,13 @@ const AboutHeader = () => {
                     </h1>
                 </div>
             </div>
-
+            {/* Left Header */}
             <div className="absolute -left-10 bottom-0 lg:top-50 w-30 xsm:w-40 sm:w-56 sm:-left-14 float">
-                <Image src={'/assets/boxHeader.png'} alt="Mockup 1" className="object-cover h-full w-full -rotate-230" width={600} height={600} />
+                <Image src={'/assets/boxHeader.png'} alt="AboutHeader1" className="object-cover h-full w-full -rotate-230" width={600} height={600} />
             </div>
-
-            {/* Right Mockups */}
+            {/* Right Header */}
             <div className="absolute -top-15 w-30 xsm:w-40 sm:w-56 xl:w-60 -right-10 lm:-right-5 sm:-right-14 xl:-right-15 float">
-                <Image src={'/assets/diamondHeader.png'} alt="Mockup 2" className="object-cover h-full w-full rotate-0" width={600} height={600} />
+                <Image src={'/assets/diamondHeader.png'} alt="AboutHeader2" className="object-cover h-full w-full rotate-0" width={600} height={600} />
             </div>
         </section>
     );

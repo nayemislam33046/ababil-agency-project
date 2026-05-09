@@ -4,7 +4,6 @@ import ContactContent from './sections/ContactContent'
 import SuccessStories from './sections/SuccessStories'
 import FAQSection from '@/components/sections/FAQSection/faqs'
 import BrandSection from './sections/BrandSection'
-
 const Contact = () => {
   return (
     <div className="bg-white">
@@ -21,5 +20,4 @@ const Contact = () => {
     </div>
   )
 }
-
 export default Contact

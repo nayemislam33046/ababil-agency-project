@@ -5,13 +5,11 @@ import Image from "next/image";
 const BrandSection = () => {
   return (
     <>
-      <section className="mx-10 mt-20 md:mt-30">       
-        <div 
+      <section className="mx-10 mt-20 md:mt-30">
+        <div
           className="relative rounded-2xl bg-primary md:min-h-87.5 lg:min-h-100 xl:min-h-125 px-6 lm:px-12 py-4 lm:py-8 flex flex-col md:flex-row items-center justify-between"
-          style={{ clipPath: 'inset(-500px 0px 0px 0px)' }} 
+          style={{ clipPath: 'inset(-500px 0px 0px 0px)' }}
         >
-          
-          {/* BACKGROUND GRADIENTS (Overflow hidden wrapper for gradients only) */}
           <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
             <div className="absolute left-0 bottom-0">
               <Image
@@ -33,21 +31,18 @@ const BrandSection = () => {
             </div>
           </div>
 
-          {/* LEFT CONTENT */}
+          {/* LEFT SIDE */}
           <div className="z-20 md:max-w-[50%] text-center md:text-left mb-2 lm:mb-10 md:mb-0">
             <p className="text-white text-xs lm:text-sm lg:text-base font-inter font-semibold mb-3">
               Claim a $799 Consultation, on Us!
             </p>
-
             <h1 className="text-2xl lm:text-3xl sm:text-5xl md:text-3xl lg:text-4xl xl:text-5xl text-white font-heading font-bold leading-tight mb-4">
               Your Brand Deserves <br />
               Next Level! The
             </h1>
-
             <p className="text-white text-xs sm:text-sm xl:text-base font-body mb-6 text-wrap">
-              Get expert advice and a custom strategy session worth <br className="hidden lg:block"/> $799 at no cost
+              Get expert advice and a custom strategy session worth <br className="hidden lg:block" /> $799 at no cost
             </p>
-
             <div className="flex items-center justify-center md:justify-start gap-4">
               <div>
                 <div className="flex -space-x-4 mb-4">
@@ -70,7 +65,7 @@ const BrandSection = () => {
             </div>
           </div>
 
-          {/* RIGHT IMAGE - Overflow Visible on Top, Hidden on Bottom */}
+          {/* RIGHT Side*/}
           <div className="hidden sm:block relative md:absolute md:right-0 lp:-top-14 lg:-top-14 xl:-top-18 w-1/2 md:flex md:justify-end z-10">
             <Image
               src="/assets/project-banner.png"
@@ -81,7 +76,6 @@ const BrandSection = () => {
               priority
             />
           </div>
-
         </div>
         <Headline />
       </section>

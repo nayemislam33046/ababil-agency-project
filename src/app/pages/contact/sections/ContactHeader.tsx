@@ -1,4 +1,3 @@
-import ContactSection from '@/components/sections/ContactSection/ContuctSection';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,14 +6,12 @@ const ContactHeader = () => {
   const random = (min: number, max: number) =>
     Math.random() * (max - min) + min;
 
-  // ✅ Size system (controlled)
   const getSize = (i: number) => {
     if (i % 3 === 0) return 4;
     if (i % 3 === 1) return 6;
     return 8;
   };
 
-  // ✅ Color system (controlled)
   const colors = [
     "#ef4444",
     "#eab308",
@@ -25,8 +22,7 @@ const ContactHeader = () => {
   ];
 
   return (
-     <section className="relative min-h-screen bg-white overflow-hidden pb-20">
-    
+    <section className="relative min-h-screen bg-white overflow-hidden pb-20">
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/image_design.png"
@@ -36,8 +32,6 @@ const ContactHeader = () => {
           priority
         />
       </div>
-
-      {/* 🔥 FIXED PARTICLES */}
       <div
         className="particle w-2 h-2 bg-red-900 rounded-full"
         style={{
@@ -49,7 +43,6 @@ const ContactHeader = () => {
           "--delay": "0s",
         } as React.CSSProperties}
       />
-
       <div
         className="particle w-4 h-4 bg-blue-500 rounded-full"
         style={{
@@ -73,8 +66,6 @@ const ContactHeader = () => {
           "--delay": "0.5s",
         } as React.CSSProperties}
       />
-
-      {/* ✅ FIXED (circle corrected) */}
       <div
         className="particle w-4 h-4 bg-cyan-900 rounded-full"
         style={{
@@ -87,10 +78,8 @@ const ContactHeader = () => {
         } as React.CSSProperties}
       />
 
-      {/* 🔥 DYNAMIC PARTICLES */}
       {[...Array(18)].map((_, i) => {
         const size = getSize(i);
-
         return (
           <div
             key={i}
@@ -106,17 +95,14 @@ const ContactHeader = () => {
 
               "--x": `${random(-30, 30)}px`,
               "--y": `${random(-40, 40)}px`,
-
-              // 💎 BONUS: size-based speed (premium feel)
               "--duration": `${size === 4 ? 6 : size === 6 ? 8 : 10}s`,
-
               "--delay": `${random(0, 5)}s`,
             } as React.CSSProperties}
           />
         );
       })}
 
-      {/* 🔹 TOP */}
+      {/* TOP */}
       <div className="flex flex-col items-center py-5 relative z-10">
         <Image src="/ababil.svg" alt="Ababil" width={140} height={40} priority />
 
@@ -136,14 +122,12 @@ const ContactHeader = () => {
         </p>
       </div>
 
-      {/* 🔹 CENTER */}
+      {/* CENTER */}
       <div className="flex flex-col items-center justify-center text-center p-4 relative z-10">
-
         <h1 className="text-[#0A3D2E] leading-tight text-4xl sm:text-5xl lg:text-6xl max-w-4xl">
           Have a Question or Just <br className="hidden sm:block" />
           Want to Chat?
         </h1>
-
       </div>
 
       <div className="absolute -left-10 top-40 w-20 xsm:w-24 md:w-44 xl:w-56 md:-left-14 float">
