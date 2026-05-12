@@ -6,6 +6,9 @@ import AboutShowcase from "./sections/aboutShowcase/aboutShowcase"
 import VisionaryPartnerships from "./sections/visionaryPartnerships/VisionaryPartnerships"
 import AboutSection from "./sections/AboutSection/AboutSection"
 import TeamMembersSlider from "./sections/teamMembers/teamMembersSlider"
+import TestimonialAboutSection from "./sections/testimonialAboutSection/TestimonialAboutSection"
+import AboutCompanyLogo from "./sections/aboutCompanyLogo/AboutCompanyLogo"
+import CareerSection from "./sections/aboutCareerSection/CareerSection"
 const page = () => {
   return (
     <div className="bg-white">
@@ -15,6 +18,9 @@ const page = () => {
       <VisionaryPartnerships/>
       <AboutSection/>
       <TeamMembersSlider/>
+      <TestimonialAboutSection/>
+      <AboutCompanyLogo />
+      <CareerSection/>
       <FAQSection />
       <ContactSection />
     </div>

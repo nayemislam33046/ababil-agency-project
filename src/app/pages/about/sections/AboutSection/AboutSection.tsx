@@ -32,7 +32,7 @@ const AboutSection=()=> {
                 <div className="relative flex items-end gap-4 md:gap-8 justify-center lg:justify-end">
 
                     <Image
-                        src="/assets/about/fahad_jalal.png"
+                        src="/assets/about/fahad_jalal1.png"
                         alt="Founder"
                         className="object-cover w-full h-auto transform transition-transform group-hover:scale-105"
                         width={600}
