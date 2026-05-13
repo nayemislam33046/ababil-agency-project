@@ -10,7 +10,6 @@ const AboutSlider = () => {
     { logo: "/logo.svg", width: "w-96" },
     { logo: "/logo.png", width: "w-56" },
     { logo: "/logo.svg", width: "w-96" },
-    { logo: "/logo.svg", width: "w-56" }
   ];
 
   const logosBottom = [
@@ -25,13 +24,13 @@ const AboutSlider = () => {
   ];
 
   return (
-    <section className="bg-transparent relative overflow-hidden py-10">
+    <section className="bg-transparent relative overflow-hidden pb-10">
       <div className="w-full">
         {/* TOP ROW */}
         <div className="overflow-hidden">
           <div className="flex animate-scroll-left w-max">
             {[0, 1].map((track) => (
-              <div key={track} className="flex gap-5 max-h-75 px-5">
+              <div key={track} className="flex gap-5 max-h-75 px-2.5">
                 {logosTop.map((logo, i) => (
                   <Image
                     key={i}
@@ -51,7 +50,7 @@ const AboutSlider = () => {
         <div className="overflow-hidden mt-5">
           <div className="flex animate-scroll-right w-max">
             {[0, 1].map((track) => (
-              <div key={track} className="flex gap-5 max-h-75 px-5">
+              <div key={track} className="flex gap-5 max-h-75 px-2.5">
                 {logosBottom.map((logo, i) => (
                   <Image
                     key={i}

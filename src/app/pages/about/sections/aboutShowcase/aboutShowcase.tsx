@@ -15,19 +15,13 @@ const AboutShowcase = () => {
           Websites Create for <br className="hidden lg:block" />
           Business success!
         </h2>
-        <button className="group flex items-center gap-3 bg-secondary hover:bg-yellow-500 transition-all duration-300 text-primary font-bold px-6 py-3 lm:py-4 lm:px-9 rounded-full shadow-md hover:shadow-xl">
-          <span className="text-lg">Explore All</span>
-          <ArrowRight
-            size={22}
-            className="transition-transform duration-300 group-hover:translate-x-2"
-          />
-        </button>
+      
       </div>
 
       {/* Right Side */}
       <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center relative">
         <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-full h-full bg-[#E8F5F1] rounded-full blur-[100px] -z-10 opacity-60" />
-        <div className="relative w-full max-w-162.5 aspect-4/5 md:aspect-5/6 lg:aspect-square md:mr-[-5%] lg:mr-[-10%]">
+        <div className="relative w-full max-w-162.5 aspect-4/5 md:aspect-5/6 lg:aspect-square md:mr-[-5%] lg:mr-[-10%] float">
           <Image
             src="/assets/about/aboutShowcase.png"
             alt="Showcase Image"

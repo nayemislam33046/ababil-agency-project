@@ -14,7 +14,7 @@ const Navbar = () => {
       image: "/assets/parallelMobile.jpg",
       imagePosition: 'right',
       vidPosition: "end",
-      arrowPos: 'sm:left-[28%] lg:left-[32%] xl:left-[30%]',
+      arrowPos: 'sm:left-[140px] lg:left-[150px]',
       links: [
         { title: "UI UX Design", desc: "Creating user-friendly digital experiences.", href: "/pages/service/ui-ux" },
         { title: "Logo & Branding", desc: "Creating memorable identities for brands.", href: "/pages/service/logo-branding" },
@@ -28,11 +28,11 @@ const Navbar = () => {
       image: "/assets/dmvid.png",
       imagePosition: 'left',
       vidPosition: "center",
-      arrowPos: 'sm:right-[60px] lg:right-[140px] xl:right-[120px]',
+      arrowPos: 'sm:right-[50px] lg:right-[70px] xl:right-[40px]',
       links: [
-        { title: "Home", desc: "Home is where the ABABIL lives.", href: "/home" },
+        { title: "Home", desc: "Home is where the ABABIL lives.", href: "/" },
         { title: "About us", desc: "The Journey of ABABIL", href: "/pages/about" },
-        { title: "Meet the team", desc: "An overview of the Monk family", href: "/meet" },
+        { title: "Meet the team", desc: "An overview of the Monk family", href: "/pages/about/teampage" },
         { title: "Blogs", desc: "A collection of informative blogs", href: "/blogs" },
         { title: "Career", desc: "Work with top global brands, grow your skills", href: "/career" },
         { title: "Contact us", desc: "Start your dream design journey from here", href: "/pages/contact" },
@@ -53,10 +53,10 @@ const Navbar = () => {
       )}
 
       {activePopup && (
-        <div className="fixed z-50 transition-all duration-300 ease-out bottom-0 left-0 h-[90vh] bg-white rounded-t-[30px] p-8 sm:bottom-28 sm:left-1/2 sm:-translate-x-1/2 sm:w-150 w-full lg:w-[90%] lg:max-w-3xl sm:h-auto sm:rounded-2xl sm:shadow-2xl overflow-visible">
+        <div className="fixed z-50 transition-all duration-300 ease-out bottom-0 left-0 h-[90vh] bg-white rounded-t-[30px] px-8 py-6 sm:bottom-25 sm:left-1/2 sm:-translate-x-1/2 sm:w-142 w-full lg:w-[80%] lg:max-w-150 sm:h-auto sm:rounded-2xl sm:shadow-2xl overflow-visible">      
 
-          <div className={`flex flex-col sm:flex-row gap-14 sm:px-6 items-stretch ${navData[activePopup].imagePosition === 'left'
-            ? 'sm:flex-row-reverse'
+          <div className={`flex flex-col sm:flex-row gap-16 items-stretch ${navData[activePopup].imagePosition === 'left'
+            ? 'sm:flex-row-reverse px-7'
             : 'sm:flex-row'
             }`}>
 
@@ -79,7 +79,7 @@ const Navbar = () => {
             </div>
 
             <div className={`hidden sm:flex flex-1 items-center justify-${navData[activePopup].vidPosition}`}>
-              <div className="relative h-full aspect-[9/16] max-h-[400px]">
+              <div className="relative h-full aspect-9/16 max-h-100">
                 <Image
                   src={navData[activePopup].image}
                   alt="preview"
@@ -141,3 +141,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

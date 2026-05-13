@@ -46,7 +46,6 @@ const headers = [
 const ComparisonSection = () => {
   return (
     <div className="bg-white px-6 md:px-8 lp:px-14 py-12 mx-auto">
-
       {/* Heading */}
       <div className="text-center mb-12">
         <p className="uppercase text-primary font-bold text-sm mb-2">
@@ -57,86 +56,144 @@ const ComparisonSection = () => {
         </h2>
       </div>
 
-      {/* Header Row */}
-      <div className="hidden md:flex justify-between items-center  mb-4 text-primary text-sm font-semibold">
-        <div className="w-[40%]">Platform</div>
-        <div className="flex flex-1 justify-around">
-          {headers.map((h, i) => (
-            <span key={i}>{h}</span>
-          ))}
-        </div>
+      {/* --- Desktop View (Table Layout for md and above) --- */}
+      <div className="hidden md:block overflow-hidden">
+        <table className="w-full border-separate border-spacing-y-4">
+          <thead>
+            <tr className="text-primary text-sm font-semibold">
+              <th className="text-left pb-4 pl-6">Platform</th>
+              {headers.map((h, i) => (
+                <th key={i} className="pb-4 text-center">
+                  {h}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item, index) => (
+              <tr key={index} className="transition-all duration-300">
+                {/* First TD */}
+                <td
+                  className={`rounded-l-2xl py-6 pl-6 w-[40%]
+        ${item.highlight
+                      ? "bg-primary text-white"
+                      : "bg-white border-y border-l border-gray-100"
+                    }`}
+                >
+                  <div className="flex items-start gap-4">
+                    <div
+                      className={`min-w-12 h-12 rounded-lg flex items-center justify-center
+            ${item.highlight ? "bg-secondary" : "bg-primary"}`}
+                    >
+                      <Image
+                        src={item.icon}
+                        alt={item.name}
+                        width={28}
+                        height={28}
+                      />
+                    </div>
+
+                    <div>
+                      <p className="font-semibold text-lg">{item.name}</p>
+
+                      <p
+                        className={`text-[13px] lg:text-sm mt-1 max-w-sm ${item.highlight ? "text-white/80" : "text-gray-500"
+                          }`}
+                      >
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </td>
+
+                {/* Middle TDs */}
+                {item.stats.map((val, i) => (
+                  <td
+                    key={i}
+                    className={`
+            text-center
+            ${item.highlight
+                        ? "bg-primary text-white"
+                        : "bg-white border-y border-gray-100"
+                      }
+            ${i === item.stats.length - 1
+                        ? "rounded-r-2xl border-r border-gray-100"
+                        : ""
+                      }
+          `}
+                  >
+                    <div className="flex justify-center">
+                      {val ? (
+                        <Check
+                          className={
+                            item.highlight ? "text-white" : "text-green-600"
+                          }
+                        />
+                      ) : (
+                        <X className="text-red-500" />
+                      )}
+                    </div>
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
 
-      {/* Rows */}
-      <div className="flex flex-col gap-5">
+      {/* --- Mobile View (Your Original Card Design for below md) --- */}
+      <div className="flex flex-col gap-5 md:hidden">
         {data.map((item, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row md:items-center md:justify-between gap-6 px-6 py-6 rounded-2xl transition-all duration-300
-            ${item.highlight
-                ? "bg-primary text-white shadow-lg"
-                : "bg-white"
-              }`}
+            className={`flex flex-col gap-6 px-6 py-6 rounded-2xl transition-all duration-300
+            ${item.highlight ? "bg-primary text-white shadow-lg" : "bg-white border border-gray-100"}`}
           >
             {/* Left Content */}
-            <div className="flex items-center gap-4 md:w-[40%]">
+            <div className="flex items-center gap-4">
               <div
-                className={`min-w-12 h-12 lp:min-w-14 lp:h-14 rounded-lg flex items-center justify-center
+                className={`min-w-12 h-12 rounded-lg flex items-center justify-center
                 ${item.highlight ? "bg-secondary" : "bg-primary"}`}
               >
-                <Image
-                  src={item.icon}
-                  alt={item.name}
-                  width={28}
-                  height={28}
-                />
+                <Image src={item.icon} alt={item.name} width={28} height={28} />
               </div>
               <div>
                 <p className="font-semibold text-lg">{item.name}</p>
                 <p
-                  className={`text-[11px] md:text-[13px] lg:text-sm mt-1 ${item.highlight ? "text-white/80" : "text-gray"
-                    }`}
+                  className={`text-[12px] lm:text-sm mt-1 ${item.highlight ? "text-white" : "text-gray"}`}
                 >
                   {item.desc}
                 </p>
               </div>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-nowrap justify-between md:justify-around items-center flex-1 gap-4">
+            {/* Stats Mobile Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {item.stats.map((val, i) => (
-                <div
-                  key={i}
-                  className="flex md:flex-col justify-between items-center gap-2 p-2 rounded-lg md:p-0 bg-transparent md:bg-transparent"
-                >
-                  {/* Mobile Header */}
-                  <span className={`text-xs md:hidden text-gray-500 ${item.highlight ? "text-white/80" : "text-gray-500"}`}>
+                <div key={i} className="flex justify-between items-center p-2">
+                  <span
+                    className={`text-xs ${item.highlight ? "text-white/80" : "text-gray-500"}`}
+                  >
                     {headers[i]}
                   </span>
-
-                  {/* Icon */}
                   {val ? (
                     <Check
-                      className={`${item.highlight
-                        ? "text-white"
-                        : "text-green-600"
-                        }`}
+                      className={
+                        item.highlight ? "text-white" : "text-green-600"
+                      }
+                      size={20}
                     />
                   ) : (
-                    <X className="text-red-500" />
+                    <X className="text-red-500" size={20} />
                   )}
                 </div>
               ))}
             </div>
-            <hr
-              className={`text-gray ${item.highlight || index === data.length - 1 ? "hidden" : "block"
-                }`}
-            />
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default ComparisonSection;

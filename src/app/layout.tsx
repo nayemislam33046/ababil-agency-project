@@ -27,7 +27,7 @@ const inter = Inter({
 const damion = Damion({
   variable: "--font-damion",
   subsets: ["latin"],
-  weight: "400", // Damion only supports 400
+  weight: "400", 
 });
 
 const playfair = Playfair_Display({

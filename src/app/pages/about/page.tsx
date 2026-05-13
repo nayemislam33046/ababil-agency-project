@@ -9,6 +9,7 @@ import TeamMembersSlider from "./sections/teamMembers/teamMembersSlider"
 import TestimonialAboutSection from "./sections/testimonialAboutSection/TestimonialAboutSection"
 import AboutCompanyLogo from "./sections/aboutCompanyLogo/AboutCompanyLogo"
 import CareerSection from "./sections/aboutCareerSection/CareerSection"
+import BrandSection from "../contact/sections/BrandSection"
 const page = () => {
   return (
     <div className="bg-white">
@@ -22,6 +23,7 @@ const page = () => {
       <AboutCompanyLogo />
       <CareerSection/>
       <FAQSection />
+      <BrandSection/>
       <ContactSection />
     </div>
   )

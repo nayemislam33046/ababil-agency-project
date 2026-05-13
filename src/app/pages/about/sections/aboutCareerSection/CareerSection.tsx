@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CareerSection = () => {
   return (
@@ -23,10 +24,10 @@ const CareerSection = () => {
             Ababil family.
           </p>
           
-          <button className="bg-secondary hover:bg-yellow-300 text-primary font-bold text-sm md:text-base py-3 md:py-3.5 px-6 md:px-10 rounded-full flex items-center gap-2 transition-all active:scale-95 shadow-lg w-fit">
+          <Link href="/pages/about/teampage" className="bg-secondary hover:bg-yellow-300 text-primary font-bold text-sm md:text-base py-3 md:py-3.5 px-6 md:px-10 rounded-full flex items-center gap-2 transition-all active:scale-95 shadow-lg w-fit">
             Join our team 
             <img src="/right-arrow.svg" alt="Arrow" />
-          </button>
+          </Link>
         </div>
 
         {/* RIGHT SIDE: Image */}
