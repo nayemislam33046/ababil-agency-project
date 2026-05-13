@@ -36,9 +36,9 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-white py-10 px-6 md:px-12 lg:px-16">
-      <div className="">
-        <div className="mt-10">
+    <section className="pb-10 px-6 md:px-12 lg:px-16">
+      <div>
+        <div>
           {/* Founders Row: 1 Column on Mobile, 2 on MD screens */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {team.filter(m => m.large).map((member, idx) => (
