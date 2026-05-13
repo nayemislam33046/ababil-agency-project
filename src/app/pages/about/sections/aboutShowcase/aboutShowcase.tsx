@@ -15,7 +15,9 @@ const AboutShowcase = () => {
           Websites Create for <br className="hidden lg:block" />
           Business success!
         </h2>
-      
+        <button className="flex items-center gap-2 bg-secondary hover:bg-[#facc15] transition-colors text-[#003d2b] border border-primary font-bold py-3 px-8 rounded-full shadow-sm">
+          Explore All <img src="/right-arrow.svg" alt="Arrow Right" className="w-4 h-4" />
+        </button>
       </div>
 
       {/* Right Side */}
