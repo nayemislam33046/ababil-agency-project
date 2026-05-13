@@ -1,7 +1,8 @@
-import React from 'react'
 import TeamHeaders from './sections/teamHeader/TeamHeader'
 import TeamSection from './sections/teamSection/TeamSection'
 import TeamMemberBlog from './sections/teamMemberBlog/teamMemberBlog'
+import CareerSection from '../sections/aboutCareerSection/CareerSection'
+import ContactSection from '@/components/sections/ContactSection/ContuctSection'
 
 const page = () => {
   return (
@@ -9,6 +10,8 @@ const page = () => {
         <TeamHeaders/>
         <TeamSection/>
         <TeamMemberBlog/>
+        <CareerSection/>
+        <ContactSection/>
     </div>
   )
 }

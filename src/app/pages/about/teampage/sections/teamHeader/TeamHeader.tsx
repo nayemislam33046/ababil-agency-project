@@ -130,21 +130,21 @@ const TeamHeaders = () => {
 
                 {/* Main Headline */}
                 <div className='lm:px-10'>
-                    <h1 className=" text-[#0A3D2E] mx-auto mb-4 px-6 lm:px-0 text-4xl lm:mt-20 sm:mt-0 text-wrap sm:text-5xl lg:text-7xl">
+                    <h1 className=" text-[#0A3D2E] mx-auto mb-4 px-6 lm:px-0 text-4xl lm:mt-10 sm:mt-0 text-wrap sm:text-5xl lg:text-7xl">
                         <span className="relative sm:leading-tight">
-                            Behind the Scene: <br className="hidden lm:block" />                             
-                            Team ABABIL
+                            Our Awesome <br />
+                            Ababil family
                         </span>
                     </h1>
                 </div>
             </div>
             {/* Left Header */}
             <div className="absolute -left-10 bottom-0 lg:top-50 w-30 xsm:w-40 sm:w-56 sm:-left-14 float">
-                <Image src={'/assets/boxHeader.png'} alt="AboutHeader1" className="object-cover h-full w-full -rotate-230" width={600} height={600} />
+                <Image src={'/assets/diamondHeader.png'} alt="TeamHeader1" className="object-cover h-full w-full -rotate-130" width={600} height={600} />
             </div>
             {/* Right Header */}
-            <div className="absolute -top-15 w-30 xsm:w-40 sm:w-56 xl:w-60 -right-10 lm:-right-5 sm:-right-14 xl:-right-15 float">
-                <Image src={'/assets/diamondHeader.png'} alt="AboutHeader2" className="object-cover h-full w-full rotate-0" width={600} height={600} />
+            <div className="absolute top-10 w-44 xsm:w-56 sm:w-72 xl:w-80 -right-16 lm:-right-20 sm:-right-24 float">
+                <Image src={'/assets/arrowHeader.png'} alt="TeamHeader2" className="object-cover h-full w-full rotate-0" width={600} height={600} />
             </div>
         </section>
     );
