@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 const AboutSlider = () => {
   const logosTop = [
     { logo: "/logo.svg", width: "w-56" },
@@ -11,7 +10,6 @@ const AboutSlider = () => {
     { logo: "/logo.png", width: "w-56" },
     { logo: "/logo.svg", width: "w-96" },
   ];
-
   const logosBottom = [
     { logo: "/logo.svg", width: "w-56" },
     { logo: "/logo.png", width: "w-96" },
@@ -22,7 +20,6 @@ const AboutSlider = () => {
     { logo: "/logo.svg", width: "w-56" },
     { logo: "/logo.svg", width: "w-96" }
   ];
-
   return (
     <section className="bg-transparent relative overflow-hidden pb-10">
       <div className="w-full">

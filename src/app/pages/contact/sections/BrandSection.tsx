@@ -1,4 +1,3 @@
-
 import Headline from "@/components/sections/Headlines/Headline";
 import Image from "next/image";
 

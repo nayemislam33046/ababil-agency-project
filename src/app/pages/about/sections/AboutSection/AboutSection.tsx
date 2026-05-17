@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const AboutSection=()=> {
+const AboutSection = () => {
     return (
         <section className="min-h-screen px-6 md:px-12 lg:px-16 py-14 md:py-0 flex justify-center items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -30,7 +30,6 @@ const AboutSection=()=> {
 
                 {/* Right Image Column */}
                 <div className="relative flex items-end gap-4 md:gap-8 justify-center lg:justify-end">
-
                     <Image
                         src="/assets/about/fahad_jalal1.png"
                         alt="Founder"
@@ -40,9 +39,7 @@ const AboutSection=()=> {
                     />
                 </div>
             </div>
-
         </section>
     );
 }
-
 export default AboutSection;

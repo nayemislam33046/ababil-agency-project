@@ -33,8 +33,8 @@ const Navbar = () => {
         { title: "Home", desc: "Home is where the ABABIL lives.", href: "/" },
         { title: "About us", desc: "The Journey of ABABIL", href: "/pages/about" },
         { title: "Meet the team", desc: "An overview of the Monk family", href: "/pages/about/teampage" },
-        { title: "Blogs", desc: "A collection of informative blogs", href: "/blogs" },
-        { title: "Career", desc: "Work with top global brands, grow your skills", href: "/career" },
+        { title: "Blogs", desc: "A collection of informative blogs", href: "/pages/blogs" },
+        { title: "Career", desc: "Work with top global brands, grow your skills", href: "/pages/career" },
         { title: "Contact us", desc: "Start your dream design journey from here", href: "/pages/contact" },
       ]
     }
@@ -53,7 +53,7 @@ const Navbar = () => {
       )}
 
       {activePopup && (
-        <div className="fixed z-50 transition-all duration-300 ease-out bottom-0 left-0 h-[90vh] bg-white rounded-t-[30px] px-8 py-6 sm:bottom-25 sm:left-1/2 sm:-translate-x-1/2 sm:w-142 w-full lg:w-[80%] lg:max-w-150 sm:h-auto sm:rounded-2xl sm:shadow-2xl overflow-visible">      
+        <div className="fixed z-50 transition-all duration-300 ease-out bottom-0 left-0 h-[90vh] bg-white rounded-t-[30px] px-8 py-6 sm:bottom-25 sm:left-1/2 sm:-translate-x-1/2 sm:w-142 w-full lg:w-[80%] lg:max-w-150 sm:h-auto sm:rounded-2xl sm:shadow-2xl overflow-visible">
 
           <div className={`flex flex-col sm:flex-row gap-16 items-stretch ${navData[activePopup].imagePosition === 'left'
             ? 'sm:flex-row-reverse px-7'

@@ -1,16 +1,16 @@
 import Image from 'next/image';
-import { MoveRight } from 'lucide-react'; // Optional: for the arrow icon
+import { MoveRight } from 'lucide-react';
 
 const WhyUsSection = () => {
   return (
     <section className="px-6 md:px-14 py-16 md:py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        
-        {/* Image Container - Forced to top on mobile using order-1 */}
+
+        {/* Image Container */}
         <div className="order-1 md:order-2 relative w-full h-64 md:h-96">
           <div className="overflow-hidden rounded-3xl h-full w-full">
             <Image
-              src="/assets/dmvid.png" 
+              src="/assets/dmvid.png"
               alt="Team member at Ababil workspace"
               fill
               className="object-cover rounded-2xl"
@@ -24,20 +24,20 @@ const WhyUsSection = () => {
           <span className="text-sm mb-3 font-body tracking-widest text-primary uppercase">
             Why Us
           </span>
-          
+
           <h2 className="text-4xl sm:text-3xl lg:text-4xl text-primary leading-tight">
             Because Our Premium Design Always Pays for Itself
           </h2>
-          
+
           <div className="space-y-4 text-[#333333] text-sm lg:text-base xl:text-lg leading-relaxed max-w-xl">
             <p>
-              Great products are built by teams that move fast and think clearly. 
+              Great products are built by teams that move fast and think clearly.
               Our approach is designed exactly for that.
             </p>
             <p>
-              We combine strategy, design, and execution into a single, focused system 
-              that reduces friction and increases output quality. You don't just get 
-              designs, you get momentum. Also, that momentum comes 20x faster and 
+              We combine strategy, design, and execution into a single, focused system
+              that reduces friction and increases output quality. You don't just get
+              designs, you get momentum. Also, that momentum comes 20x faster and
               at about half the cost of traditional agencies.
             </p>
           </div>
@@ -49,7 +49,6 @@ const WhyUsSection = () => {
             </button>
           </div>
         </div>
-
       </div>
     </section>
   );

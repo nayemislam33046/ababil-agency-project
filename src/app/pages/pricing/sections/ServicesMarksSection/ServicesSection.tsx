@@ -35,7 +35,6 @@ const ServicesMarks = () => {
         {/* Dynamic Service Container */}
         <div className="bg-primary text-white rounded-[2.5rem] p-7 md:p-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 justify-center items-center gap-y-8">
-
             {serviceCategories.map((category, idx) => (
               <ul key={idx} className="space-y-4">
                 {category.items.map((item, itemIdx) => (
@@ -57,7 +56,6 @@ const ServicesMarks = () => {
                 )}
               </ul>
             ))}
-
           </div>
         </div>
       </div>
@@ -65,7 +63,6 @@ const ServicesMarks = () => {
   );
 };
 
-// Simple reusable SVG component for the checkmark
 const CheckIcon = () => (
   <svg
     width="14"

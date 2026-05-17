@@ -12,7 +12,7 @@ const FAQSection = () => {
           </h2>
         </div>
         {/* Right */}
-        <Questions/>
+        <Questions />
       </div>
     </section>
   );

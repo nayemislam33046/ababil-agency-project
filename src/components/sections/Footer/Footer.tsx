@@ -9,7 +9,6 @@ const Footer = () => {
     specializedIndustry: ['Fintech Industry', 'Healthcare & Fitness Industry', 'Edtech Industry', 'Cybersecurity Industry', 'Company Deck'],
     compare: ['Vs Agencies', 'Vs Freelancers', 'Vs Inhouse'],
   };
-
   const partners = [
     { name: 'framer', sub: 'Professional Partner' },
     { name: 'webflow', sub: 'Professional Partner' },
@@ -20,7 +19,6 @@ const Footer = () => {
   ];
 
   return (
-    
     <footer className="bg-[linear-gradient(180deg,#060606_-3.32%,#07211B_24.25%,#063D30_58.34%)] text-white pt-16 pb-32 lm:pb-40 sm:pb-24 px-6 font-sans">
       <div className="max-w-7xl mx-auto">
         

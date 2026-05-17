@@ -1,7 +1,7 @@
 import Tables from "./Tables";
 
-export default function ComparisonTable() {
-  // 🔹 Table 1
+const ComparisonTable = () =>{
+  // Table 1
   const table1 = {
     subtitle: "WHY CHOOSE US",
     title: "Other Agencies We Deliver Solutions Offer Services",
@@ -16,7 +16,7 @@ export default function ComparisonTable() {
     ],
   };
 
-  // 🔹 Table 2 (Different Content)
+  // Table 2 
   const table2 = {
     subtitle: "WHY CHOOSE US",
     title: "One Brain vs. Choose Wisely Collective Brilliance",
@@ -31,7 +31,7 @@ export default function ComparisonTable() {
     ],
   };
 
-  // 🔹 Table 2 (Different Content)
+  // Table 3
   const table3 = {
     subtitle: "WHY CHOOSE US",
     title: "We Think Like a Team Member, Work Like a Partner",
@@ -54,3 +54,5 @@ export default function ComparisonTable() {
     </div>
   );
 }
+
+export default ComparisonTable;

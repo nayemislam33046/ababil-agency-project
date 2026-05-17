@@ -5,9 +5,9 @@ import ProjectsSection from "./sections/ProjectSection/ProjectsSections"
 const page = () => {
   return (
     <>
-      <ProjectsHeader/>
-      <ProjectsSection/>
-      <ContactSection/>
+      <ProjectsHeader />
+      <ProjectsSection />
+      <ContactSection />
     </>
   )
 }

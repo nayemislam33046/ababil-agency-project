@@ -7,11 +7,11 @@ import ContactSection from '@/components/sections/ContactSection/ContuctSection'
 const page = () => {
   return (
     <div className="bg-white">
-        <TeamHeaders/>
-        <TeamSection/>
-        <TeamMemberBlog/>
-        <CareerSection/>
-        <ContactSection/>
+      <TeamHeaders />
+      <TeamSection />
+      <TeamMemberBlog />
+      <CareerSection />
+      <ContactSection />
     </div>
   )
 }

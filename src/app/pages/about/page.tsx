@@ -16,14 +16,14 @@ const page = () => {
       <AboutHeader />
       <AboutSlider />
       <AboutShowcase />
-      <VisionaryPartnerships/>
-      <AboutSection/>
-      <TeamMembersSlider/>
-      <TestimonialAboutSection/>
+      <VisionaryPartnerships />
+      <AboutSection />
+      <TeamMembersSlider />
+      <TestimonialAboutSection />
       <AboutCompanyLogo />
-      <CareerSection/>
+      <CareerSection />
       <FAQSection />
-      <BrandSection/>
+      <BrandSection />
       <ContactSection />
     </div>
   )

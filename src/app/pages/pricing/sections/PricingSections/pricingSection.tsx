@@ -1,7 +1,7 @@
 "use client"
-import React, { useState } from "react";
+import { useState } from "react";
 
-// ✅ Types
+// Types
 type Plan = {
   name: string;
   monthly: number;
@@ -12,7 +12,6 @@ type Plan = {
 };
 
 type PageType = "1-4 Pages" | "5-8 Pages" | "10-15 Pages" | "16-25 Pages" | "Custom";
-
 type Category = "Website" | "Web App" | "Mobile App" | "Branding" | "Subscription";
 
 const generatePlans = (base: number): Plan[] => [
@@ -42,7 +41,7 @@ const generatePlans = (base: number): Plan[] => [
   },
 ];
 
-// ✅ All page options
+// All page options
 const pageOptions: PageType[] = [
   "1-4 Pages",
   "5-8 Pages",
@@ -51,7 +50,7 @@ const pageOptions: PageType[] = [
   "Custom",
 ];
 
-// ✅ Dynamic pricing data
+// Dynamic pricing data
 const pricingData: Record<Category, Record<PageType, Plan[]>> = {
   Website: {
     "1-4 Pages": generatePlans(999),
@@ -94,13 +93,12 @@ const PricingSection = () => {
   const [category, setCategory] = useState<Category>("Website");
   const [pageType, setPageType] = useState<PageType>("1-4 Pages");
   const [yearly, setYearly] = useState(false);
-
   const currentPlans = pricingData[category][pageType];
 
   return (
     <div>
 
-      {/* 🔹 CATEGORY BUTTONS */}
+      {/* CATEGORY BUTTONS */}
       <div className="mt-6 flex justify-center">
         <div className="inline-flex flex-wrap justify-center items-center gap-2 bg-primary p-2 rounded-lg">
           {(Object.keys(pricingData) as Category[]).map((item) => (
@@ -112,8 +110,8 @@ const PricingSection = () => {
                 setPageType("1-4 Pages");
               }}
               className={`px-4 py-2 rounded-md text-sm ${category === item
-                  ? "bg-secondary text-primary"
-                  : "text-white"
+                ? "bg-secondary text-primary"
+                : "text-white"
                 }`}
             >
               {item}
@@ -122,7 +120,7 @@ const PricingSection = () => {
         </div>
       </div>
 
-      {/* 🔹 PAGE BUTTONS (ALL CATEGORY) */}
+      {/* PAGE BUTTONS (ALL CATEGORY) */}
       <div className="mt-6 flex flex-wrap justify-center gap-2">
         {pageOptions.map((p) => (
           <button
@@ -130,8 +128,8 @@ const PricingSection = () => {
             key={p}
             onClick={() => setPageType(p)}
             className={`px-4 py-2 rounded-md text-sm ${pageType === p
-                ? "bg-secondary text-primary border border-primary"
-                : "bg-[#0A3D2E] text-white"
+              ? "bg-secondary text-primary border border-primary"
+              : "bg-[#0A3D2E] text-white"
               }`}
           >
             {p}
@@ -139,12 +137,11 @@ const PricingSection = () => {
         ))}
       </div>
 
-      {/* 🔹 TOGGLE */}
+      {/* TOGGLE */}
       <div className="flex items-center justify-center gap-3 my-8">
         <span className={!yearly ? "font-semibold text-primary" : "opacity-60"}>
           Monthly
         </span>
-
         <button
           aria-label={yearly ? "Switch to Monthly" : "Switch to Yearly"}
           onClick={() => setYearly(!yearly)}
@@ -156,17 +153,15 @@ const PricingSection = () => {
               }`}
           />
         </button>
-
         <span className={yearly ? "font-semibold text-primary" : "opacity-60"}>
           Yearly
         </span>
       </div>
 
-      {/* 🔹 CARDS */}
+      {/* CARDS */}
       <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap px-2 gap-8 justify-center items-stretch">
         {currentPlans.map((plan, i) => {
           const price = yearly ? plan.yearly : plan.monthly;
-
           return (
             <div
               key={i}
@@ -175,29 +170,25 @@ const PricingSection = () => {
               <div>
                 <p className="text-lg font-semibold text-primary mb-2">{plan.name}</p>
                 <p className="text-sm text-primary mb-4">{plan.desc}</p>
-
                 <div className=" mb-2 flex items-baseline gap-2">
                   <h1 className="text-4xl font-bold font-anton text-primary">${Math.round(price)}</h1>
                   <p className="text-sm text-primary font-normal font-body">
                     /{yearly ? "year" : "month"}
                   </p>
                 </div>
-
                 <hr className="my-4 text-primary" />
               </div>
-
               <div className="mt-auto">
                 <ul className="space-y-2 text-sm mb-6">
                   {plan.features.map((f, idx) => (
                     <li key={idx}>✓ <span className="text-primary">{f}</span></li>
                   ))}
                 </ul>
-
                 <button
                   aria-label={`Select the ${plan.name} plan`}
                   className={`w-full py-2 rounded-full font-semibold ${plan.highlight
-                      ? "bg-secondary text-primary"
-                      : "border border-primary text-primary"
+                    ? "bg-secondary text-primary"
+                    : "border border-primary text-primary"
                     }`}
                 >
                   Book a Call
@@ -207,7 +198,6 @@ const PricingSection = () => {
           );
         })}
       </div>
-
     </div>
   );
 };

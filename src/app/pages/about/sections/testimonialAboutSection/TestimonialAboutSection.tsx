@@ -28,8 +28,6 @@ const TestimonialAboutSection = () => {
               />
 
             </div>
-
-            {/* Testimonial Text */}
             <p className="text-gray leading-relaxed text-sm xl:text-lg mb-5">
               I had countless ideas but no clear direction until Ababil stepped in. Their team
               patiently listened, refined every detail, and never once hesitated when I requested
@@ -58,7 +56,6 @@ const TestimonialAboutSection = () => {
           {/* Author Profile */}
           <div className="flex items-center gap-4">
             <div className="relative w-10 h-10 lg:w-14 lg:h-14 rounded-full overflow-hidden">
-              {/* Replace with your actual image path */}
               <Image
                 src="/assets/about/fahim.png"
                 alt="Fahim Aziz"
@@ -74,7 +71,6 @@ const TestimonialAboutSection = () => {
         </div>
 
         {/* Right Card: Global Map Visual */}
-    
         <div className="flex-1 rounded-3xl hidden md:block overflow-hidden relative md:min-h-full">
           <Image
             src="/assets/about/global.png"

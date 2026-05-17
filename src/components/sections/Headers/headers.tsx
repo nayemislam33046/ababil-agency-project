@@ -110,7 +110,6 @@ const Home = () => {
 
           <div className="flex flex-col items-center mt-5 lm:mt-10">
             <div className="flex -space-x-2 mb-1">
-              {/* Placeholder for Clutch/Google icons */}
               <Image src={'/assets/clutch-google.png'} alt="Clutch-Google" width={50} height={50} />
             </div>
             <p className="text-sm font-body text-primary font-medium">4.9 <span className='text-[#FFCB33] text-lg font-bold'>★★★★★</span></p>
@@ -145,16 +144,14 @@ const Home = () => {
         </button>
       </div>
 
-      {/* Floating Mockups Container */}
-
       {/* Left Mockups */}
       <div className="absolute -left-10 -bottom-10 w-50 xsm:w-65 md:w-90 xl:w-95 md:-left-14 float">
-        <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={300} height={300} priority/>
+        <Image src={'/assets/headerImage1.png'} alt="Mockup 1" className="object-cover h-full w-full" width={300} height={300} priority />
       </div>
 
       {/* Right Mockups */}
       <div className="absolute -right-10 -bottom-10 w-50 xsm:w-65 md:w-90 xl:w-95 md:-right-20 float">
-        <Image src={'/assets/headerImage2.png'} alt="Mockup 2" className="object-cover h-full w-full" width={300} height={300} priority/>
+        <Image src={'/assets/headerImage2.png'} alt="Mockup 2" className="object-cover h-full w-full" width={300} height={300} priority />
       </div>
     </section>
   );

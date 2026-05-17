@@ -1,4 +1,4 @@
-import { ArrowBigLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import DescriptionText from "./descriptionText";
 
@@ -53,21 +53,21 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
                 {/* AUTHOR */}
                 <div className=" bg-white rounded-md px-4 py-1 lg:py-2 mt-3 lg:mt-5 flex items-center justify-between w-full">
-                   <div className="flex items-center gap-2">
-                     <div>
-                        <Image
-                            src={project.authorImage}
-                            alt={project.author}
-                            width={40}
-                            height={40}
-                            className="rounded-full"
-                        />
-                    </div>
+                    <div className="flex items-center gap-2">
+                        <div>
+                            <Image
+                                src={project.authorImage}
+                                alt={project.author}
+                                width={40}
+                                height={40}
+                                className="rounded-full"
+                            />
+                        </div>
                         <div>
                             <p className="text-sm font-semibold font-body text-[#0A0A0A]">{project.author}</p>
                             <p className="text-xs text-gray">{project.role}</p>
                         </div>
-                   </div>
+                    </div>
                     <span className="ml-4 text-lg text-gray">
                         <ArrowRight />
                     </span>

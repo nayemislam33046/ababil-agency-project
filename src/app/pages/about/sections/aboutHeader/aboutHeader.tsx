@@ -120,7 +120,7 @@ const AboutHeader = () => {
                 <div className='lm:px-10'>
                     <h1 className=" text-[#0A3D2E] mx-auto mb-4 px-6 lm:px-0 text-4xl lm:mt-20 sm:mt-0 text-wrap sm:text-5xl lg:text-7xl">
                         <span className="relative sm:leading-tight">
-                            Behind the Scene: <br className="hidden lm:block" />                             
+                            Behind the Scene: <br className="hidden lm:block" />
                             Team ABABIL
                         </span>
                     </h1>

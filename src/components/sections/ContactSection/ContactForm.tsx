@@ -30,8 +30,6 @@ const ContactForm = ({ isContact }: ContactSectionProps) => {
         "$20K - $50K",
         "More than $50K",
     ];
-
-    // handle input change
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
@@ -39,10 +37,9 @@ const ContactForm = ({ isContact }: ContactSectionProps) => {
         });
     };
 
-    // handle submit
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(formData); // 🔥 এখানে সব data object আকারে পাবা
+        console.log(formData);
     };
 
     return (

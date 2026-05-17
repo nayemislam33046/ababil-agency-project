@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ServicesHeader = () => {
+const CareerHeader = () => {
     const random = (min: number, max: number) =>
         Math.random() * (max - min) + min;
     const getSize = (i: number) => {
@@ -9,7 +9,6 @@ const ServicesHeader = () => {
         if (i % 3 === 1) return 6;
         return 8;
     };
-
     const colors = [
         "#ef4444",
         "#eab308",
@@ -18,19 +17,9 @@ const ServicesHeader = () => {
         "#1e3a8a",
         "#0e7490",
     ];
-
     return (
         <section className="relative h-[70vh] bg-white pt-5 overflow-hidden">
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src="/assets/image_design.png"
-                    alt="background"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-            </div>
-
+           
             {/* Decorative Dots */}
             <div
                 className="particle w-2 h-2 bg-red-900 rounded-full"
@@ -43,7 +32,6 @@ const ServicesHeader = () => {
                     "--delay": "0s",
                 } as React.CSSProperties}
             />
-
             <div
                 className="particle w-4 h-4 bg-blue-500 rounded-full"
                 style={{
@@ -67,7 +55,6 @@ const ServicesHeader = () => {
                     "--delay": "0.5s",
                 } as React.CSSProperties}
             />
-
             <div
                 className="particle w-4 h-4 bg-cyan-900 rounded-full"
                 style={{
@@ -79,10 +66,8 @@ const ServicesHeader = () => {
                     "--delay": "2s",
                 } as React.CSSProperties}
             />
-
             {[...Array(18)].map((_, i) => {
                 const size = getSize(i);
-
                 return (
                     <div
                         key={i}
@@ -118,7 +103,7 @@ const ServicesHeader = () => {
                                 />
                             </svg>
                         </span>
-                        Services
+                        Career
                     </p>
                 </div>
 
@@ -126,23 +111,22 @@ const ServicesHeader = () => {
                 <div className='lm:px-10'>
                     <h1 className=" text-[#0A3D2E] mx-auto mb-4 px-6 lm:px-0 text-4xl lm:mt-20 sm:mt-0 text-wrap sm:text-5xl lg:text-7xl">
                         <span className="relative sm:leading-tight">
-                            We turn great ideas into <br className="hidden lm:block" />
-                            excellent products
+                            Be a part of <br />                             
+                            Something Great 
                         </span>
                     </h1>
                 </div>
             </div>
-
-            <div className="absolute -left-10 bottom-0 lg:top-50 w-30 xsm:w-40 sm:w-56 sm:-left-14 float">
-                <Image src={'/assets/boxHeader.png'} alt="Mockup 1" className="object-cover h-full w-full rotate-12" width={900} height={900} />
+            {/* Left Header */}
+            <div className="absolute -left-17 bottom-0 w-62 sm:w-72 lg:w-96 sm:-left-20 lg:-left-26 float">
+                <Image src={'/assets/arrowHeader.png'} alt="AboutHeader1" className="object-cover h-full w-full -rotate-270" width={600} height={600} />
             </div>
-
-            {/* Right Mockups */}
-            <div className="absolute top-0 w-30 xsm:w-40 sm:w-56 xl:w-72 -right-10 lm:-right-5 sm:-right-14 xl:-right-20 float">
-                <Image src={'/assets/starHeader.png'} alt="Mockup 2" className="object-cover h-full w-full rotate-12" width={900} height={900} />
+            {/* Right Header */}
+            <div className="absolute -top-5 w-30 xsm:w-40 sm:w-56 xl:w-60 -right-8 lm:-right-5 sm:-right-14 xl:-right-15 float">
+                <Image src={'/assets/circleHeader.png'} alt="AboutHeader2" className="object-cover h-full w-full rotate-0" width={600} height={600} />
             </div>
         </section>
     );
 };
 
-export default ServicesHeader;
+export default CareerHeader;

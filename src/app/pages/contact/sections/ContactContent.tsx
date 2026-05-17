@@ -20,7 +20,6 @@ const ContactContent = () => {
                             <p className="underline text-white mt-1 text-sm lm:text-lg">career@ababil.com</p>
                         </div>
                     </div>
-
                 </div>
                 <LogoMarquee />
             </div>

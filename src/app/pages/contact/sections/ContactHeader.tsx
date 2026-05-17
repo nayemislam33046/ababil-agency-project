@@ -1,17 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
-
 const ContactHeader = () => {
-
   const random = (min: number, max: number) =>
     Math.random() * (max - min) + min;
-
   const getSize = (i: number) => {
     if (i % 3 === 0) return 4;
     if (i % 3 === 1) return 6;
     return 8;
   };
-
   const colors = [
     "#ef4444",
     "#eab308",
@@ -20,7 +16,6 @@ const ContactHeader = () => {
     "#1e3a8a",
     "#0e7490",
   ];
-
   return (
     <section className="relative min-h-screen bg-white overflow-hidden pb-20">
       <div className="absolute inset-0 z-0">
@@ -54,7 +49,6 @@ const ContactHeader = () => {
           "--delay": "1s",
         } as React.CSSProperties}
       />
-
       <div
         className="particle w-3 h-3 bg-yellow-500 rounded-full"
         style={{
@@ -77,7 +71,6 @@ const ContactHeader = () => {
           "--delay": "2s",
         } as React.CSSProperties}
       />
-
       {[...Array(18)].map((_, i) => {
         const size = getSize(i);
         return (
@@ -87,12 +80,9 @@ const ContactHeader = () => {
             style={{
               top: `${random(0, 90)}%`,
               left: `${random(0, 90)}%`,
-
               width: `${size}px`,
               height: `${size}px`,
-
               backgroundColor: colors[i % colors.length],
-
               "--x": `${random(-30, 30)}px`,
               "--y": `${random(-40, 40)}px`,
               "--duration": `${size === 4 ? 6 : size === 6 ? 8 : 10}s`,
@@ -105,7 +95,6 @@ const ContactHeader = () => {
       {/* TOP */}
       <div className="flex flex-col items-center py-5 relative z-10">
         <Image src="/ababil.svg" alt="Ababil" width={140} height={40} priority />
-
         <p className="p-1 px-2 text-xs lm:text-sm mt-7 rounded-full flex items-center gap-2 text-primary">
           <Link href="/" className="text-[#454A51]">Home</Link>
           <span>
@@ -129,11 +118,9 @@ const ContactHeader = () => {
           Want to Chat?
         </h1>
       </div>
-
       <div className="absolute -left-10 top-40 w-20 xsm:w-24 md:w-44 xl:w-56 md:-left-14 float">
         <Image src={'/assets/boxHeader.png'} alt="Mockup 1" className="object-cover h-full w-full rotate-12" width={900} height={900} />
       </div>
-
       <div className="absolute -right-5 -top-14 w-20 xsm:w-24 md:w-44 xl:w-56 md:-right-10 float">
         <Image src={'/assets/earthHeader.png'} alt="Mockup 2" className="object-cover h-full w-full rotate-16" width={900} height={900} />
       </div>

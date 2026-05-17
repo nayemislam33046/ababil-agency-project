@@ -47,73 +47,73 @@ const Pricing = () => {
 
   return (
     <>
-     {/* Toggle */}
-        <div className="flex items-center justify-center gap-3 mb-12">
-          <span className={!yearly ? "font-semibold" : "opacity-60"}>
-            Monthly
-          </span>
+      {/* Toggle */}
+      <div className="flex items-center justify-center gap-3 mb-12">
+        <span className={!yearly ? "font-semibold" : "opacity-60"}>
+          Monthly
+        </span>
 
-          <button
-            aria-label={yearly ? "Switch to Monthly" : "Switch to Yearly"}
-            onClick={() => setYearly(!yearly)}
-            className={`w-14 h-7 flex items-center rounded-full p-1 transition ${yearly ? "bg-yellow-400" : "bg-gray-400"
+        <button
+          aria-label={yearly ? "Switch to Monthly" : "Switch to Yearly"}
+          onClick={() => setYearly(!yearly)}
+          className={`w-14 h-7 flex items-center rounded-full p-1 transition ${yearly ? "bg-yellow-400" : "bg-gray-400"
+            }`}
+        >
+          <div
+            className={`bg-white w-5 h-5 rounded-full shadow-md transform transition ${yearly ? "translate-x-7" : ""
               }`}
-          >
+          />
+        </button>
+
+        <span className={yearly ? "font-semibold" : "opacity-60"}>
+          Yearly
+        </span>
+      </div>
+
+      {/* Cards */}
+      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-6 justify-center items-stretch">
+        {plans.map((plan, i) => {
+          const price = yearly ? plan.yearly : plan.monthly;
+          return (
             <div
-              className={`bg-white w-5 h-5 rounded-full shadow-md transform transition ${yearly ? "translate-x-7" : ""
+              key={i}
+              className={`rounded-xl p-6 text-left flex flex-col min-h-95 w-full sm:w-64 ${plan.highlight
+                ? "bg-white text-primary lp:scale-105"
+                : "bg-gray-100 text-primary"
                 }`}
-            />
-          </button>
-
-          <span className={yearly ? "font-semibold" : "opacity-60"}>
-            Yearly
-          </span>
-        </div>
-
-        {/* Cards */}
-        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-6 justify-center items-stretch">
-          {plans.map((plan, i) => {
-            const price = yearly ? plan.yearly : plan.monthly;
-            return (
-              <div
-                key={i}
-                className={`rounded-xl p-6 text-left flex flex-col min-h-95 w-full sm:w-64 ${plan.highlight
-                  ? "bg-white text-primary lp:scale-105"
-                  : "bg-gray-100 text-primary"
-                  }`}
-              >
-                <div>
-                  <p className="text-lg text-primary font-semibold mb-2">{plan.name}</p>
-                  <p className="text-sm lp:text-[13px] text-primary mb-4">{plan.desc}</p>
-                  <div className="text-4xl text-primary font-bold mb-2 flex items-baseline gap-2">
-                    ${Math.round(price)}
-                    <p className="text-sm mb-4">/{yearly ? "year" : "month"}</p>
-                  </div>
-                  <hr className="my-4" />
+            >
+              <div>
+                <p className="text-lg text-primary font-semibold mb-2">{plan.name}</p>
+                <p className="text-sm lp:text-[13px] text-primary mb-4">{plan.desc}</p>
+                <div className="text-4xl text-primary font-bold mb-2 flex items-baseline gap-2">
+                  ${Math.round(price)}
+                  <p className="text-sm mb-4">/{yearly ? "year" : "month"}</p>
                 </div>
-
-                {/* Bottom content */}
-                <div className="mt-auto">
-                  <ul className="space-y-2 text-sm mb-6">
-                    {plan.features.map((f, idx) => (
-                      <li key={idx}>✓ {f}</li>
-                    ))}
-                  </ul>
-
-                  <button
-                    aria-label={`Select the ${plan.name} plan`}
-                    className={`w-full py-2 rounded-full font-semibold ${plan.highlight
-                      ? "bg-secondary text-primary"
-                      : "border border-primary"
-                      }`}
-                  >
-                    Let's Collab!
-                  </button>
-                </div>
+                <hr className="my-4" />
               </div>
-            );
-          })}
-        </div>
+
+              {/* Bottom content */}
+              <div className="mt-auto">
+                <ul className="space-y-2 text-sm mb-6">
+                  {plan.features.map((f, idx) => (
+                    <li key={idx}>✓ {f}</li>
+                  ))}
+                </ul>
+
+                <button
+                  aria-label={`Select the ${plan.name} plan`}
+                  className={`w-full py-2 rounded-full font-semibold ${plan.highlight
+                    ? "bg-secondary text-primary"
+                    : "border border-primary"
+                    }`}
+                >
+                  Let's Collab!
+                </button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }

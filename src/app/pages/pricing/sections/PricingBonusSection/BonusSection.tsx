@@ -28,7 +28,7 @@ const BonusSection = () => {
     <section className="w-full flex justify-center px-6 py-10 bg-white">
       <div className="w-full bg-primary rounded-2xl p-6 md:p-10 sm:mx-10 relative overflow-hidden">
 
-        {/* Gradient Glow (top right effect) */}
+        {/* Gradient Glow */}
         <div className="absolute top-0 right-0 w-40 h-40 bg-green-400 blur-3xl opacity-20 rounded-full"></div>
 
         {/* Title */}
@@ -47,11 +47,9 @@ const BonusSection = () => {
                 className="bg-secondary rounded-xl p-6 shadow-md hover:scale-105 h-48 transition duration-300"
               >
                 <Image src={item.icon} width={24} height={24} alt={item.title} className="mb-3" />
-
                 <p className="font-bold text-lg lg:text-base text-primary mb-2">
                   {item.title}
                 </p>
-
                 <p className="text-primary">
                   {item.desc}
                 </p>

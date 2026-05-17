@@ -1,11 +1,10 @@
-"use client"; // Next.js App Router এ ড্র্যাগিং ইভেন্টের জন্য এটি প্রয়োজন
+"use client";
 
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 
-// Dummy Data with valid Unsplash high-quality images
 const projects = [
   {
     id: 1,
@@ -52,14 +51,14 @@ const projects = [
 ];
 
 const categories = [
-  "Explore All", "Automotive", "Beauty & Cosmetics", "Business Consulting", "Construction", 
-  "eCommerce", "eCRM Portals", "EdTech", "Entertainment", "Financial Services", 
-  "Food & Beverages", "Health & Wellness", "Hospitality", "Manufacturing", 
-  "Media & Publishing", "Non-Profit", "Real Estate", "Retail", 
+  "Explore All", "Automotive", "Beauty & Cosmetics", "Business Consulting", "Construction",
+  "eCommerce", "eCRM Portals", "EdTech", "Entertainment", "Financial Services",
+  "Food & Beverages", "Health & Wellness", "Hospitality", "Manufacturing",
+  "Media & Publishing", "Non-Profit", "Real Estate", "Retail",
   "Software & Technology", "Sports & Fitness", "Travel & Tourism"
 ];
 
-export default function ProjectsSection() {
+const ProjectsSection = () => {
   const [width, setWidth] = useState(0);
   const carousel = useRef<HTMLDivElement>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -74,27 +73,26 @@ export default function ProjectsSection() {
 
   return (
     <section className="bg-white py-16 px-6 md:px-12">
-      
+
       {/* Draggable Category Filter */}
-<div className="mb-12 overflow-hidden -mr-6 md:-mr-12">
-          <motion.div 
-          ref={carousel} 
+      <div className="mb-12 overflow-hidden -mr-6 md:-mr-12">
+        <motion.div
+          ref={carousel}
           className="cursor-grab overflow-hidden active:cursor-grabbing"
           whileTap={{ cursor: "grabbing" }}
         >
-          <motion.div 
-            drag="x" 
+          <motion.div
+            drag="x"
             dragConstraints={{ right: 0, left: -width }}
             className="flex gap-3 pr-24"
           >
             {categories.map((cat, index) => (
               <motion.button
                 key={index}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors border select-none ${
-                  index === 0 
-                    ? 'bg-teal-900 text-white border-teal-900' 
-                    : 'bg-gray-50 text-gray-700 border-gray-100 hover:bg-gray-100'
-                }`}
+                className={`px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors border select-none ${index === 0
+                  ? 'bg-teal-900 text-white border-teal-900'
+                  : 'bg-gray-50 text-gray-700 border-gray-100 hover:bg-gray-100'
+                  }`}
               >
                 {cat}
               </motion.button>
@@ -109,7 +107,7 @@ export default function ProjectsSection() {
           <div key={project.id} className="group cursor-pointer">
             {/* Image Container */}
             <div className="relative aspect-4/3 overflow-hidden rounded-[2.5rem] mb-6">
-              <Image 
+              <Image
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
@@ -135,35 +133,31 @@ export default function ProjectsSection() {
         ))}
       </div>
 
-{/* --- Pagination Section (Image Reference: screen16.jpg) --- */}
+      {/* --- Pagination Section --- */}
       <div className="flex items-center justify-center gap-4 mt-16">
         <div className="flex items-center gap-2">
           {[1, 2, 3, 4, 5].map((page) => (
             <button
               key={page}
               onClick={() => setCurrentPage(page)}
-              className={`w-10 h-10 flex items-center justify-center text-sm font-medium transition-all duration-200 rounded-xl ${
-                currentPage === page
-                  ? "bg-primary text-white shadow-md"
-                  : "text-gray hover:bg-gray-100"
-              }`}
+              className={`w-10 h-10 flex items-center justify-center text-sm font-medium transition-all duration-200 rounded-xl ${currentPage === page
+                ? "bg-primary text-white shadow-md"
+                : "text-gray hover:bg-gray-100"
+                }`}
             >
               {page}
             </button>
           ))}
         </div>
-
-        {/* Next Button */}
         <button
           onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-          className={`p-2 transition-colors ${
-            currentPage === totalPages ? "text-gray-300 cursor-not-allowed" : "text-gray-600 hover:text-black"
-          }`}
+          className={`p-2 transition-colors ${currentPage === totalPages ? "text-gray-300 cursor-not-allowed" : "text-gray-600 hover:text-black"
+            }`}
         >
           <ChevronRight size={20} strokeWidth={2.5} />
         </button>
       </div>
-      
     </section>
   );
 }
+export default ProjectsSection;

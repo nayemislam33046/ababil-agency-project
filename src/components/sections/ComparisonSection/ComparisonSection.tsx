@@ -56,7 +56,7 @@ const ComparisonSection = () => {
         </h2>
       </div>
 
-      {/* --- Desktop View (Table Layout for md and above) --- */}
+      {/* --- Desktop View --- */}
       <div className="hidden md:block overflow-hidden">
         <table className="w-full border-separate border-spacing-y-4">
           <thead>
@@ -141,7 +141,7 @@ const ComparisonSection = () => {
         </table>
       </div>
 
-      {/* --- Mobile View (Your Original Card Design for below md) --- */}
+      {/* --- Mobile View --- */}
       <div className="flex flex-col gap-5 md:hidden">
         {data.map((item, index) => (
           <div

@@ -18,7 +18,7 @@ const TeamMembersSlider = () => {
       <TeamSlider />
       <div className="flex justify-center mt-10">
         <Link
-          href="/team"
+          href="/pages/about/teampage"
           className="text-primary font-body bg-secondary font-bold border border-primary rounded-full px-6 py-3 inline-flex items-center"
         >
           Meet the Team

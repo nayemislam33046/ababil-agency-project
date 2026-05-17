@@ -31,25 +31,14 @@ const About: React.FC = () => {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  // useEffect(() => {
-  //   if (isInView) {
-  //     const timer = setTimeout(() => {
-  //       handlePlay();
-  //     }, 1000);
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [isInView]);
-
   useEffect(() => {
-  if (isInView && isLargeScreen) {
-    const timer = setTimeout(() => {
-      handlePlay();
-    }, 1000);
-    return () => clearTimeout(timer);
-  }
-}, [isInView, isLargeScreen]);
-
-
+    if (isInView && isLargeScreen) {
+      const timer = setTimeout(() => {
+        handlePlay();
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [isInView, isLargeScreen]);
 
   const handleTimeUpdate = () => {
     if (videoRef.current) {
@@ -82,7 +71,6 @@ const About: React.FC = () => {
       setIsFullWidth(false);
     }
   };
-
   const togglePlay = () => (isPlaying ? handlePause() : handlePlay());
 
   const handleVolumeChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -118,26 +106,6 @@ const About: React.FC = () => {
           className="relative group rounded-2xl overflow-hidden shadow-2xl z-20 bg-black max-h-[80vh]"
           role="region" aria-label="About us video section"
         >
-
-          {/* <video
-            ref={videoRef}
-            muted={isMuted}
-            loop
-            playsInline
-            onTimeUpdate={handleTimeUpdate}
-            className="w-full h-full max-h-112.5 object-cover cursor-pointer"
-            onClick={togglePlay}
-            aria-label="About us promotional video"
-          >
-            <source src="/assets/video.mp4" type="video/mp4" />
-            <track
-              kind="captions"
-              src="/captions.vtt"
-              // srclang="en"
-              label="English captions" 
-            />
-          </video> */}
-
           <video
             ref={videoRef}
             muted={isMuted}
@@ -146,7 +114,7 @@ const About: React.FC = () => {
             preload="none"
             poster="/assets/dmvid.png"
             onTimeUpdate={handleTimeUpdate}
-            className="w-full object-cover max-h-[450px] cursor-pointer"
+            className="w-full object-cover max-h-112.5 cursor-pointer"
             onClick={togglePlay}
             aria-label="About us promotional video"
           >
@@ -155,14 +123,7 @@ const About: React.FC = () => {
 
           {/* CUSTOM CONTROLS */}
           <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity space-y-2">
-            {/* <input
-              type="range"
-              min="0"
-              max="100"
-              value={progress}
-              onChange={handleSeek}
-              className="w-full h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer accent-yellow-500"
-            /> */}
+
             <label htmlFor="video-progress" className="sr-only">
               Video progress
             </label>
@@ -188,7 +149,6 @@ const About: React.FC = () => {
                 {isPlaying ? <Pause size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" />}
               </button>
               <div className="flex items-center gap-2">
-                {/* {isMuted || volume === 0 ? <VolumeX size={18} /> : <Volume2 size={18} />} */}
                 <button
                   type="button"
                   onClick={() => {
@@ -201,7 +161,7 @@ const About: React.FC = () => {
                 >
                   {isMuted || volume === 0 ? <VolumeX size={18} /> : <Volume2 size={18} />}
                 </button>
-                
+
                 <label htmlFor="volume-control" className="sr-only">
                   Volume control
                 </label>

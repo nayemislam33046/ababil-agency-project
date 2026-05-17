@@ -113,8 +113,8 @@ const TeamHeaders = () => {
                             </svg>
                         </span>
                         <Link href="/pages/about" className="text-[#454A51]">About Us</Link>
-                        
-                         <span>
+
+                        <span>
                             <svg width="7" height="12" viewBox="0 0 6 10" fill="none">
                                 <path
                                     fillRule="evenodd"

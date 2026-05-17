@@ -30,7 +30,6 @@ const ProjectsHeader = () => {
                     priority
                 />
             </div>
-
             {/* Decorative Dots */}
             <div
                 className="particle w-2 h-2 bg-red-900 rounded-full"
@@ -55,7 +54,6 @@ const ProjectsHeader = () => {
                     "--delay": "1s",
                 } as React.CSSProperties}
             />
-
             <div
                 className="particle w-3 h-3 bg-yellow-500 rounded-full"
                 style={{
@@ -134,12 +132,11 @@ const ProjectsHeader = () => {
             </div>
 
             <div className="absolute -left-10 bottom-0 lg:top-50 w-30 xsm:w-40 sm:w-56 sm:-left-14 float">
-                <Image src={'/assets/starHeader.png'} alt="Mockup 1" className="object-cover h-full w-full -rotate-230" width={600} height={600} />
+                <Image src={'/assets/starHeader.png'} alt="Project Mockup1" className="object-cover h-full w-full -rotate-230" width={600} height={600} />
             </div>
 
-            {/* Right Mockups */}
             <div className="absolute -top-5 w-30 xsm:w-40 sm:w-56 xl:w-72 -right-10 lm:-right-5 sm:-right-14 xl:-right-10 float">
-                <Image src={'/assets/circleHeader.png'} alt="Mockup 2" className="object-cover h-full w-full rotate-0" width={600} height={600} />
+                <Image src={'/assets/circleHeader.png'} alt="Project Mockup2" className="object-cover h-full w-full rotate-0" width={600} height={600} />
             </div>
         </section>
     );

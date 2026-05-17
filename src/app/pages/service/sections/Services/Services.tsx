@@ -162,7 +162,7 @@ const services = [
   },
 ];
 
-export default function Services() {
+const Services = () =>{
   return (
     <section className="relative min-h-screen bg-primary rounded-2xl px-6 py-10 md:px-15">
       <div className="space-y-10">
@@ -201,7 +201,6 @@ export default function Services() {
                       className="flex items-center justify-between border-b border-[#E5E5E5] pb-2 text-[#0A0A0A] font-body group cursor-pointer"
                     >
                       <span>{item.name}</span>
-
                       <img
                         src="/right-arrow.svg"
                         alt="Right Arrow"
@@ -232,3 +231,4 @@ export default function Services() {
     </section>
   );
 }
+export default Services;

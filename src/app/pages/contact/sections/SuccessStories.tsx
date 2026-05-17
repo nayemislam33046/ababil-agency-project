@@ -67,9 +67,7 @@ const projects = [
 
 const SuccessStories = () => {
   const [activeTab, setActiveTab] = useState('UI UX Design');
-
   const categories = ['UI UX Design', 'Branding', 'Web Dev', 'Mobile App Dev', 'SaaS Design & Dev'];
-
   const currentProject = projects.find(p => p.category === activeTab) || projects[0];
 
   return (
@@ -89,21 +87,19 @@ const SuccessStories = () => {
             key={cat}
             onClick={() => setActiveTab(cat)}
             className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === cat
-                ? 'bg-gray-100 text-black shadow-sm scale-105'
-                : 'text-gray-500 hover:text-black hover:bg-gray-50'
+              ? 'bg-gray-100 text-black shadow-sm scale-105'
+              : 'text-gray-500 hover:text-black hover:bg-gray-50'
               }`}
           >
             {cat}
           </button>
         ))}
       </div>
-
       {/* Main Content */}
       <div
         key={activeTab}
         className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center rounded-3xl p-3 lm:p-8 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-700"
       >
-
         {/* Left Side*/}
         <div className="flex justify-center items-center z-10">
           <div className="relative w-full transition-transform duration-500 hover:scale-105">

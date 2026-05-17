@@ -1,5 +1,3 @@
-import React from 'react';
-
 const stats = [
   {
     title: "Clients",
@@ -23,7 +21,7 @@ const stats = [
   }
 ];
 
-export default function VisionaryPartnerships() {
+const VisionaryPartnerships = () =>{
   return (
     <section className="py-8 px-6 bg-white md:px-12 lg:px-16">
       {/* Header Section */}
@@ -39,8 +37,8 @@ export default function VisionaryPartnerships() {
       {/* Responsive Grid Section */}
       <div className="grid grid-cols-1 lm:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="bg-gray-50 p-5 rounded-2xl border border-gray-200 flex flex-col justify-between transition-hover duration-300 hover:shadow-lg"
           >
             <div>
@@ -60,3 +58,5 @@ export default function VisionaryPartnerships() {
     </section>
   );
 }
+
+export default VisionaryPartnerships;

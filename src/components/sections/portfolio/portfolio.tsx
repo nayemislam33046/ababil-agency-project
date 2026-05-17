@@ -87,7 +87,7 @@ const projects = [
 
 ];
 
-export default function ServiceCard() {
+const ServiceCard = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -95,10 +95,8 @@ export default function ServiceCard() {
 
     cards?.forEach((card: any, index) => {
       if (index === cards.length - 1) return;
-
       const nextCard = cards[index + 1];
       const inner = card.querySelector(".stack-inner");
-
       const scaleTo = 1 - (cards.length - index - 1) * 0.05;
 
       gsap.to(inner, {
@@ -117,7 +115,7 @@ export default function ServiceCard() {
 
   return (
     <section className="my-10 bg-white p-8 xl:p-16">
-      
+
       {/* HEADER */}
       <div className="mb-16">
         <p className="font-inter font-bold text-primary mb-5 text-sm">
@@ -135,7 +133,7 @@ export default function ServiceCard() {
             key={project.id}
             className="stack-card sticky top-5"
             style={{
-              paddingTop: `10px`, 
+              paddingTop: `10px`,
               zIndex: i
             }}
           >
@@ -151,8 +149,8 @@ export default function ServiceCard() {
         Explore All
         <ArrowRight />
       </button>
-
-      {/* bottom space for scroll */}
     </section>
   );
 }
+
+export default ServiceCard;

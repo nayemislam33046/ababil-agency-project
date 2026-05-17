@@ -30,7 +30,6 @@ export default function ContactSection({ isContact }: ContactSectionProps) {
                 </h2>
               </div>)}
 
-
               <ul className={`text-sm space-y-2 ${isContact ? "text-primary" : "text-gray-200"}`}>
                 <li className="flex items-center gap-1">
                   <Image src={`/${isContact ? "checkprimary" : "round-check"}.svg`} alt="Check" width={16} height={16} /> Expect a response from us within 24 hours

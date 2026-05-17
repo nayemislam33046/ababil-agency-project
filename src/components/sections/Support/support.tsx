@@ -35,20 +35,19 @@ const Support = () => {
       <span className="text-xs font-bold tracking-widest">
         WHY CHOOSE US
       </span>
-
       <h2 className="mt-4 text-xl lm:text-3xl sm:text-4xl md:text-5xl font-black max-w-xl ">
         WE DESIGN & BUILD FOR THE FUTURE <br /> TO DRIVE TODAY’S SUCCESS
       </h2>
 
       <div className="py-20 flex justify-center items-center">
-        
+
         {/* MAIN WRAPPER */}
         <div className="relative w-full max-w-6xl md:h-200 flex flex-col justify-center items-center gap-6 md:gap-0">
 
           <div className="md:absolute md:top-23 lp:top-22 lg:top-9 xl:top-12 w-full flex flex-col md:flex-row gap-6">
             {topCards.map((card, i) => (
               <div key={i} className="flex-1 bg-white/10 backdrop-blur-md p-6 rounded-xl md:h-56 lp:h-auto lg:h-60 xl:h-auto">
-                <Image src={card.icon} width={50} height={50} alt={card.title} className="mb-4 h-10 lp:h-12"/>
+                <Image src={card.icon} width={50} height={50} alt={card.title} className="mb-4 h-10 lp:h-12" />
                 <p className="lg:text-xl xl:text-2xl font-bold">{card.title}</p>
                 <p className="mt-3 opacity-80 text-[13px] lp:text-sm xl:text-base">{card.desc}</p>
               </div>
@@ -58,7 +57,7 @@ const Support = () => {
           <div className="md:absolute md:-bottom-1 lp:bottom-10 lg:bottom-5 xl:bottom-5 w-full flex flex-col md:flex-row gap-6">
             {bottomCards.map((card, i) => (
               <div key={i} className="flex-1 bg-white/10 backdrop-blur-md p-7 rounded-xl md:h-80 lp:h-auto lg:h-64">
-                <Image src={card.icon} width={50} height={50} alt={card.title} className="mb-4 h-10 lp:h-12"/>
+                <Image src={card.icon} width={50} height={50} alt={card.title} className="mb-4 h-10 lp:h-12" />
                 <p className="lg:text-xl xl:text-2xl font-bold">{card.title}</p>
                 <p className="mt-3 opacity-80 text-[13px] lp:text-sm xl:text-base">{card.desc}</p>
               </div>

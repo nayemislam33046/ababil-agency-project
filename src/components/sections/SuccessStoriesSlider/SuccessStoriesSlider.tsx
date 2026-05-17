@@ -17,7 +17,7 @@ const SuccessStoriesSlider = () => {
       </div>
 
       {/* Slider track */}
-      <SuccessSlider/>
+      <SuccessSlider />
 
       {/* Hide scrollbar globally for webkit */}
       <style>{`

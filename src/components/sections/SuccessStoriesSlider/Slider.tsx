@@ -136,13 +136,13 @@ const SuccessSlider = () => {
               <div className="absolute flex flex-col sm:gap-1 md:gap-2 left-0 bottom-0 w-full bg-linear-to-t from-black/80 to-transparent p-3 sm:p-6">
                 <div className="w-fit">
                   <Image
-                  src={story.logo}
-                  alt={story.name}
-                  className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto"
-                  draggable={false}
-                  width={100}
-                  height={40}
-                />
+                    src={story.logo}
+                    alt={story.name}
+                    className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto"
+                    draggable={false}
+                    width={100}
+                    height={40}
+                  />
                 </div>
                 <p className="text-white text-[12px] md:text-sm font-body">{story.quote}</p>
                 <p className="text-white font-inter font-bold text-lg text-[16px] sm:text-[18px] md:text-[22px]">{story.name}</p>

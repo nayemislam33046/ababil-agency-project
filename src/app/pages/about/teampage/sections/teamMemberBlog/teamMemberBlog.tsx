@@ -1,8 +1,7 @@
 "use client";
-
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { ChevronUp, ChevronDown, Quote } from "lucide-react";
+import { ChevronUp, ChevronDown } from "lucide-react";
 
 const testimonials = [
   {
@@ -42,7 +41,7 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialSection() {
+const TeamMemberBlog = () =>{
   const [activeIndex, setActiveIndex] = useState(0);
 
   const active = testimonials[activeIndex];
@@ -70,8 +69,8 @@ export default function TestimonialSection() {
   };
 
   return (
-    <section className="w-full bg-[#f5f5f3] py-16 md:py-24 overflow-hidden">
-      <div className="px-6 md:px-12 lg:px-16 lg:px-8">
+    <section className="w-full py-16 md:py-24 overflow-hidden">
+      <div className="px-6 md:px-12 lg:px-16">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10 lg:gap-20">
           
           {/* IMAGE STACK */}
@@ -80,9 +79,7 @@ export default function TestimonialSection() {
               const originalIndex = testimonials.findIndex(
                 (t) => t.id === item.id
               );
-
               const isActive = originalIndex === activeIndex;
-
               return (
                 <button
                   key={item.id}
@@ -130,7 +127,7 @@ export default function TestimonialSection() {
             </div>
 
             {/* NAV BUTTONS */}
-            <div className="hidden sm:flex flex-col gap-3">
+            <div className="hidden lg:flex flex-col gap-3">
               <button
                 onClick={handlePrev}
                 className="w-10 h-10 rounded-full border border-primary flex items-center justify-center hover:bg-white transition"
@@ -149,7 +146,7 @@ export default function TestimonialSection() {
         </div>
 
         {/* MOBILE BUTTONS */}
-        <div className="flex sm:hidden items-center justify-center gap-4 mt-8">
+        <div className="flex lg:hidden items-center justify-center gap-4 mt-8">
           <button
             onClick={handlePrev}
             className="w-10 h-10 rounded-full border border-primary flex items-center justify-center hover:bg-white transition"
@@ -168,3 +165,5 @@ export default function TestimonialSection() {
     </section>
   );
 }
+
+export default TeamMemberBlog;

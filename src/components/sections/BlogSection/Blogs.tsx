@@ -1,4 +1,4 @@
- 'use client';
+'use client';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
@@ -62,7 +62,7 @@ const Blogs = () => {
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     handleResize();
-    handleScroll(); 
+    handleScroll();
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
@@ -71,7 +71,7 @@ const Blogs = () => {
 
   return (
     <>
-       <div className="flex flex-col md:flex-row gap-10 items-start relative">
+      <div className="flex flex-col md:flex-row gap-10 items-start relative">
         <div className="hidden md:block md:w-1/2 md:sticky md:top-10 h-fit">
           <div className="xl:max-w-96">
             <h3 className="text-2xl lg:text-3xl lg:font-extrabold text-primary mb-6 uppercase transition-all duration-500 ease-in-out">
@@ -87,15 +87,15 @@ const Blogs = () => {
           </div>
         </div>
 
-        {/* Right Area: Scrolling Images on Desktop, Full Content on Mobile */}
+        {/* Right Area */}
         <div className="w-full md:w-1/2">
           {blogs.map((blog, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               ref={(el) => { sectionRefs.current[index] = el; }}
               className="mb-20 md:mb-40 min-h-fit md:min-h-[70vh] last:mb-20 md:last:mb-[50vh]"
             >
-              {/* Mobile Only: Content will appear above images */}
+              {/* Mobile Only */}
               <div className="md:hidden mb-8">
                 <h3 className="text-xl font-bold text-primary mb-2 uppercase">
                   {blog.title}
@@ -109,19 +109,19 @@ const Blogs = () => {
               {/* Images Container */}
               <div className="flex justify-center items-center gap-5 lp:gap-10">
                 <div className={`${blog.images[0].color} rounded-2xl w-1/2 h-64 md:w-52 md:h-80 lg:w-64 lg:h-96 flex items-center justify-center overflow-hidden relative shadow-lg`}>
-                  <Image 
-                    src={blog.images[0].src} 
-                    alt="Blog Image 1" 
-                    fill 
-                    className="object-cover p-2" 
+                  <Image
+                    src={blog.images[0].src}
+                    alt="Blog Image 1"
+                    fill
+                    className="object-cover p-2"
                   />
                 </div>
                 <div className={`${blog.images[1].color} rounded-2xl w-1/2 h-64 md:w-52 md:h-80 lg:w-64 lg:h-96 mt-10 md:mt-20 overflow-hidden relative shadow-lg`}>
-                  <Image 
-                    src={blog.images[1].src} 
-                    alt="Blog Image 2" 
-                    fill 
-                    className="object-cover p-2" 
+                  <Image
+                    src={blog.images[1].src}
+                    alt="Blog Image 2"
+                    fill
+                    className="object-cover p-2"
                   />
                 </div>
               </div>

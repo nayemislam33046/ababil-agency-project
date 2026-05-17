@@ -10,9 +10,8 @@ const DescriptionText = ({ desc }: DescriptionTextProps) => {
     return (
         <div>
             <p
-                className={`text-[12px] lm:text-sm lp:text-sm font-body  ${
-                    isExpanded ? "" : "line-clamp-2"
-                } lm:line-clamp-none`}
+                className={`text-[12px] lm:text-sm lp:text-sm font-body  ${isExpanded ? "" : "line-clamp-2"
+                    } lm:line-clamp-none`}
             >
                 {desc}
             </p>

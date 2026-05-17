@@ -1,5 +1,3 @@
-import { Lightbulb, Workflow, ShieldCheck, Zap, BarChart3, Search } from 'lucide-react';
-
 const ServicesSection = () => {
   const services = [
     {
@@ -49,8 +47,8 @@ const ServicesSection = () => {
       {/* Responsive Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="bg-[#063b2d] px-8 py-10 rounded-4xl flex flex-col gap-4 hover:scale-[1.02] transition-transform duration-300"
           >
             <div className="mb-2">

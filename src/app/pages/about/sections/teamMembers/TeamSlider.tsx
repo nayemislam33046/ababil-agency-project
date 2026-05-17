@@ -1,7 +1,4 @@
 "use client";
-
-import Image from "next/image";
-import Link from "next/link";
 import { useRef, useState, useCallback } from "react";
 const stories = [
     {
@@ -97,34 +94,12 @@ const TeamSlider = () => {
                 onTouchMove={onTouchMove}
             >
                 {stories.map((story) => (
-                    // <div
-                    //     key={story.id}
-                    //     className="relative shrink-0 rounded-2xl overflow-hidden flex flex-col w-60 sm:w-70 md:w-[320px] lg:w-85 h-95 sm:h-112.5 md:h-125 lg:h-125"
-                    //     draggable={false}
-                    // >
-                    //     {/* Image wrapper */}
-                    //     <div className="relative w-full h-full">
-                    //         <img
-                    //             src={story.imgUrl}
-                    //             alt={story.name}
-                    //             className="w-full h-full object-cover pointer-events-none"
-                    //             draggable={false}
-                    //         />
-                    //     <p className="text-center font-bold text-lg mt-2 pointer-events-none select-none">
-                    //         {story.name}
-                    //     </p>
 
-                    //     <p className="text-center text-gray-600 pointer-events-none select-none">
-                    //         {story.role}
-                    //     </p>
-                    //     </div>
-                    // </div>
                     <div
                         key={story.id}
                         className="relative shrink-0 rounded-2xl overflow-hidden flex flex-col w-60 sm:w-70 md:w-[320px] lg:w-85"
                         draggable={false}
                     >
-                        {/* Image wrapper */}
                         <div className="relative w-full h-95 sm:h-112.5 md:h-125 lg:h-125">
                             <img
                                 src={story.imgUrl}
@@ -134,7 +109,6 @@ const TeamSlider = () => {
                             />
                         </div>
 
-                        {/* Text */}
                         <div className="py-3">
                             <p className="text-center text-[#FAFAFA] font-bold text-xl pointer-events-none select-none">
                                 {story.name}

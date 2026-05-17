@@ -38,7 +38,7 @@ const LogoMarquee = () => {
         {/* TOP ROW */}
         <div className="overflow-hidden">
           <div className="flex animate-scroll-left w-max">
-            {[0,1].map((track)=>(
+            {[0, 1].map((track) => (
               <div key={track} className="flex gap-12 h-12 px-5">
                 {logosTop.map((logo, i) => (
                   <img
@@ -56,7 +56,7 @@ const LogoMarquee = () => {
         {/* BOTTOM ROW */}
         <div className="overflow-hidden mt-8 lg:mt-12">
           <div className="flex animate-scroll-right w-max">
-            {[0,1].map((track)=>(
+            {[0, 1].map((track) => (
               <div key={track} className="flex gap-12 h-12 px-5 ">
                 {logosBottom.map((logo, i) => (
                   <img

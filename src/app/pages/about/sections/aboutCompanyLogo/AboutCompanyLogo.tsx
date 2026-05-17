@@ -1,5 +1,5 @@
 const AboutCompanyLogo = () => {
-    const logosTop = [
+  const logosTop = [
     "/assets/about/logo/companyLogo1.png",
     "/assets/about/logo/companyLogo2.png",
     "/assets/about/logo/companyLogo3.png",
@@ -23,8 +23,7 @@ const AboutCompanyLogo = () => {
 
   return (
     <section className="py-12 md:py-16 relative overflow-hidden">
-
-        <div className="text-center mb-16 px-6 md:px-12 lg:px-16">
+      <div className="text-center mb-16 px-6 md:px-12 lg:px-16">
         <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
           Partners
         </span>
@@ -32,13 +31,11 @@ const AboutCompanyLogo = () => {
           Collaborating with Ambitious Titans Alike Startups and Industry
         </h2>
       </div>
-
       <div className="max-w-400 mx-auto">
-
         {/* TOP ROW */}
         <div className="overflow-hidden">
           <div className="flex animate-scroll-left w-max">
-            {[0,1].map((track)=>(
+            {[0, 1].map((track) => (
               <div key={track} className="flex gap-6 h-20 sm:h-24 px-5">
                 {logosTop.map((logo, i) => (
                   <img
@@ -56,7 +53,7 @@ const AboutCompanyLogo = () => {
         {/* BOTTOM ROW */}
         <div className="overflow-hidden mt-8 lg:mt-12">
           <div className="flex animate-scroll-right w-max">
-            {[0,1].map((track)=>(
+            {[0, 1].map((track) => (
               <div key={track} className="flex gap-6 h-20 sm:h-24 px-5 ">
                 {logosBottom.map((logo, i) => (
                   <img
