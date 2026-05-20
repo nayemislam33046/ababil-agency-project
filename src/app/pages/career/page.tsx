@@ -7,6 +7,7 @@ import ActivitiesSlider from "../about/teampage/sections/activitiesSlider/Activi
 import CareerHeroSection from "./section/careerHeroSection/CareerHeroSection"
 import OurStory from "./section/OurCareerStory/OurStory"
 import GameNightSection from "./section/GameNightSection/GameNightSection"
+import PerksSection from "./section/PerksCardSection/PerksSection"
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
       <CareerHeader />
       <CareerHeroSection />
       <OurStory />
+      <PerksSection/>
       <GameNightSection />
       <ActivitiesSlider />
       <TeamMemberBlog />

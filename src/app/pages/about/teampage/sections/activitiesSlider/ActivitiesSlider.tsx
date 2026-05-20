@@ -29,7 +29,7 @@ const ActivitiesSlider = () => {
                 <span className="text-sm font-bold tracking-widest text-primary uppercase">
                     Activities
                 </span>
-                <h2 className="text-3xl lm:text-4xl md:text-6xl font-extrabold text-primary my-4 leading-tight">
+                <h2 className="text-3xl lm:text-4xl md:text-6xl text-primary my-4 leading-tight">
                     Life At Ababil
                 </h2>
                 <p className="text-gray text-sm sm:text-base lg:text-lg text-wrap">Design Monks is not just a workplace, it’s a hub of some creative and talented people who work together like <br className="hidden lg:block" />
